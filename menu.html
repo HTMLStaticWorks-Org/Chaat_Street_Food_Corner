@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – A Little Spice. A Lot of Happiness. | Chaat Adda</title>
+  <meta name="description" content="Explore Chaat Adda's complete Indian street-food menu: Pani Puri & Golgappa, Papdi & Sev Puri, Dahi Chaat, Bhel, Aloo Tikki, Samosa Chaat, Sandwiches and Beverages." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Custom Brand Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY HEADER & NAVIGATION
+       At 360px, 768px and 1024px: Displays ONLY Logo & Hamburger on same row
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chaat Adda Home">
+        <img src="assets/logo.svg" alt="Chaat Adda – Every Bite Has a Story!" width="215" height="52" />
+      </a>
+
+      <!-- Desktop Navigation (>1024px) -->
+      <nav aria-label="Primary Navigation">
+        <ul class="desktop-nav">
+          <li><a href="index.html" class="nav-link-item">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+          <li><a href="menu.html" class="nav-link-item active" aria-current="page">Menu</a></li>
+          <li><a href="catering.html" class="nav-link-item">Catering</a></li>
+          <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Right CTA (>1024px) -->
+      <div class="desktop-header-actions">
+        <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+          <span>RTL</span>
+        </button>
+        <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span>Dark</span>
+        </button>
+        <a href="#orderSummaryBox" class="header-cart-btn" aria-label="View Current Order">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span>Order</span>
+          <span class="cart-count-badge">0</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Shown at 360px, 768px, 1024px) -->
+      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
+        <span class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile & Tablet Hamburger Menu Drawer -->
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home 1 – About Chaat Adda</a></li>
+        <li><a href="home2.html" class="mobile-nav-link">Home 2 – Street Food Corner</a></li>
+        <li><a href="menu.html" class="mobile-nav-link active" aria-current="page">Menu</a></li>
+        <li><a href="catering.html" class="mobile-nav-link">Catering</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-actions">
+        <div class="mobile-utility-row">
+          <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+            <span>RTL</span>
+          </button>
+          <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            <span>Dark</span>
+          </button>
+        </div>
+        <a href="#orderSummaryBox" class="btn-chaat btn-chaat-secondary">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span>View Order (<span class="cart-count-badge">0</span>)</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         MENU HERO SECTION
+         Heading: "A Little Spice. A Lot of Happiness."
+         ====================================================================== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="kicker-badge hero-animate-item">
+          <i data-lucide="utensils" style="width:16px;height:16px;"></i>
+          100% Pure Vegetarian Street Food Menu
+        </span>
+        <h1 class="hero-title hero-animate-item">A Little Spice. A Lot of Happiness.</h1>
+        <p class="hero-subtitle hero-animate-item mb-3">
+          Browse our 7 signature street-food categories, add your favourite chaats to your order tray, and send your order directly on WhatsApp!
+        </p>
+        <p class="small fw-bold text-danger mb-0 hero-animate-item">
+          * Note: All items and ₹ prices below are Editable Sample Menu Pricing. Jain (No Onion / No Garlic) options available on request.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         MENU CATALOG, FILTER TABS, SEARCH & INTERACTIVE ORDER SUMMARY
+         ====================================================================== -->
+    <section class="section-pad" id="menuCatalog">
+      <div class="container">
+        <!-- Search & Category Filter Tabs -->
+        <div class="menu-controls-wrap" data-aos="fade-up">
+          <div class="menu-search-box">
+            <i data-lucide="search" class="menu-search-icon" style="width:20px;height:20px;"></i>
+            <input
+              type="search"
+              id="menuSearchInput"
+              class="menu-search-input"
+              placeholder="Search chaats (e.g., Pani Puri, Dahi Bhalla, Aloo Tikki, Lassi)..."
+              aria-label="Search menu items"
+            />
+          </div>
+
+          <ul class="category-tabs" role="tablist" aria-label="Menu Categories">
+            <li>
+              <button type="button" class="category-tab-btn active" data-filter="all">
+                All Items (21)
+              </button>
+            </li>
+            <li>
+              <button type="button" class="category-tab-btn" data-filter="pani-puri">
+                1. Pani Puri &amp; Golgappa
+              </button>
+            </li>
+            <li>
+              <button type="button" class="category-tab-btn" data-filter="papdi-sev">
+                2. Papdi &amp; Sev Puri
+              </button>
+            </li>
+            <li>
+              <button type="button" class="category-tab-btn" data-filter="dahi-chaat">
+                3. Dahi Chaat
+              </button>
+            </li>
+            <li>
+              <button type="button" class="category-tab-btn" data-filter="bhel-snacks">
+                4. Bhel &amp; Street Snacks
+              </button>
+            </li>
+            <li>
+              <button type="button" class="category-tab-btn" data-filter="tikki-samosa">
+                5. Tikki &amp; Samosa Specials
+              </button>
+            </li>
+            <li>
+              <button type="button" class="category-tab-btn" data-filter="sandwiches">
+                6. Sandwiches &amp; Quick Bites
+              </button>
+            </li>
+            <li>
+              <button type="button" class="category-tab-btn" data-filter="beverages">
+                7. Beverages &amp; Refreshments
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="row g-4">
+          <!-- Menu Items Grid (Left 8 Columns on Large Screens) -->
+          <div class="col-lg-8">
+            <div id="menuNoResults" class="chaat-card mb-4" style="display:none;">
+              <div class="card-body-centered py-4">
+                <h3 class="card-title">No Matching Chaat Found</h3>
+                <p class="card-desc">Try searching for another street-food dish or click "All Items" above.</p>
+              </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch" id="menuItemsGrid">
+
+              <!-- ==================== CATEGORY 1: PANI PURI & GOLGAPPA ==================== -->
+              <div class="col-sm-6 menu-item-col" data-category="pani-puri" data-name="Classic Mumbai Pani Puri (8 Pcs)" data-desc="Crispy puris with warm ragda, boondi, spicy pudina pani and sweet khajoor imli water">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-shahbaz-ansari-283673909-13041629.jpg" alt="Classic Mumbai Pani Puri" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Pani Puri &amp; Golgappa</span>
+                    <h3 class="card-title">Classic Mumbai Pani Puri</h3>
+                    <p class="card-desc">8 crisp puris served with warm white-pea ragda, spiced boondi, fiery mint pani &amp; sweet tamarind water.</p>
+                    <div class="price-pill">₹60</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-pani-puri-classic" data-name="Classic Mumbai Pani Puri" data-price="60" data-category="Pani Puri & Golgappa">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="pani-puri" data-name="5-Flavour Golgappa Platter (10 Pcs)" data-desc="Suji and atta golgappas with Pudina, Hing Jeera, Khatta Meetha, Lehsuni and Raw Mango Pani">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-bank-12427783.jpg" alt="5-Flavour Golgappa Platter" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Pani Puri &amp; Golgappa</span>
+                    <h3 class="card-title">5-Flavour Golgappa Shots</h3>
+                    <p class="card-desc">10 crisp golgappas paired with 5 artisanal waters: Pudina, Hing-Jeera, Khatta-Meetha, Lehsuni &amp; Kairi Mango.</p>
+                    <div class="price-pill">₹95</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-golgappa-5flavour" data-name="5-Flavour Golgappa Shots" data-price="95" data-category="Pani Puri & Golgappa">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="pani-puri" data-name="Kolkata Masala Phuchka Ring (12 Pcs)" data-desc="Atta phuchkas stuffed with spiced potato black chana mash, gondhoraj lime and tangy tamarind dip">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-fahim-shizan-2152194768-34356403.jpg" alt="Kolkata Masala Phuchka Ring" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Pani Puri &amp; Golgappa</span>
+                    <h3 class="card-title">Kolkata Masala Phuchka Ring</h3>
+                    <p class="card-desc">12 whole-wheat phuchkas crowned with spiced potato-chana mash, grated masala toppings, and roasted chili tetul pani.</p>
+                    <div class="price-pill">₹120</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-kolkata-phuchka" data-name="Kolkata Masala Phuchka Ring" data-price="120" data-category="Pani Puri & Golgappa">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ==================== CATEGORY 2: PAPDI & SEV PURI ==================== -->
+              <div class="col-sm-6 menu-item-col" data-category="papdi-sev" data-name="Bombay Sev Batata Puri" data-desc="Flat crispy papdi topped with potato, onion, three chutneys, raw mango and golden nylon sev">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-ar-kay-768552413-34270741.jpg" alt="Bombay Sev Batata Puri" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Papdi &amp; Sev Puri</span>
+                    <h3 class="card-title">Bombay Sev Batata Puri</h3>
+                    <p class="card-desc">Crispy flat papdis layered with spiced potato cubes, red onions, garlic-chili, mint &amp; date chutneys under golden nylon sev.</p>
+                    <div class="price-pill">₹85</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-sev-puri" data-name="Bombay Sev Batata Puri" data-price="85" data-category="Papdi & Sev Puri">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="papdi-sev" data-name="Old Delhi Khasta Papdi Chaat" data-desc="Flaky wheat papdis with boiled chana, potato, chilled dahi, ginger juliennes and chaat masala">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/xbC78VmRZnBhQG_SKEiGNmrsyXmfx2dRmB3zWbIPnr7hSzdW62aNGRXEVeo1ExhwmV1vm5HHMIPrZ8b7PQR5eJMOC7obkCpJ_8sEJyOtGa8a22H3Kipi8Em70XZEDrUi_8hQy3xwc3YDh-yCPp3eFN57ML-IFgN3bH25XT1s-vljA.jpg" alt="Old Delhi Khasta Papdi Chaat" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Papdi &amp; Sev Puri</span>
+                    <h3 class="card-title">Old Delhi Khasta Papdi Chaat</h3>
+                    <p class="card-desc">Hand-rolled flaky papdis drizzled with whipped curd, tamarind-date glaze, green herb chutney, and pomegranate jewels.</p>
+                    <div class="price-pill">₹95</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-papdi-chaat" data-name="Old Delhi Khasta Papdi Chaat" data-price="95" data-category="Papdi & Sev Puri">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="papdi-sev" data-name="Katori Basket Tokri Chaat" data-desc="Edible crispy fried potato and flour baskets filled with sprouted moong, sweet corn, curd and sev">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/MVkGuQUyN8Plg-ycCucmHrI1yBel6SsJqooKCAj9J_sjkxaL-B-Dq-ad2OYZDBoRHFu8M5W2i-bqcu2ASZSkAk8lqG9Jtte2Tsiluq3IRxHxPdu3nmIYbUHFJU_pTrgzF68N4KDKLCUEPkknj-WvPXFmO0Rv_2MRx3YZGvxWXcW5F.jpg" alt="Katori Basket Tokri Chaat" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Papdi &amp; Sev Puri</span>
+                    <h3 class="card-title">Katori Basket Tokri Chaat</h3>
+                    <p class="card-desc">Crunchy edible tokri baskets brimming with spiced chickpeas, sweet corn, yogurt, anardana, and crispy sev.</p>
+                    <div class="price-pill">₹115</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-katori-chaat" data-name="Katori Basket Tokri Chaat" data-price="115" data-category="Papdi & Sev Puri">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ==================== CATEGORY 3: DAHI CHAAT ==================== -->
+              <div class="col-sm-6 menu-item-col" data-category="dahi-chaat" data-name="Signature Dahi Batata Puri" data-desc="Puffed puris filled with potato mash, chilled sweet yogurt, khajoor chutney and nylon sev">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-jahratreza-40000335.jpg" alt="Signature Dahi Batata Puri" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Dahi Chaat</span>
+                    <h3 class="card-title">Signature Dahi Batata Puri</h3>
+                    <p class="card-desc">Golden puris stuffed with potato-moong mash, flooded with velvety sweet dahi, tangy imli, mint chutney &amp; sev.</p>
+                    <div class="price-pill">₹90</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-dahi-puri" data-name="Signature Dahi Batata Puri" data-price="90" data-category="Dahi Chaat">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="dahi-chaat" data-name="Melt-in-Mouth Dahi Bhalla" data-desc="Soft urad dal lentil dumplings soaked in spiced yogurt with roasted cumin and tamarind glaze">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-drmkhawarnazir-9213253.jpg" alt="Melt-in-Mouth Dahi Bhalla" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Dahi Chaat</span>
+                    <h3 class="card-title">Melt-in-Mouth Dahi Bhalla</h3>
+                    <p class="card-desc">Pillow-soft urad dal vadas stuffed with raisins &amp; cashews, blanketed in chilled yogurt, roasted jeera, and red chili flakes.</p>
+                    <div class="price-pill">₹105</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-dahi-bhalla" data-name="Melt-in-Mouth Dahi Bhalla" data-price="105" data-category="Dahi Chaat">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="dahi-chaat" data-name="Shahi Raj Kachori" data-desc="Giant crispy kachori shell stuffed with bhalla, papdi, sprouts, dahi, dry fruits and pomegranate">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/1FA5ukAcjRFLpLVEwhuYg2YJ1Gj2EaIFlmtBxorapGz26Qr5bC7dvknw3NrGjL2lnKmPLfxerSw9vRgXx3YdVqNcL7AuVSTQFC4Cv4BE3xwW7lRWdrJSAfrt_bhezftt9qBFUr1I_8OEfD-whWRH34NpC_o6DwGXCLWdIAH-NPjjX.jpg" alt="Shahi Raj Kachori" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Dahi Chaat</span>
+                    <h3 class="card-title">Shahi Raj Kachori</h3>
+                    <p class="card-desc">The King of Chaats — a giant crisp kachori loaded with soft pakodis, sprouts, sweet curd, dual chutneys, and pomegranate.</p>
+                    <div class="price-pill">₹135</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-raj-kachori" data-name="Shahi Raj Kachori" data-price="135" data-category="Dahi Chaat">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ==================== CATEGORY 4: BHEL & STREET SNACKS ==================== -->
+              <div class="col-sm-6 menu-item-col" data-category="bhel-snacks" data-name="Chowpatty Geeli Bhel Puri" data-desc="Puffed rice tossed with farsan, papdi, peanuts, onions, raw mango and tangy chutneys">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-ar-kay-768552413-34270742.jpg" alt="Chowpatty Geeli Bhel Puri" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Bhel &amp; Street Snacks</span>
+                    <h3 class="card-title">Chowpatty Geeli Bhel Puri</h3>
+                    <p class="card-desc">Crisp murmura, roasted masala peanuts, crushed papdi, and Bombay farsan tossed fresh with mint &amp; imli chutneys.</p>
+                    <div class="price-pill">₹75</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-bhel-puri" data-name="Chowpatty Geeli Bhel Puri" data-price="75" data-category="Bhel & Street Snacks">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="bhel-snacks" data-name="Crispy Palak Patta Chaat" data-desc="Tempura battered spinach leaves topped with curd, tamarind, mint, boondi and sev">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-jahratreza-40000376.jpg" alt="Crispy Palak Patta Chaat" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Bhel &amp; Street Snacks</span>
+                    <h3 class="card-title">Crispy Palak Patta Chaat</h3>
+                    <p class="card-desc">Delicate baby spinach leaves fried in spiced besan batter until shatteringly crisp, drizzled with chilled dahi &amp; chutneys.</p>
+                    <div class="price-pill">₹110</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-palak-patta" data-name="Crispy Palak Patta Chaat" data-price="110" data-category="Bhel & Street Snacks">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="bhel-snacks" data-name="Garma Garam Mix Pakora Platter" data-desc="Crispy onion kanda bhaji, aloo pakora and mirchi vada with pudina chutney">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-ranjit-pradhan-943095-40047410.jpg" alt="Garma Garam Mix Pakora Platter" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Bhel &amp; Street Snacks</span>
+                    <h3 class="card-title">Garma Garam Mix Pakora Platter</h3>
+                    <p class="card-desc">Golden kanda bhajiya, potato pakoras, and stuffed green chili fritters sprinkled with special chaat masala.</p>
+                    <div class="price-pill">₹95</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-mix-pakora" data-name="Garma Garam Mix Pakora Platter" data-price="95" data-category="Bhel & Street Snacks">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ==================== CATEGORY 5: TIKKI & SAMOSA SPECIALS ==================== -->
+              <div class="col-sm-6 menu-item-col" data-category="tikki-samosa" data-name="Desi Ghee Aloo Tikki Chaat" data-desc="Crispy tawa-seared potato patties stuffed with peas and topped with chole, dahi and chutneys">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-dashingvinit-16171917.jpg" alt="Desi Ghee Aloo Tikki Chaat" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Tikki &amp; Samosa Specials</span>
+                    <h3 class="card-title">Desi Ghee Aloo Tikki Chaat</h3>
+                    <p class="card-desc">Double-seared potato patties cooked in pure desi ghee, topped with spiced ragda, sweet curd, imli, and ginger strips.</p>
+                    <div class="price-pill">₹110</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-aloo-tikki" data-name="Desi Ghee Aloo Tikki Chaat" data-price="110" data-category="Tikki & Samosa Specials">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="tikki-samosa" data-name="Punjabi Chole Samosa Chaat" data-desc="Crushed flaky samosa topped with Amritsari chole, yogurt, tamarind chutney, onions and sev">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/P3VWsokILeZRtD5yAozBwfzd5gYl6MTwSZZu7Xwmi2wbCNS2MEQLZSKUiYNj2_Wcqk2t7seY0xUNXIM3NFUXjq_YMaPiVvX9bPbRa9rZWzE8B6lT1e7ikdLCOBTV7hcvGJKvZcN68907XsZuyM6HmzTrqW7M5sR9WyrDn2SOW3Uq2.jpg" alt="Punjabi Chole Samosa Chaat" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Tikki &amp; Samosa Specials</span>
+                    <h3 class="card-title">Punjabi Chole Samosa Chaat</h3>
+                    <p class="card-desc">Two crisp Punjabi aloo-matar samosas crushed under simmering pindi chole, cool dahi, mint chutney, and pomegranate.</p>
+                    <div class="price-pill">₹105</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-samosa-chaat" data-name="Punjabi Chole Samosa Chaat" data-price="105" data-category="Tikki & Samosa Specials">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="tikki-samosa" data-name="Rajasthani Dal Kachori Chaat" data-desc="Flaky moong dal kachori broken and filled with ragda, sweet yogurt, garlic chutney and sev">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/2LRvcInyUxiqkA58JRrLjSsC3ExDYhsFy1AuvrnJv_vZ60h3prcJlNs04Z3OEWOWOirw0pIFU6Aw7auzO4mp-0rC1dXx_IYyGzMJD-2grkUWmn4Wiy_b9ij-R84UrCb6igQ58QjcLIhS7FxMguU78JRu_FCAX9BBFPAxPlkhm4W1o.jpg" alt="Rajasthani Dal Kachori Chaat" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Tikki &amp; Samosa Specials</span>
+                    <h3 class="card-title">Rajasthani Dal Kachori Chaat</h3>
+                    <p class="card-desc">Puffed moong-hing khasta kachori cracked open and loaded with hot aloo sabzi, sweetened curd, and sev.</p>
+                    <div class="price-pill">₹100</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-kachori-chaat" data-name="Rajasthani Dal Kachori Chaat" data-price="100" data-category="Tikki & Samosa Specials">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ==================== CATEGORY 6: SANDWICHES & QUICK BITES ==================== -->
+              <div class="col-sm-6 menu-item-col" data-category="sandwiches" data-name="Amchi Mumbai Vada Pav (2 Pcs)" data-desc="Buttered ladi pav stuffed with hot batata vada, dry red garlic lasun chutney and fried green chili">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/jzAX6vBcWSyMpxDztPuEAB-qyTEAQ8A5vJk9T-07F8U3Vv3ohxSgnnkbhSJkn2gqkwPsDfAilmo-3Avds8_4VEu03gjC0oz_xO1zwD49l-ruNnwpL6GgqEF4R1q-sJvdL2LzyVg553zweYP1xpHQHjNscCbjLze4W_up77NDkB5.jpg" alt="Amchi Mumbai Vada Pav & Misal Thali" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Sandwiches &amp; Quick Bites</span>
+                    <h3 class="card-title">Kolhapuri Misal Pav &amp; Vada</h3>
+                    <p class="card-desc">Spicy sprouted moth-bean usal topped with crunchy farsan, served with buttered ladi pav, buttermilk, and gulab jamun.</p>
+                    <div class="price-pill">₹140</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-misal-pav" data-name="Kolhapuri Misal Pav & Vada" data-price="140" data-category="Sandwiches & Quick Bites">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="sandwiches" data-name="Bombay Masala Cheese Grill Sandwich" data-desc="Triple decker toasted bread with spiced aloo mash, beetroot, cucumber, green chutney and Amul cheese">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/home2/pexels-pham-huynh-tuan-vy-903011268-36243530 (1).jpg" alt="Bombay Masala Cheese Grill Sandwich" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Sandwiches &amp; Quick Bites</span>
+                    <h3 class="card-title">Bombay Masala Cheese Grill</h3>
+                    <p class="card-desc">Triple-layer street toast loaded with spiced potato masala, cucumber, tomato, Indore jeeravan, and grated Amul cheese.</p>
+                    <div class="price-pill">₹125</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-bombay-sandwich" data-name="Bombay Masala Cheese Grill" data-price="125" data-category="Sandwiches & Quick Bites">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="sandwiches" data-name="Kutchi Dabeli Double (2 Pcs)" data-desc="Buttery pav stuffed with sweet and spicy Kutchi dabeli masala, roasted peanuts, pomegranate and sev">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-uniqueton-4722522.jpg" alt="Kutchi Dabeli & Street Snacks" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Sandwiches &amp; Quick Bites</span>
+                    <h3 class="card-title">Butter-Toasted Kutchi Dabeli</h3>
+                    <p class="card-desc">Two soft pavs stuffed with signature Kutchi potato masala, masala peanuts, ruby pomegranate, and rolled in nylon sev.</p>
+                    <div class="price-pill">₹85</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-kutchi-dabeli" data-name="Butter-Toasted Kutchi Dabeli" data-price="85" data-category="Sandwiches & Quick Bites">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ==================== CATEGORY 7: BEVERAGES & REFRESHMENTS ==================== -->
+              <div class="col-sm-6 menu-item-col" data-category="beverages" data-name="Pudina Masala Chaas & Boondi" data-desc="Chilled churned buttermilk spiced with roasted cumin, black salt, fresh mint and crispy boondi">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/jzAX6vBcWSyMpxDztPuEAB-qyTEAQ8A5vJk9T-07F8U3Vv3ohxSgnnkbhSJkn2gqkwPsDfAilmo-3Avds8_4VEu03gjC0oz_xO1zwD49l-ruNnwpL6GgqEF4R1q-sJvdL2LzyVg553zweYP1xpHQHjNscCbjLze4W_up77NDkB5.jpg" alt="Pudina Masala Chaas with Boondi" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Beverages &amp; Refreshments</span>
+                    <h3 class="card-title">Spiced Boondi Masala Chaas</h3>
+                    <p class="card-desc">Tall chilled glass of hand-churned buttermilk tempered with roasted jeera, kala namak, coriander, and crunchy boondi.</p>
+                    <div class="price-pill">₹55</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-masala-chaas" data-name="Spiced Boondi Masala Chaas" data-price="55" data-category="Beverages & Refreshments">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="beverages" data-name="Earthen Kulhad Kesariya Lassi" data-desc="Thick Punjabi sweet yogurt lassi topped with malai, saffron strands, pistachio and rose petals">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-shahbaz-ansari-283673909-13063315.jpg" alt="Earthen Kulhad Kesariya Lassi & Refreshments" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Beverages &amp; Refreshments</span>
+                    <h3 class="card-title">Kulhad Kesariya Malai Lassi</h3>
+                    <p class="card-desc">Rich, creamy Punjabi lassi served in a clay kulhad, crowned with fresh malai, saffron strands, and crushed pistachios.</p>
+                    <div class="price-pill">₹80</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-kulhad-lassi" data-name="Kulhad Kesariya Malai Lassi" data-price="80" data-category="Beverages & Refreshments">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-sm-6 menu-item-col" data-category="beverages" data-name="Nimbu Pudina Masala Shikanji" data-desc="Refreshing Indian street-style spiced lemonade with mint, ginger, black salt and jaljeera">
+                <article class="chaat-card">
+                  <div class="card-img-wrap">
+                    <img src="image/pexels-aditya-mara-425995080-17223836.jpg" alt="Nimbu Pudina Masala Shikanji" />
+                  </div>
+                  <div class="card-body-centered">
+                    <span class="veg-badge"><span class="veg-icon-box"></span> 100% Veg · Beverages &amp; Refreshments</span>
+                    <h3 class="card-title">Nimbu Pudina Masala Shikanji</h3>
+                    <p class="card-desc">Zesty street-style sparkling lemonade muddled with fresh mint leaves, ginger juice, black salt, and roasted cumin.</p>
+                    <div class="price-pill">₹65</div>
+                  </div>
+                  <div class="card-footer-action">
+                    <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="m-masala-shikanji" data-name="Nimbu Pudina Masala Shikanji" data-price="65" data-category="Beverages & Refreshments">
+                      <i data-lucide="plus-circle" style="width:18px;height:18px;"></i>
+                      <span>Add to Order</span>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Interactive Order Summary Sidebar (Right 4 Columns on Large Screens) -->
+          <div class="col-lg-4">
+            <aside class="order-summary-card sticky-lg-top" id="orderSummaryBox" style="top: 100px;">
+              <span class="kicker-badge badge-red">Live Order Tray</span>
+              <h2 class="card-title mb-1">Your Chaat Order</h2>
+              <p class="small text-muted mb-2" id="orderSummaryCount">0 Items</p>
+              <div class="spice-divider mb-3"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
+
+              <div id="orderEmptyMessage" class="py-3">
+                <p class="card-desc mb-0">
+                  Your order tray is currently empty. Click <strong>"Add to Order"</strong> on any chaat item to build your WhatsApp order!
+                </p>
+              </div>
+
+              <ul class="order-items-list" id="orderSummaryList" aria-live="polite"></ul>
+
+              <div class="p-3 rounded-3 mb-3" style="background: var(--warm-cream); border: 1.5px solid var(--mango-yellow);">
+                <div class="d-flex justify-content-center align-items-center gap-2">
+                  <span class="fw-bold">Estimated Total:</span>
+                  <strong class="fs-4 text-danger" id="orderSummaryTotal">₹0</strong>
+                </div>
+                <span class="d-block small text-muted mt-1">(Editable Sample Menu Pricing)</span>
+              </div>
+
+              <div class="d-flex flex-column align-items-center gap-2">
+                <a
+                  href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20place%20an%20order."
+                  target="_blank"
+                  rel="noopener"
+                  class="btn-chaat btn-chaat-whatsapp w-100 js-whatsapp-cart-link"
+                >
+                  <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+                  <span>Send Order on WhatsApp</span>
+                </a>
+
+                <button type="button" id="clearOrderBtn" class="btn-chaat btn-chaat-outline w-100" style="display:none;">
+                  <i data-lucide="trash-2" style="width:16px;height:16px;"></i>
+                  <span>Clear Order Tray</span>
+                </button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CATERING CTA BANNER ON MENU PAGE
+         ====================================================================== -->
+    <section class="section-pad pt-0">
+      <div class="container">
+        <div class="cta-banner-box" data-aos="zoom-in">
+          <span class="kicker-badge">Ordering for 25+ Guests?</span>
+          <h2 class="section-title">Book Our Live Chaat Counters!</h2>
+          <p>
+            Planning a birthday, wedding, or office celebration? We bring live Pani Puri, Aloo Tikki, and Bhel stations straight to your venue.
+          </p>
+          <div class="btn-group-centered">
+            <a href="catering.html" class="btn-chaat btn-chaat-secondary">
+              <i data-lucide="party-popper" style="width:18px;height:18px;"></i>
+              <span>Explore Catering Packages</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       PREMIUM COLORFUL FOOTER (Logo links to Home)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 footer-col">
+          <a href="index.html" class="footer-logo-link" aria-label="Chaat Adda Home">
+            <img src="assets/logo.svg" alt="Chaat Adda Logo" width="190" height="46" />
+          </a>
+          <p class="small mb-2">
+            <strong>Every Bite Has a Story!</strong> Celebrating India's vibrant street-food heritage with freshly prepared chaats, artisanal chutneys, and 100% hygienic preparation.
+          </p>
+          <div class="social-icons-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Subscribe to Chaat Adda on YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 – About Chaat Adda</a></li>
+            <li><a href="home2.html">Home 2 – Street Food Corner</a></li>
+            <li><a href="menu.html">Full Street Food Menu</a></li>
+            <li><a href="catering.html">Event &amp; Wedding Catering</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Popular Chaats</h3>
+          <ul class="footer-links-list">
+            <li><a href="menu.html?cat=pani-puri">Pani Puri &amp; Golgappa</a></li>
+            <li><a href="menu.html?cat=papdi-sev">Bombay Sev Puri &amp; Papdi</a></li>
+            <li><a href="menu.html?cat=dahi-chaat">Dahi Puri &amp; Dahi Bhalla</a></li>
+            <li><a href="menu.html?cat=tikki-samosa">Desi Ghee Aloo Tikki Chaat</a></li>
+            <li><a href="menu.html?cat=beverages">Kulhad Lassi &amp; Masala Chai</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Visit &amp; Contact</h3>
+          <ul class="footer-links-list">
+            <li><span>Shop 14, Spice Bazaar Promenade, Sample Food Street (Editable Sample Address)</span></li>
+            <li><a href="tel:+919876543210">Phone: +91 98765 43210</a></li>
+            <li><a href="mailto:hello@chaatadda.com">Email: hello@chaatadda.com</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp: +91 98765 43210</a></li>
+            <li><strong class="text-warning">Hours: Mon – Sun, 11:30 AM – 11:00 PM</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 <strong>Chaat Adda</strong> – Every Bite Has a Story! All Rights Reserved. | 100% Vegetarian Street Food &amp; Chaat.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

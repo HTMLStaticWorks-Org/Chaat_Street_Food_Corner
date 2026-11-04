@@ -1,0 +1,1598 @@
+/* ==========================================================================
+   CHAAT ADDA – INDIAN STREET FOOD & CHAAT RESTAURANT
+   Design Direction: Vibrant Indian Street Food × Modern Restaurant Branding
+   Palette:
+   - Chili Red:    #D92D20
+   - Mango Yellow: #FFC83D
+   - Warm Cream:   #FFF5E6
+   - Deep Brown:   #38251D
+   - Fresh Green:  #4B8B43
+   - White:        #FFFFFF
+   ========================================================================== */
+
+:root {
+  --chili-red: #D92D20;
+  --chili-red-dark: #B42318;
+  --chili-red-soft: rgba(217, 45, 32, 0.1);
+  --mango-yellow: #FFC83D;
+  --mango-yellow-dark: #E5AC1F;
+  --mango-yellow-soft: rgba(255, 200, 61, 0.22);
+  --warm-cream: #FFF5E6;
+  --warm-cream-deep: #FDE8C8;
+  --deep-brown: #38251D;
+  --deep-brown-soft: #5E4337;
+  --fresh-green: #4B8B43;
+  --fresh-green-soft: rgba(75, 139, 67, 0.14);
+  --white: #FFFFFF;
+  --border-warm: rgba(56, 37, 29, 0.12);
+  --shadow-sm: 0 6px 18px rgba(56, 37, 29, 0.07);
+  --shadow-md: 0 14px 34px rgba(56, 37, 29, 0.11);
+  --shadow-lg: 0 22px 48px rgba(56, 37, 29, 0.16);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --header-height: 82px;
+  --transition-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color-scheme: light;
+}
+
+/* Preserve brand palette regardless of OS light/dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--warm-cream);
+  color: var(--deep-brown);
+  line-height: 1.65;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent horizontal overflow on all sections and containers */
+section,
+header,
+footer,
+main {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--deep-brown);
+  text-decoration: none;
+  transition: var(--transition-base);
+}
+
+a:hover {
+  color: var(--chili-red);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY & STRICT ALIGNMENT RULES
+   Center all H1 headings, subheadings, card headings, links and buttons.
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  color: var(--deep-brown);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 0;
+  text-align: center;
+}
+
+h1,
+.hero-title {
+  font-size: clamp(2.1rem, 4.2vw, 3.75rem);
+  letter-spacing: -0.02em;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2,
+.section-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  letter-spacing: -0.015em;
+  text-align: center !important;
+  margin-bottom: 0.75rem;
+}
+
+h3,
+.card-title {
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  text-align: center !important;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle,
+.section-subtitle,
+.subheading {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.35vw, 1.18rem);
+  color: var(--deep-brown-soft);
+  max-width: 680px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  font-weight: 500;
+}
+
+.kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--mango-yellow);
+  color: var(--deep-brown);
+  font-weight: 800;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 200, 61, 0.35);
+  border: 1.5px solid rgba(56, 37, 29, 0.15);
+  text-align: center;
+}
+
+.kicker-badge.badge-red {
+  background: var(--chili-red);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.kicker-badge.badge-green {
+  background: var(--fresh-green);
+  color: var(--white);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Decorative Indian Truck-Art / Spice Divider */
+.spice-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.75rem auto 0;
+}
+
+.spice-divider span {
+  display: inline-block;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.spice-divider .line-red {
+  width: 36px;
+  background: var(--chili-red);
+}
+
+.spice-divider .dot-yellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--mango-yellow);
+  border: 2px solid var(--deep-brown);
+}
+
+.spice-divider .line-green {
+  width: 36px;
+  background: var(--fresh-green);
+}
+
+/* ==========================================================================
+   BUTTONS (All centered, smooth hover transitions)
+   ========================================================================== */
+
+.btn-chaat,
+.btn-chaat-primary,
+.btn-chaat-secondary,
+.btn-chaat-whatsapp,
+.btn-chaat-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 0.82rem 1.65rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center !important;
+  transition: var(--transition-base);
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.btn-chaat-primary {
+  background: var(--chili-red);
+  color: var(--white) !important;
+  border-color: var(--chili-red);
+  box-shadow: 0 8px 20px rgba(217, 45, 32, 0.28);
+}
+
+.btn-chaat-primary:hover,
+.btn-chaat-primary:focus {
+  background: var(--chili-red-dark);
+  border-color: var(--chili-red-dark);
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(217, 45, 32, 0.38);
+}
+
+.btn-chaat-secondary {
+  background: var(--mango-yellow);
+  color: var(--deep-brown) !important;
+  border-color: var(--deep-brown);
+  box-shadow: 0 6px 16px rgba(255, 200, 61, 0.35);
+}
+
+.btn-chaat-secondary:hover,
+.btn-chaat-secondary:focus {
+  background: #ffd463;
+  color: var(--deep-brown) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 200, 61, 0.5);
+}
+
+.btn-chaat-whatsapp {
+  background: var(--fresh-green);
+  color: var(--white) !important;
+  border-color: var(--fresh-green);
+  box-shadow: 0 8px 20px rgba(75, 139, 67, 0.28);
+}
+
+.btn-chaat-whatsapp:hover,
+.btn-chaat-whatsapp:focus {
+  background: #3b7134;
+  border-color: #3b7134;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(75, 139, 67, 0.38);
+}
+
+.btn-chaat-outline {
+  background: var(--white);
+  color: var(--deep-brown) !important;
+  border-color: var(--deep-brown);
+}
+
+.btn-chaat-outline:hover,
+.btn-chaat-outline:focus {
+  background: var(--mango-yellow);
+  color: var(--deep-brown) !important;
+  transform: translateY(-2px);
+}
+
+.btn-group-centered {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* ==========================================================================
+   STICKY HEADER & NAVIGATION
+   Strict Requirements at 360px, 768px and 1024px:
+   - Show ONLY logo and hamburger in the header.
+   - Keep all other navigation elements inside the hamburger menu.
+   - Align logo and hamburger on the same horizontal row.
+   - Ensure the hamburger is positioned at the right corner.
+   ========================================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1050;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  background-color: rgba(255, 245, 230, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid rgba(56, 37, 29, 0.1);
+}
+
+.site-header.header-transparent:not(.scrolled) {
+  background-color: rgba(255, 245, 230, 0.82);
+  border-bottom-color: rgba(56, 37, 29, 0.08);
+}
+
+.site-header.scrolled {
+  background-color: #FFF5E6;
+  box-shadow: 0 10px 30px rgba(56, 37, 29, 0.12);
+  border-bottom: 2px solid var(--mango-yellow);
+}
+
+.header-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 54px;
+}
+
+.brand-logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Desktop Navigation (Only visible > 1024px) */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav .nav-link-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.05rem;
+  font-weight: 700;
+  font-size: 0.96rem;
+  color: var(--deep-brown);
+  border-radius: var(--radius-pill);
+  text-align: center;
+  position: relative;
+  transition: var(--transition-base);
+}
+
+.desktop-nav .nav-link-item:hover {
+  color: var(--chili-red);
+  background-color: rgba(255, 200, 61, 0.25);
+}
+
+.desktop-nav .nav-link-item.active {
+  background-color: var(--chili-red);
+  color: var(--white) !important;
+  box-shadow: 0 4px 12px rgba(217, 45, 32, 0.28);
+}
+
+.desktop-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.header-cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: var(--mango-yellow);
+  color: var(--deep-brown);
+  border: 2px solid var(--deep-brown);
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.header-cart-btn:hover {
+  background: var(--chili-red);
+  color: var(--white);
+  border-color: var(--chili-red);
+}
+
+.cart-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 50%;
+  background: var(--chili-red);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* Hamburger Toggle Button */
+.hamburger-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--mango-yellow);
+  color: var(--deep-brown);
+  border: 2px solid var(--deep-brown);
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  flex-shrink: 0;
+  transition: var(--transition-base);
+}
+
+.hamburger-btn:hover,
+.hamburger-btn:focus {
+  background: var(--chili-red);
+  color: var(--white);
+  border-color: var(--chili-red);
+}
+
+.hamburger-lines {
+  width: 22px;
+  height: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-lines span {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: currentColor;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-lines span:nth-child(1) {
+  transform: translateY(6.75px) rotate(45deg);
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-lines span:nth-child(3) {
+  transform: translateY(-6.75px) rotate(-45deg);
+}
+
+/* Mobile / Tablet Hamburger Drawer (Used at 360px, 768px, 1024px) */
+.mobile-menu-drawer {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background: var(--warm-cream);
+  border-bottom: 3px solid var(--chili-red);
+  box-shadow: 0 20px 40px rgba(56, 37, 29, 0.22);
+  padding: 1.5rem 1.25rem 2rem;
+  z-index: 1045;
+  transform: translateY(-120%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease, visibility 0.35s;
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+}
+
+.mobile-menu-drawer.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  margin: 0 0 1.25rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.mobile-nav-list li {
+  width: 100%;
+  max-width: 340px;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.78rem 1.2rem;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--deep-brown);
+  background: var(--white);
+  border: 1.5px solid rgba(56, 37, 29, 0.12);
+  text-align: center;
+}
+
+.mobile-nav-link.active,
+.mobile-nav-link:hover {
+  background: var(--chili-red);
+  color: var(--white) !important;
+  border-color: var(--chili-red);
+}
+
+.mobile-drawer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.mobile-drawer-actions .btn-chaat-whatsapp,
+.mobile-drawer-actions .btn-chaat-secondary {
+  width: 100%;
+}
+
+/* Strict Breakpoint Rule: At 360px, 768px and 1024px show ONLY logo and hamburger in header */
+@media (max-width: 1024.98px) {
+  .desktop-nav,
+  .desktop-header-actions {
+    display: none !important;
+  }
+
+  .hamburger-btn {
+    display: inline-flex !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mobile-menu-drawer {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   HERO SECTIONS
+   ========================================================================== */
+
+.hero-section {
+  padding-top: calc(var(--header-height) + 2.75rem);
+  padding-bottom: 4.5rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 200, 61, 0.32), transparent 38%),
+    radial-gradient(circle at 88% 22%, rgba(217, 45, 32, 0.14), transparent 40%),
+    linear-gradient(180deg, #FFF5E6 0%, #FDEBD0 100%);
+  border-bottom: 3px solid var(--mango-yellow);
+}
+
+.hero-street-corner {
+  background:
+    radial-gradient(circle at 85% 15%, rgba(255, 200, 61, 0.38), transparent 42%),
+    radial-gradient(circle at 15% 80%, rgba(75, 139, 67, 0.16), transparent 38%),
+    linear-gradient(180deg, #FFF5E6 0%, #FFE8C2 100%);
+}
+
+.page-hero {
+  padding-top: calc(var(--header-height) + 2.5rem);
+  padding-bottom: 3.25rem;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 200, 61, 0.35), transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(217, 45, 32, 0.14), transparent 45%),
+    linear-gradient(180deg, #FFF5E6 0%, #FDE8C9 100%);
+  border-bottom: 3px solid var(--mango-yellow);
+  text-align: center;
+}
+
+.hero-content-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-visual-wrap {
+  position: relative;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero-main-frame {
+  background: radial-gradient(circle, #FFFFFF 0%, #FFF5E6 100%);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  border: 4px solid var(--mango-yellow);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-main-frame img {
+  width: 100%;
+  height: 390px;
+  object-fit: contain;
+  border-radius: calc(var(--radius-lg) - 8px);
+  background-color: #FFF5E6;
+  transition: transform 0.5s ease;
+}
+
+.hero-main-frame:hover img {
+  transform: scale(1.03);
+}
+
+/* Floating Spice & Street Food Badges */
+.floating-spice-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: var(--white);
+  color: var(--deep-brown);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--mango-yellow);
+}
+
+.hero-Quick-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+  width: 100%;
+}
+
+/* Marquee / Spice Ribbon */
+.spice-ribbon {
+  background: var(--deep-brown);
+  color: var(--mango-yellow);
+  padding: 0.75rem 1rem;
+  border-bottom: 3px solid var(--chili-red);
+}
+
+.spice-ribbon-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.spice-ribbon-list li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+/* ==========================================================================
+   SECTIONS & CARDS (Consistent Dimensions + Uncropped Images)
+   ========================================================================== */
+
+.section-pad {
+  padding: 4.5rem 0;
+  position: relative;
+}
+
+.section-pad-sm {
+  padding: 3.25rem 0;
+}
+
+.bg-cream-alt {
+  background-color: var(--warm-cream-deep);
+}
+
+.bg-white-warm {
+  background-color: var(--white);
+}
+
+.bg-brown-festive {
+  background: linear-gradient(135deg, #38251D 0%, #261812 100%);
+  color: var(--warm-cream);
+}
+
+.bg-brown-festive h2,
+.bg-brown-festive h3,
+.bg-brown-festive h4,
+.bg-brown-festive .section-title {
+  color: var(--warm-cream);
+}
+
+.bg-brown-festive .section-subtitle {
+  color: rgba(255, 245, 230, 0.84);
+}
+
+/* Universal Chaat Card */
+.chaat-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(56, 37, 29, 0.1);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.chaat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--mango-yellow);
+}
+
+/* Uncropped Food Image Container (object-fit: contain + consistent height) */
+.card-img-wrap {
+  width: 100%;
+  height: 220px;
+  border-radius: calc(var(--radius-md) - 6px);
+  background: radial-gradient(circle at center, #FFFDF9 0%, #FFF0D6 100%);
+  border: 1.5px solid rgba(255, 200, 61, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 1.15rem;
+  padding: 0.5rem;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center;
+  border-radius: 10px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.chaat-card:hover .card-img-wrap img {
+  transform: scale(1.06);
+}
+
+/* Veg Indicator & Price Tag */
+.veg-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  background: var(--fresh-green-soft);
+  color: var(--fresh-green);
+  font-size: 0.76rem;
+  font-weight: 800;
+  margin-bottom: 0.55rem;
+}
+
+.veg-icon-box {
+  width: 14px;
+  height: 14px;
+  border: 1.8px solid var(--fresh-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.veg-icon-box::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--fresh-green);
+}
+
+.price-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mango-yellow-soft);
+  color: var(--chili-red);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding: 0.3rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--mango-yellow);
+  margin: 0.55rem 0 0.9rem;
+}
+
+.card-body-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.card-desc {
+  color: var(--deep-brown-soft);
+  font-size: 0.94rem;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+
+.card-footer-action {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card-footer-action .btn-chaat {
+  width: 100%;
+}
+
+/* Feature / Why Choose Us Icon Box */
+.feature-icon-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--mango-yellow) 0%, #FFE28A 100%);
+  color: var(--chili-red);
+  border: 2px solid var(--deep-brown);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 8px 18px rgba(255, 200, 61, 0.35);
+}
+
+.feature-icon-circle svg {
+  width: 32px;
+  height: 32px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   MENU PAGE – FILTER TABS, SEARCH & ORDER DRAWER
+   ========================================================================== */
+
+.menu-controls-wrap {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 2px solid rgba(56, 37, 29, 0.1);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.menu-search-box {
+  max-width: 520px;
+  margin: 0 auto 1.25rem;
+  position: relative;
+}
+
+.menu-search-input {
+  width: 100%;
+  padding: 0.85rem 1.25rem 0.85rem 2.85rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid rgba(56, 37, 29, 0.2);
+  background: var(--warm-cream);
+  color: var(--deep-brown);
+  font-family: var(--font-sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+.menu-search-input:focus {
+  outline: none;
+  border-color: var(--chili-red);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(217, 45, 32, 0.12);
+}
+
+.menu-search-icon {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--chili-red);
+  pointer-events: none;
+}
+
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.62rem 1.15rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(56, 37, 29, 0.18);
+  background: var(--warm-cream);
+  color: var(--deep-brown);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-align: center;
+}
+
+.category-tab-btn:hover {
+  background: var(--mango-yellow);
+  border-color: var(--deep-brown);
+}
+
+.category-tab-btn.active {
+  background: var(--chili-red);
+  color: var(--white);
+  border-color: var(--chili-red);
+  box-shadow: 0 6px 16px rgba(217, 45, 32, 0.3);
+}
+
+/* Sticky Order Summary Card on Menu Page */
+.order-summary-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 3px solid var(--mango-yellow);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.order-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.order-item-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.75rem;
+  border-bottom: 1px dashed rgba(56, 37, 29, 0.16);
+  text-align: center;
+}
+
+.qty-controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--warm-cream);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(56, 37, 29, 0.15);
+}
+
+.qty-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: var(--mango-yellow);
+  color: var(--deep-brown);
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover {
+  background: var(--chili-red);
+  color: var(--white);
+}
+
+/* ==========================================================================
+   FORMS (Catering Enquiry & Contact Form)
+   ========================================================================== */
+
+.chaat-form-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 2.5px solid var(--mango-yellow);
+  box-shadow: var(--shadow-md);
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+}
+
+.form-label-centered {
+  display: block;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--deep-brown);
+  margin-bottom: 0.45rem;
+  text-align: center;
+}
+
+.chaat-input,
+.chaat-select,
+.chaat-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.8px solid rgba(56, 37, 29, 0.2);
+  background: var(--warm-cream);
+  color: var(--deep-brown);
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+.chaat-input:focus,
+.chaat-select:focus,
+.chaat-textarea:focus {
+  outline: none;
+  border-color: var(--chili-red);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(217, 45, 32, 0.12);
+}
+
+.chaat-input.is-invalid,
+.chaat-select.is-invalid,
+.chaat-textarea.is-invalid {
+  border-color: var(--chili-red);
+  background: #FFF0EF;
+}
+
+.field-error-msg {
+  color: var(--chili-red);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+  display: none;
+  text-align: center;
+}
+
+.field-error-msg.visible {
+  display: block;
+}
+
+.form-status-box {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  margin-top: 1.25rem;
+  display: none;
+  text-align: center;
+}
+
+.form-status-box.success {
+  display: block;
+  background: var(--fresh-green-soft);
+  color: #265321;
+  border: 2px solid var(--fresh-green);
+}
+
+/* ==========================================================================
+   TESTIMONIAL & GALLERY STYLES
+   ========================================================================== */
+
+.stars-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  color: #F59E0B;
+  margin-bottom: 0.75rem;
+}
+
+.cta-banner-box {
+  background: linear-gradient(135deg, var(--chili-red) 0%, #9E1C13 100%);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2rem;
+  border: 4px solid var(--mango-yellow);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner-box h2 {
+  color: var(--white) !important;
+}
+
+.cta-banner-box p {
+  color: rgba(255, 245, 230, 0.92);
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer {
+  background: #2B1B15;
+  color: var(--warm-cream);
+  padding: 4rem 0 2rem;
+  border-top: 5px solid var(--mango-yellow);
+  text-align: center;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--warm-cream);
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--mango-yellow);
+  margin-bottom: 1rem;
+}
+
+.footer-logo-link img {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-heading {
+  color: var(--mango-yellow) !important;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center !important;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.footer-links-list a {
+  color: rgba(255, 245, 230, 0.85);
+  font-weight: 600;
+  text-align: center;
+}
+
+.footer-links-list a:hover {
+  color: var(--mango-yellow);
+}
+
+.social-icons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.social-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 245, 230, 0.1);
+  color: var(--mango-yellow) !important;
+  border: 1.5px solid var(--mango-yellow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-base);
+}
+
+.social-icon-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.social-icon-btn:hover {
+  background: var(--chili-red);
+  color: var(--white) !important;
+  border-color: var(--chili-red);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 245, 230, 0.14);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 245, 230, 0.75);
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION & REDUCED MOTION
+   ========================================================================== */
+
+.chaat-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--deep-brown);
+  color: var(--warm-cream);
+  border: 2px solid var(--mango-yellow);
+  padding: 0.9rem 1.35rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-lg);
+  font-weight: 700;
+  z-index: 2000;
+  transform: translateY(150%);
+  opacity: 0;
+  transition: var(--transition-base);
+  text-align: center;
+}
+
+.chaat-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  .section-pad {
+    padding: 3.25rem 0;
+  }
+
+  .hero-main-frame img {
+    height: 270px;
+  }
+
+  .card-img-wrap {
+    height: 200px;
+  }
+
+  .chaat-toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   THEME TOGGLE (LIGHT / DARK) & RTL TOGGLE BUTTONS + DARK / RTL MODES
+   ========================================================================== */
+
+.header-utility-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+  height: 40px;
+  padding: 0 0.85rem;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--deep-brown);
+  border: 2px solid var(--deep-brown);
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.header-utility-btn svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.header-utility-btn:hover,
+.header-utility-btn:focus {
+  background: var(--mango-yellow);
+  color: var(--deep-brown);
+  border-color: var(--deep-brown);
+  transform: translateY(-2px);
+}
+
+.header-utility-btn.is-active {
+  background: var(--chili-red);
+  color: var(--white);
+  border-color: var(--chili-red);
+}
+
+.mobile-utility-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.mobile-utility-row .header-utility-btn {
+  flex: 1;
+  height: 44px;
+  font-size: 0.9rem;
+}
+
+/* Warm Indian Night Market Dark Theme */
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+  background-color: #1D120E;
+  color: #FFF5E6;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .hero-title,
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .form-label-centered {
+  color: #FFF5E6;
+}
+
+html[data-theme="dark"] .hero-subtitle,
+html[data-theme="dark"] .section-subtitle,
+html[data-theme="dark"] .card-desc,
+html[data-theme="dark"] .text-muted {
+  color: rgba(255, 245, 230, 0.8) !important;
+}
+
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .site-header.header-transparent:not(.scrolled),
+html[data-theme="dark"] .site-header.scrolled {
+  background-color: rgba(29, 18, 14, 0.96);
+  border-bottom-color: var(--mango-yellow);
+}
+
+html[data-theme="dark"] .brand-logo,
+html[data-theme="dark"] .footer-logo-link {
+  background: #FFF5E6;
+  padding: 0.3rem 0.75rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--mango-yellow);
+}
+
+html[data-theme="dark"] .desktop-nav .nav-link-item {
+  color: #FFF5E6;
+}
+
+html[data-theme="dark"] .desktop-nav .nav-link-item:hover {
+  color: var(--mango-yellow);
+  background-color: rgba(255, 200, 61, 0.15);
+}
+
+html[data-theme="dark"] .mobile-menu-drawer {
+  background: #251712;
+  border-bottom-color: var(--mango-yellow);
+}
+
+html[data-theme="dark"] .mobile-nav-link {
+  background: #322019;
+  color: #FFF5E6;
+  border-color: rgba(255, 200, 61, 0.25);
+}
+
+html[data-theme="dark"] .hero-section,
+html[data-theme="dark"] .hero-street-corner,
+html[data-theme="dark"] .page-hero {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 200, 61, 0.16), transparent 42%),
+    radial-gradient(circle at 82% 25%, rgba(217, 45, 32, 0.2), transparent 42%),
+    linear-gradient(180deg, #1D120E 0%, #2A1A14 100%);
+}
+
+html[data-theme="dark"] .bg-white-warm {
+  background-color: #241611;
+}
+
+html[data-theme="dark"] .bg-cream-alt {
+  background-color: #190F0C;
+}
+
+html[data-theme="dark"] .chaat-card,
+html[data-theme="dark"] .menu-controls-wrap,
+html[data-theme="dark"] .order-summary-card,
+html[data-theme="dark"] .chaat-form-card {
+  background: #2C1C16;
+  border-color: rgba(255, 200, 61, 0.28);
+  color: #FFF5E6;
+}
+
+html[data-theme="dark"] .card-img-wrap,
+html[data-theme="dark"] .hero-main-frame {
+  background: radial-gradient(circle at center, #3A251D 0%, #241611 100%);
+  border-color: rgba(255, 200, 61, 0.45);
+}
+
+html[data-theme="dark"] .hero-main-frame img {
+  background-color: #241611;
+}
+
+html[data-theme="dark"] .floating-spice-pill,
+html[data-theme="dark"] .category-tab-btn,
+html[data-theme="dark"] .header-utility-btn {
+  background: #36221B;
+  color: #FFF5E6;
+  border-color: var(--mango-yellow);
+}
+
+html[data-theme="dark"] .category-tab-btn.active,
+html[data-theme="dark"] .header-utility-btn.is-active {
+  background: var(--chili-red);
+  color: var(--white);
+  border-color: var(--chili-red);
+}
+
+html[data-theme="dark"] .chaat-input,
+html[data-theme="dark"] .chaat-select,
+html[data-theme="dark"] .chaat-textarea,
+html[data-theme="dark"] .menu-search-input {
+  background: #1D120E;
+  color: #FFF5E6;
+  border-color: rgba(255, 200, 61, 0.35);
+}
+
+html[data-theme="dark"] .qty-controls {
+  background: #1D120E;
+  border-color: rgba(255, 200, 61, 0.3);
+}
+
+html[data-theme="dark"] .price-pill {
+  background: rgba(255, 200, 61, 0.18);
+  color: var(--mango-yellow);
+}
+
+/* RTL Layout Support */
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+/* Keep sticky header logo on left and hamburger on right corner at all breakpoints */
+html[dir="rtl"] .header-container {
+  direction: ltr;
+}
+
+html[dir="rtl"] .desktop-nav {
+  direction: rtl;
+}
+
+html[dir="rtl"] .menu-search-icon {
+  left: auto;
+  right: 1.1rem;
+}
+
+html[dir="rtl"] .menu-search-input {
+  padding: 0.85rem 2.85rem 0.85rem 1.25rem;
+}
+
+

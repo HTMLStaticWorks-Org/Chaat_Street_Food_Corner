@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 68" width="280" height="68" role="img" aria-label="Chaat Adda Logo">
+  <defs>
+    <linearGradient id="logoRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D92D20"/>
+      <stop offset="100%" stop-color="#B42318"/>
+    </linearGradient>
+    <linearGradient id="logoMango" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE07D"/>
+      <stop offset="100%" stop-color="#FFC83D"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon Group: Indian Street Food Cart + Chaat Bowl + Golgappa -->
+  <g transform="translate(2, 2)">
+    <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#logoRed)" stroke="#FFC83D" stroke-width="2.5"/>
+    <!-- Cart Canopy -->
+    <path d="M11 21 L53 21 L48 11 L16 11 Z" fill="url(#logoMango)"/>
+    <path d="M11 21 Q16.25 25 21.5 21 Q26.75 25 32 21 Q37.25 25 42.5 21 Q47.75 25 53 21" fill="none" stroke="#FFF5E6" stroke-width="2" stroke-linecap="round"/>
+    <!-- Support Pillars -->
+    <line x1="15" y1="22" x2="15" y2="38" stroke="#FFF5E6" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="49" y1="22" x2="49" y2="38" stroke="#FFF5E6" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Golgappa / Puri with Mint & Sev -->
+    <circle cx="32" cy="31" r="8.5" fill="#FFF5E6" stroke="#FFC83D" stroke-width="2"/>
+    <path d="M27 30 Q32 26 37 30" fill="none" stroke="#4B8B43" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="32" cy="33" r="2" fill="#D92D20"/>
+    <!-- Chaat Bowl / Cart Body -->
+    <path d="M13 37 C13 46.5 21 50.5 32 50.5 C43 50.5 51 46.5 51 37 Z" fill="url(#logoMango)"/>
+    <!-- Cart Wheels -->
+    <circle cx="21" cy="52" r="4.2" fill="#38251D" stroke="#FFF5E6" stroke-width="1.6"/>
+    <circle cx="43" cy="52" r="4.2" fill="#38251D" stroke="#FFF5E6" stroke-width="1.6"/>
+  </g>
+  <!-- Wordmark -->
+  <g transform="translate(76, 0)">
+    <text x="0" y="37" font-family="'Fraunces', 'Playfair Display', Georgia, serif" font-weight="800" font-size="28" fill="#38251D" letter-spacing="-0.5">Chaat <tspan fill="#D92D20">Adda</tspan></text>
+    <rect x="0" y="44" width="38" height="3" rx="1.5" fill="#FFC83D"/>
+    <text x="44" y="49" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10.5" fill="#4B8B43" letter-spacing="1.4">EVERY BITE HAS A STORY!</text>
+  </g>
+</svg>
+

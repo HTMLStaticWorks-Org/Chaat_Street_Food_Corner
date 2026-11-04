@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Come Hungry. Leave Happy! | Chaat Adda</title>
+  <meta name="description" content="Come Hungry. Leave Happy! Get in touch with Chaat Adda for table enquiries, WhatsApp orders, opening hours, directions and feedback." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Custom Brand Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY HEADER & NAVIGATION
+       At 360px, 768px and 1024px: Displays ONLY Logo & Hamburger on same row
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" aria-label="Chaat Adda Home">
+        <img src="assets/logo.svg" alt="Chaat Adda – Every Bite Has a Story!" width="215" height="52" />
+      </a>
+
+      <!-- Desktop Navigation (>1024px) -->
+      <nav aria-label="Primary Navigation">
+        <ul class="desktop-nav">
+          <li><a href="index.html" class="nav-link-item">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+          <li><a href="menu.html" class="nav-link-item">Menu</a></li>
+          <li><a href="catering.html" class="nav-link-item">Catering</a></li>
+          <li><a href="contact.html" class="nav-link-item active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop Right CTA (>1024px) -->
+      <div class="desktop-header-actions">
+        <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+          <span>RTL</span>
+        </button>
+        <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span>Dark</span>
+        </button>
+        <a href="menu.html#orderSummaryBox" class="header-cart-btn" aria-label="View Current Order">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span>Order</span>
+          <span class="cart-count-badge">0</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Shown at 360px, 768px, 1024px) -->
+      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
+        <span class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile & Tablet Hamburger Menu Drawer -->
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home 1 – About Chaat Adda</a></li>
+        <li><a href="home2.html" class="mobile-nav-link">Home 2 – Street Food Corner</a></li>
+        <li><a href="menu.html" class="mobile-nav-link">Menu</a></li>
+        <li><a href="catering.html" class="mobile-nav-link">Catering</a></li>
+        <li><a href="contact.html" class="mobile-nav-link active" aria-current="page">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-actions">
+        <div class="mobile-utility-row">
+          <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+            <span>RTL</span>
+          </button>
+          <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            <span>Dark</span>
+          </button>
+        </div>
+        <a href="menu.html#orderSummaryBox" class="btn-chaat btn-chaat-secondary">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span>View Order (<span class="cart-count-badge">0</span>)</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         CONTACT HERO SECTION
+         Heading: "Come Hungry. Leave Happy!"
+         ====================================================================== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="kicker-badge hero-animate-item">
+          <i data-lucide="map-pin" style="width:16px;height:16px;"></i>
+          Visit Our Chaat Corner or Connect Online
+        </span>
+        <h1 class="hero-title hero-animate-item">Come Hungry. Leave Happy!</h1>
+        <p class="hero-subtitle hero-animate-item mb-3">
+          Have a question about our chaat menu, bulk party orders, or live catering? Reach out via phone, WhatsApp, email, or visit our restaurant!
+        </p>
+        <p class="small fw-bold text-danger mb-0 hero-animate-item">
+          * Note: Contact details and map coordinates below are Editable Sample Placeholders ready for your business details.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT INFORMATION CARDS (5 Required Items)
+         1. Restaurant Address  2. Phone Number  3. Email Address
+         4. Opening Hours  5. WhatsApp Contact
+         ====================================================================== -->
+    <section class="section-pad bg-white-warm" id="contactDetails">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge badge-red">Editable Sample Contact Info</span>
+          <h2 class="section-title">Get in Touch With Chaat Adda</h2>
+          <p class="section-subtitle">
+            Direct telephone, WhatsApp, and email links for quick ordering and support.
+          </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
+        </div>
+
+        <div class="row g-4 justify-content-center align-items-stretch">
+          <!-- 1. Restaurant Address -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="40">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <i data-lucide="map-pin" style="width:32px;height:32px;"></i>
+                </div>
+                <span class="veg-badge">Editable Sample Location</span>
+                <h3 class="card-title">Restaurant Address</h3>
+                <p class="card-desc">
+                  Shop 14, Spice Bazaar Promenade, Sample Food Street, Sample City – 400001<br />
+                  <em>(Replace with actual outlet address)</em>
+                </p>
+              </div>
+              <div class="card-footer-action">
+                <a href="#googleMapSection" class="btn-chaat btn-chaat-outline">View on Map Below</a>
+              </div>
+            </article>
+          </div>
+
+          <!-- 2. Phone Number -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <i data-lucide="phone-call" style="width:32px;height:32px;"></i>
+                </div>
+                <span class="veg-badge">Editable Sample Phone</span>
+                <h3 class="card-title">Phone Number</h3>
+                <p class="card-desc">
+                  Call our order desk directly for table takeaways, family boxes, or event bookings:<br />
+                  <strong class="fs-5 text-danger">+91 98765 43210</strong>
+                </p>
+              </div>
+              <div class="card-footer-action">
+                <a href="tel:+919876543210" class="btn-chaat btn-chaat-primary">
+                  <i data-lucide="phone" style="width:18px;height:18px;"></i>
+                  <span>Call +91 98765 43210</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- 3. WhatsApp Contact -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <i data-lucide="message-circle" style="width:32px;height:32px;"></i>
+                </div>
+                <span class="veg-badge">Instant Chat &amp; Ordering</span>
+                <h3 class="card-title">WhatsApp Contact</h3>
+                <p class="card-desc">
+                  Message us on WhatsApp for quick menu orders, live counter quotes, or location pins:<br />
+                  <strong class="fs-5" style="color: var(--fresh-green);">+91 98765 43210</strong>
+                </p>
+              </div>
+              <div class="card-footer-action">
+                <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20have%20an%20enquiry." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp">
+                  <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- 4. Email Address -->
+          <div class="col-sm-6 col-lg-6" data-aos="fade-up" data-aos-delay="160">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <i data-lucide="mail" style="width:32px;height:32px;"></i>
+                </div>
+                <span class="veg-badge">Editable Sample Email</span>
+                <h3 class="card-title">Email Address</h3>
+                <p class="card-desc">
+                  For corporate catering proposals, franchise enquiries, or guest feedback:<br />
+                  <strong>hello@chaatadda.com</strong>
+                </p>
+              </div>
+              <div class="card-footer-action">
+                <a href="mailto:hello@chaatadda.com?subject=Enquiry%20for%20Chaat%20Adda" class="btn-chaat btn-chaat-outline">
+                  <i data-lucide="mail" style="width:18px;height:18px;"></i>
+                  <span>Email hello@chaatadda.com</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- 5. Opening Hours -->
+          <div class="col-sm-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <i data-lucide="clock" style="width:32px;height:32px;"></i>
+                </div>
+                <span class="veg-badge">Open All 7 Days</span>
+                <h3 class="card-title">Opening Hours</h3>
+                <p class="card-desc">
+                  <strong>Monday – Friday:</strong> 11:30 AM – 10:30 PM<br />
+                  <strong>Saturday, Sunday &amp; Festive Days:</strong> 11:30 AM – 11:00 PM
+                </p>
+              </div>
+              <div class="card-footer-action">
+                <a href="menu.html" class="btn-chaat btn-chaat-secondary">
+                  <i data-lucide="utensils" style="width:18px;height:18px;"></i>
+                  <span>Order Fresh Chaat Now</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT FORM & CONFIGURABLE GOOGLE MAPS EMBED
+         ====================================================================== -->
+    <section class="section-pad bg-cream-alt" id="contactFormAndMap">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <!-- Contact Form Column -->
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="chaat-form-card h-100 d-flex flex-column justify-content-between">
+              <div>
+                <span class="kicker-badge badge-red">Write to Us</span>
+                <h2 class="section-title">Send Us a Message</h2>
+                <p class="card-desc mb-3">
+                  Have feedback or a special request? Fill out the form below. (Frontend-Only Submission Mode — connect your backend/email webhook in <code>js/main.js</code> when ready).
+                </p>
+              </div>
+
+              <form id="contactPageForm" novalidate>
+                <div class="row g-3">
+                  <!-- Name -->
+                  <div class="col-md-6">
+                    <label for="contactName" class="form-label-centered">Your Name *</label>
+                    <input type="text" id="contactName" class="chaat-input" placeholder="e.g., Neha Kapoor" required />
+                    <div id="errContactName" class="field-error-msg">Please enter your name (min. 2 characters).</div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label-centered">Email Address *</label>
+                    <input type="email" id="contactEmail" class="chaat-input" placeholder="e.g., neha@example.com" required />
+                    <div id="errContactEmail" class="field-error-msg">Please enter a valid email address.</div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="col-md-6">
+                    <label for="contactPhone" class="form-label-centered">Phone Number *</label>
+                    <input type="tel" id="contactPhone" class="chaat-input" placeholder="e.g., +91 98765 43210" required />
+                    <div id="errContactPhone" class="field-error-msg">Please enter a valid phone number.</div>
+                  </div>
+
+                  <!-- Subject -->
+                  <div class="col-md-6">
+                    <label for="contactSubject" class="form-label-centered">Subject *</label>
+                    <input type="text" id="contactSubject" class="chaat-input" placeholder="e.g., Bulk Party Order / Feedback" required />
+                    <div id="errContactSubject" class="field-error-msg">Please enter a subject.</div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="col-12">
+                    <label for="contactMessage" class="form-label-centered">Your Message *</label>
+                    <textarea id="contactMessage" class="chaat-textarea" rows="4" placeholder="Write your message or question here..." required></textarea>
+                    <div id="errContactMessage" class="field-error-msg">Please enter your message (min. 5 characters).</div>
+                  </div>
+
+                  <div class="col-12 mt-3">
+                    <div class="btn-group-centered">
+                      <button type="submit" class="btn-chaat btn-chaat-primary w-100">
+                        <i data-lucide="send" style="width:18px;height:18px;"></i>
+                        <span>Send Message</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="contactFormStatus" class="form-status-box" role="alert" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Google Maps Column -->
+          <div class="col-lg-6" id="googleMapSection" data-aos="fade-up" data-aos-delay="100">
+            <div class="chaat-form-card h-100 d-flex flex-column justify-content-between">
+              <div>
+                <span class="kicker-badge badge-green">Configurable Map Embed</span>
+                <h2 class="section-title">Find Chaat Adda</h2>
+                <p class="card-desc mb-3">
+                  <strong>Placeholder Map Configuration:</strong> Currently showing a sample India landmark pin. Replace the <code>iframe src</code> below with your exact Google Maps Embed URL once your restaurant address is finalized.
+                </p>
+              </div>
+
+              <div class="w-100 rounded-4 overflow-hidden border border-2 border-warning" style="min-height: 330px; flex-grow: 1;">
+                <iframe
+                  title="Chaat Adda Configurable Placeholder Location Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709657!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="350"
+                  style="border:0; display:block;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+
+              <div class="mt-3">
+                <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-chaat btn-chaat-outline w-100">
+                  <i data-lucide="navigation" style="width:18px;height:18px;"></i>
+                  <span>Open Configurable Location in Google Maps</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SOCIAL MEDIA SECTION (Instagram, Facebook, YouTube)
+         ====================================================================== -->
+    <section class="section-pad bg-white-warm" id="socialConnect">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge">Join Our Foodie Community</span>
+          <h2 class="section-title">Follow Chaat Adda on Social Media</h2>
+          <p class="section-subtitle">
+            Catch daily reels of sizzling tawa tikkis, live golgappa challenges, festive combo offers, and behind-the-scenes spice stories!
+          </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
+        </div>
+
+        <div class="row g-4 justify-content-center align-items-stretch">
+          <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="40">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </div>
+                <h3 class="card-title">Instagram</h3>
+                <p class="card-desc">Daily street-food reels, customer tags, and weekend secret menu drops. (@chaatadda.sample)</p>
+              </div>
+              <div class="card-footer-action">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-chaat btn-chaat-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                  <span>Follow on Instagram</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="90">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </div>
+                <h3 class="card-title">Facebook</h3>
+                <p class="card-desc">Event catering albums, family combo announcements, and community reviews.</p>
+              </div>
+              <div class="card-footer-action">
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="btn-chaat btn-chaat-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  <span>Like Us on Facebook</span>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="140">
+            <article class="chaat-card">
+              <div class="card-body-centered">
+                <div class="feature-icon-circle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                </div>
+                <h3 class="card-title">YouTube</h3>
+                <p class="card-desc">Watch our "Art of Making Chaat" mini-episodes and live wedding chaat counter highlights.</p>
+              </div>
+              <div class="card-footer-action">
+                <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-chaat btn-chaat-outline">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+                  <span>Subscribe on YouTube</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       PREMIUM COLORFUL FOOTER (Logo links to Home)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 footer-col">
+          <a href="index.html" class="footer-logo-link" aria-label="Chaat Adda Home">
+            <img src="assets/logo.svg" alt="Chaat Adda Logo" width="190" height="46" />
+          </a>
+          <p class="small mb-2">
+            <strong>Every Bite Has a Story!</strong> Celebrating India's vibrant street-food heritage with freshly prepared chaats, artisanal chutneys, and 100% hygienic preparation.
+          </p>
+          <div class="social-icons-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Subscribe to Chaat Adda on YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 – About Chaat Adda</a></li>
+            <li><a href="home2.html">Home 2 – Street Food Corner</a></li>
+            <li><a href="menu.html">Full Street Food Menu</a></li>
+            <li><a href="catering.html">Event &amp; Wedding Catering</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Popular Chaats</h3>
+          <ul class="footer-links-list">
+            <li><a href="menu.html?cat=pani-puri">Pani Puri &amp; Golgappa</a></li>
+            <li><a href="menu.html?cat=papdi-sev">Bombay Sev Puri &amp; Papdi</a></li>
+            <li><a href="menu.html?cat=dahi-chaat">Dahi Puri &amp; Dahi Bhalla</a></li>
+            <li><a href="menu.html?cat=tikki-samosa">Desi Ghee Aloo Tikki Chaat</a></li>
+            <li><a href="menu.html?cat=beverages">Kulhad Lassi &amp; Masala Chai</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Visit &amp; Contact</h3>
+          <ul class="footer-links-list">
+            <li><span>Shop 14, Spice Bazaar Promenade, Sample Food Street (Editable Sample Address)</span></li>
+            <li><a href="tel:+919876543210">Phone: +91 98765 43210</a></li>
+            <li><a href="mailto:hello@chaatadda.com">Email: hello@chaatadda.com</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp: +91 98765 43210</a></li>
+            <li><strong class="text-warning">Hours: Mon – Sun, 11:30 AM – 11:00 PM</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 <strong>Chaat Adda</strong> – Every Bite Has a Story! All Rights Reserved. | 100% Vegetarian Street Food &amp; Chaat.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

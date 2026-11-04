@@ -659,9 +659,9 @@ h3,
 }
 
 .hero-main-frame {
-  background: radial-gradient(circle, #FFFFFF 0%, #FFF5E6 100%);
+  background: var(--warm-cream);
   border-radius: var(--radius-lg);
-  padding: 1rem;
+  padding: 0 !important;
   border: 4px solid var(--mango-yellow);
   box-shadow: var(--shadow-lg);
   position: relative;
@@ -669,11 +669,15 @@ h3,
 }
 
 .hero-main-frame img {
-  width: 100%;
-  height: 390px;
-  object-fit: contain;
-  border-radius: calc(var(--radius-lg) - 8px);
-  background-color: #FFF5E6;
+  width: 100% !important;
+  height: 410px !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
   transition: transform 0.5s ease;
 }
 
@@ -798,29 +802,32 @@ h3,
   border-color: var(--mango-yellow);
 }
 
-/* Uncropped Food Image Container (object-fit: contain + consistent height) */
+/* Full-Bleed Food Image Container (100% covered edge-to-edge across the card top) */
 .card-img-wrap {
-  width: 100%;
-  height: 220px;
-  border-radius: calc(var(--radius-md) - 6px);
-  background: radial-gradient(circle at center, #FFFDF9 0%, #FFF0D6 100%);
-  border: 1.5px solid rgba(255, 200, 61, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: calc(100% + 2.5rem);
+  height: 240px;
+  margin: -1.25rem -1.25rem 1.25rem -1.25rem;
+  border-radius: calc(var(--radius-md) - 2px) calc(var(--radius-md) - 2px) 0 0;
+  background: var(--warm-cream);
+  border: none;
+  border-bottom: 2px solid var(--mango-yellow);
+  display: block;
   overflow: hidden;
-  margin-bottom: 1.15rem;
-  padding: 0.5rem;
+  padding: 0 !important;
   position: relative;
   flex-shrink: 0;
 }
 
 .card-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
-  object-position: center;
-  border-radius: 10px;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
   transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -1594,358 +1601,5 @@ html[dir="rtl"] .menu-search-icon {
 html[dir="rtl"] .menu-search-input {
   padding: 0.85rem 2.85rem 0.85rem 1.25rem;
 }
-
-/* ==========================================================================
-   PAGE-SPECIFIC UNIQUE LAYOUTS & CREATIVE COMPONENTS
-   Ensures every page (Home 1, Home 2, Menu, Catering, Contact) has its own
-   visual architecture, image compositions, and card styles while keeping
-   strictly equal card dimensions within each section.
-   ========================================================================== */
-
-/* 1. Interactive Statistics Bar (Home 1) */
-.stats-strip-bar {
-  background: linear-gradient(90deg, #38251D 0%, #4E3125 50%, #38251D 100%);
-  color: var(--warm-cream);
-  padding: 2rem 0;
-  border-bottom: 4px solid var(--mango-yellow);
-}
-
-.stat-counter-box {
-  background: rgba(255, 245, 230, 0.07);
-  border: 1.5px solid rgba(255, 200, 61, 0.35);
-  border-radius: var(--radius-md);
-  padding: 1.25rem 1rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.stat-number {
-  font-family: var(--font-display);
-  font-size: clamp(1.85rem, 3vw, 2.5rem);
-  font-weight: 900;
-  color: var(--mango-yellow);
-  line-height: 1.1;
-  margin-bottom: 0.3rem;
-}
-
-.stat-label {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--warm-cream);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* 2. Alternating Editorial Split Layouts (Image-Left/Content-Right & Content-Left/Image-Right) */
-.editorial-split-box {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  border: 2px solid rgba(56, 37, 29, 0.12);
-  box-shadow: var(--shadow-md);
-  padding: 2rem;
-  margin-bottom: 2.5rem;
-}
-
-.editorial-split-box:last-child {
-  margin-bottom: 0;
-}
-
-.editorial-img-frame {
-  background: radial-gradient(circle at center, #FFFDF9 0%, #FFF0D6 100%);
-  border-radius: var(--radius-md);
-  border: 3px solid var(--mango-yellow);
-  padding: 0.75rem;
-  height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.editorial-img-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
-  border-radius: 12px;
-  transition: transform 0.45s ease;
-}
-
-.editorial-img-frame:hover img {
-  transform: scale(1.04);
-}
-
-.editorial-text-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Heritage Timeline Milestones inside Home 1 Story */
-.milestone-pills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.85rem;
-  width: 100%;
-  margin: 1.25rem 0 1.5rem;
-}
-
-.milestone-pill-card {
-  background: var(--warm-cream);
-  border: 1.5px solid var(--mango-yellow);
-  border-radius: var(--radius-sm);
-  padding: 0.85rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.milestone-year {
-  font-family: var(--font-display);
-  font-weight: 900;
-  color: var(--chili-red);
-  font-size: 1.1rem;
-}
-
-/* 3. Home 1 Distinct Card Variants (Equal Dimensions Enforced) */
-.chaat-card-arch {
-  border-top: 5px solid var(--chili-red);
-  border-radius: 26px 26px 18px 18px;
-}
-
-.chaat-card-pillar {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFF8EE 100%);
-  border: 2px solid rgba(217, 45, 32, 0.18);
-}
-
-.pillar-step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.22rem 0.75rem;
-  border-radius: var(--radius-pill);
-  background: var(--chili-red);
-  color: var(--white);
-  font-weight: 800;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.65rem;
-}
-
-.chaat-card-ticket {
-  border: 2.5px dashed var(--chili-red);
-  background: linear-gradient(180deg, #FFFDF9 0%, #FFF3DF 100%);
-}
-
-.combo-savings-tag {
-  background: var(--chili-red);
-  color: var(--white);
-  font-weight: 800;
-  font-size: 0.76rem;
-  padding: 0.25rem 0.8rem;
-  border-radius: var(--radius-pill);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.5rem;
-}
-
-/* 4. Home 2 – Bazaar Panoramic Hero & Connected 4-Step Process Cards */
-.bazaar-panoramic-hero {
-  padding-top: calc(var(--header-height) + 2.5rem);
-  padding-bottom: 4rem;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(255, 200, 61, 0.42), transparent 55%),
-    linear-gradient(180deg, #FFF5E6 0%, #FDE4B8 100%);
-  border-bottom: 4px solid var(--chili-red);
-  text-align: center;
-}
-
-.bazaar-showcase-banner {
-  background: var(--white);
-  border: 4px solid var(--deep-brown);
-  border-radius: var(--radius-lg);
-  padding: 1rem;
-  box-shadow: var(--shadow-lg);
-  margin-top: 2rem;
-}
-
-.bazaar-showcase-img-box {
-  width: 100%;
-  height: 330px;
-  background: radial-gradient(circle, #FFFDF9 0%, #FFF0D6 100%);
-  border-radius: calc(var(--radius-lg) - 10px);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bazaar-showcase-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain !important;
-}
-
-.chaat-card-step {
-  border-bottom: 5px solid var(--mango-yellow);
-}
-
-.chaat-card-stall {
-  border-left: 4px solid var(--fresh-green);
-  border-right: 4px solid var(--fresh-green);
-}
-
-.chaat-card-postcard {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFF4E2 100%);
-  border: 2px solid var(--deep-brown);
-}
-
-/* 5. Menu Page – Culinary Command Hero, Chutney Matrix & FAQ Accordion */
-.menu-command-hero {
-  padding-top: calc(var(--header-height) + 2.25rem);
-  padding-bottom: 3rem;
-  background:
-    radial-gradient(circle at 15% 30%, rgba(75, 139, 67, 0.18), transparent 45%),
-    radial-gradient(circle at 85% 30%, rgba(217, 45, 32, 0.16), transparent 45%),
-    linear-gradient(180deg, #FFF5E6 0%, #FDE8C8 100%);
-  border-bottom: 3px solid var(--fresh-green);
-  text-align: center;
-}
-
-.spice-meter-row {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--deep-brown-soft);
-  background: var(--warm-cream);
-  padding: 0.2rem 0.7rem;
-  border-radius: var(--radius-pill);
-  margin-bottom: 0.4rem;
-}
-
-.chaat-faq-item {
-  background: var(--white);
-  border: 2px solid rgba(56, 37, 29, 0.12);
-  border-radius: var(--radius-md);
-  padding: 1.35rem 1.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-}
-
-/* 6. Catering Page – Split Celebration Hero & Package Tier Cards */
-.catering-split-hero {
-  padding-top: calc(var(--header-height) + 2.5rem);
-  padding-bottom: 3.75rem;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(217, 45, 32, 0.18), transparent 45%),
-    linear-gradient(180deg, #FFF5E6 0%, #FDE7C5 100%);
-  border-bottom: 4px solid var(--mango-yellow);
-}
-
-.chaat-card-package {
-  border-top: 6px solid var(--mango-yellow);
-}
-
-.chaat-card-package.featured-tier {
-  border-color: var(--chili-red);
-  border-width: 3px;
-  border-top-width: 6px;
-}
-
-.package-feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 1rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  color: var(--deep-brown-soft);
-}
-
-/* 7. Contact Page – Concierge Banner & Schedule Table */
-.contact-concierge-hero {
-  padding-top: calc(var(--header-height) + 2.5rem);
-  padding-bottom: 3.25rem;
-  background:
-    radial-gradient(circle at 50% 20%, rgba(255, 200, 61, 0.35), transparent 50%),
-    linear-gradient(180deg, #FFF5E6 0%, #FCEAD2 100%);
-  border-bottom: 3px solid var(--chili-red);
-  text-align: center;
-}
-
-.hours-schedule-box {
-  background: var(--warm-cream);
-  border: 1.5px solid var(--mango-yellow);
-  border-radius: var(--radius-md);
-  padding: 1.15rem;
-  margin: 1rem 0;
-  text-align: center;
-}
-
-/* Dark Theme Overrides for New Page-Specific Components */
-html[data-theme="dark"] .editorial-split-box,
-html[data-theme="dark"] .bazaar-showcase-banner,
-html[data-theme="dark"] .chaat-faq-item,
-html[data-theme="dark"] .chaat-card-pillar,
-html[data-theme="dark"] .chaat-card-ticket,
-html[data-theme="dark"] .chaat-card-postcard {
-  background: #2C1C16;
-  border-color: rgba(255, 200, 61, 0.3);
-  color: #FFF5E6;
-}
-
-html[data-theme="dark"] .editorial-img-frame,
-html[data-theme="dark"] .bazaar-showcase-img-box {
-  background: radial-gradient(circle at center, #3A251D 0%, #241611 100%);
-}
-
-html[data-theme="dark"] .milestone-pill-card,
-html[data-theme="dark"] .spice-meter-row,
-html[data-theme="dark"] .hours-schedule-box {
-  background: #1D120E;
-  color: #FFF5E6;
-  border-color: rgba(255, 200, 61, 0.3);
-}
-
-html[data-theme="dark"] .bazaar-panoramic-hero,
-html[data-theme="dark"] .menu-command-hero,
-html[data-theme="dark"] .catering-split-hero,
-html[data-theme="dark"] .contact-concierge-hero {
-  background:
-    radial-gradient(circle at 50% 20%, rgba(255, 200, 61, 0.15), transparent 50%),
-    linear-gradient(180deg, #1D120E 0%, #2A1A14 100%);
-}
-
-html[data-theme="dark"] .package-feature-list {
-  color: rgba(255, 245, 230, 0.85);
-}
-
-@media (max-width: 767.98px) {
-  .editorial-img-frame,
-  .bazaar-showcase-img-box {
-    height: 240px;
-  }
-
-  .milestone-pills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 

@@ -1,235 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home 2 – About Our Street Food Corner | Chaat Adda</title>
-  <meta name="description" content="Where Every Street Corner Tells a Delicious Story. Discover the authentic art of making chaat, live tawa preparation, regional specialties, and vibrant bazaar energy at Chaat Adda.">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Street Food Corner – Home 2 | Chaat Adda – Every Bite Has a Story!</title>
+  <meta name="description" content="A Street Full of Flavours, A Corner Full of Happiness! Experience Chaat Adda's lively Indian street-food corner, live chaat preparation, and regional specialties." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Custom Brand Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=3" />
 </head>
 <body>
 
-  <!-- ================= STICKY HEADER ================= -->
-  <header class="site-header solid-default" id="siteHeader">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <!-- ========================================================================
+       STICKY HEADER & NAVIGATION
+       At 360px, 768px and 1024px: Displays ONLY Logo & Hamburger on same row
+       ======================================================================== -->
+  <header class="site-header header-transparent" id="siteHeader">
+    <div class="header-container">
       <a href="index.html" class="brand-logo" aria-label="Chaat Adda Home">
-        <img src="assets/logo.svg" alt="Chaat Adda Logo">
+        <img src="assets/logo.svg" alt="Chaat Adda – Every Bite Has a Story!" width="215" height="52" />
       </a>
 
-      <nav class="desktop-nav items-center gap-8" aria-label="Primary Navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="home2.html" class="nav-link active">Home 2</a>
-        <a href="menu.html" class="nav-link">Menu</a>
-        <a href="catering.html" class="nav-link">Catering</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+      <!-- Desktop Navigation (>1024px) -->
+      <nav aria-label="Primary Navigation">
+        <ul class="desktop-nav">
+          <li><a href="index.html" class="nav-link-item">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link-item active" aria-current="page">Home 2</a></li>
+          <li><a href="menu.html" class="nav-link-item">Menu</a></li>
+          <li><a href="catering.html" class="nav-link-item">Catering</a></li>
+          <li><a href="contact.html" class="nav-link-item">Contact</a></li>
+        </ul>
       </nav>
 
-      <div class="desktop-cta items-center gap-2.5">
-        <button type="button" class="util-toggle-btn js-rtl-toggle" aria-label="Switch LTR / RTL direction" title="Toggle RTL / LTR">
-          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
-          <span class="js-rtl-label">RTL</span>
+      <!-- Desktop Right CTA (>1024px) -->
+      <div class="desktop-header-actions">
+        <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+          <span>RTL</span>
         </button>
-        <button type="button" class="util-toggle-btn js-theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
-          <i data-lucide="moon" class="w-4 h-4"></i>
-          <span class="js-theme-label">Dark</span>
+        <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <span>Dark</span>
         </button>
-        <a href="menu.html#orderSummarySection" class="relative inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#FFF5E6] border-2 border-[#38251D]/20 text-[#38251D] hover:border-[#D92D20] transition" aria-label="View Order Tray">
-          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-          <span class="js-cart-badge hidden absolute -top-1.5 -right-1.5 bg-[#D92D20] text-white text-xs font-extrabold w-5 h-5 rounded-full items-center justify-center">0</span>
+        <a href="menu.html#orderSummaryBox" class="header-cart-btn" aria-label="View Current Order">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span>Order</span>
+          <span class="cart-count-badge">0</span>
         </a>
-        <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-whatsapp text-sm py-2.5 px-5">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
           <span>Order on WhatsApp</span>
         </a>
       </div>
 
-      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
+      <!-- Hamburger Button (Shown at 360px, 768px, 1024px) -->
+      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
+        <span class="hamburger-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </button>
+    </div>
+
+    <!-- Mobile & Tablet Hamburger Menu Drawer -->
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home 1 – About Chaat Adda</a></li>
+        <li><a href="home2.html" class="mobile-nav-link active" aria-current="page">Home 2 – Street Food Corner</a></li>
+        <li><a href="menu.html" class="mobile-nav-link">Menu</a></li>
+        <li><a href="catering.html" class="mobile-nav-link">Catering</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-actions">
+        <div class="mobile-utility-row">
+          <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+            <span>RTL</span>
+          </button>
+          <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            <span>Dark</span>
+          </button>
+        </div>
+        <a href="menu.html#orderSummaryBox" class="btn-chaat btn-chaat-secondary">
+          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+          <span>View Order (<span class="cart-count-badge">0</span>)</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
+          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Mobile & Tablet Navigation Drawer -->
-  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-  <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
-    <div class="flex items-center justify-between pb-6 border-b border-[#38251D]/15">
-      <a href="index.html" class="brand-logo">
-        <img src="assets/logo.svg" alt="Chaat Adda Logo">
-      </a>
-    </div>
-    <nav class="flex flex-col my-4">
-      <a href="index.html" class="mobile-nav-link">Home</a>
-      <a href="home2.html" class="mobile-nav-link active">Home 2</a>
-      <a href="menu.html" class="mobile-nav-link">Menu</a>
-      <a href="catering.html" class="mobile-nav-link">Catering</a>
-      <a href="contact.html" class="mobile-nav-link">Contact</a>
-    </nav>
-    <div class="drawer-utility-row">
-      <button type="button" class="util-toggle-btn js-rtl-toggle" aria-label="Switch LTR / RTL direction">
-        <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
-        <span class="js-rtl-label">RTL</span>
-      </button>
-      <button type="button" class="util-toggle-btn js-theme-toggle" aria-label="Toggle Dark / Light Theme">
-        <i data-lucide="moon" class="w-4 h-4"></i>
-        <span class="js-theme-label">Dark</span>
-      </button>
-    </div>
-    <div class="mt-auto pt-4 flex flex-col gap-3">
-      <a href="menu.html" class="btn-primary w-full">
-        <i data-lucide="utensils" class="w-4 h-4"></i>
-        <span>Explore Full Menu</span>
-      </a>
-      <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn-whatsapp w-full">
-        <i data-lucide="message-circle" class="w-4 h-4"></i>
-        <span>Order on WhatsApp</span>
-      </a>
-    </div>
-  </aside>
-
   <main>
-    <!-- ================= 1. CENTERED PANORAMIC BAZAAR HERO ================= -->
-    <section class="bazaar-panoramic-hero text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <div class="section-eyebrow mb-4">
-            <i data-lucide="flame" class="w-4 h-4"></i>
-            <span>HOME 2 • AUTHENTIC INDIAN BAZAAR EDITION</span>
-          </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] mb-6">
-            Where Every Street Corner Tells a <span class="text-[#FFC83D]">Delicious Story</span>
-          </h1>
-          <p class="text-lg sm:text-xl text-[#FFF5E6]/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experience the true spirit of Indian street food with freshly prepared chaats, bold spices, tangy chutneys and unforgettable flavours.
-          </p>
-
-          <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
-            <a href="menu.html" class="btn-secondary text-base">
-              <i data-lucide="compass" class="w-5 h-5"></i>
-              <span>Discover Our Menu</span>
-            </a>
-            <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20want%20to%20order%20fresh%20street%20food." target="_blank" rel="noopener" class="btn-primary text-base">
-              <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-              <span>Order Street Food</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Panoramic Bazaar Showcase Banner -->
-        <div class="bazaar-showcase-banner max-w-5xl mx-auto">
-          <img src="image/home2/siSQLkvfqKCe96bhkaX6E290QEfkvfWuiecgTRta5NzvxOHuxcpRmdVK94MmV1ENzKGCV5mnMSBinxlpzV7FhLAQdN97bAkpX3ZzcmjS-__r7n3UakNEo_IUhSAaV5Z60R6TdKRbLtKKWfVFk8nf9nMbsnCqpHTp0_D29RA.jpg" alt="Bustling Indian Chaat Corner stall showcasing bowls of Dahi Puri, Samosa, Papdi, Ragda and fresh chutneys">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 p-4 bg-[#261711] border-t border-[#FFC83D]/30 text-center">
-            <div class="p-2 rounded-xl bg-white/5">
-              <p class="text-xs font-bold uppercase tracking-wider text-[#FFC83D]">Counter 01</p>
-              <p class="text-sm font-bold text-white mt-0.5">Live Golgappa Matka</p>
-            </div>
-            <div class="p-2 rounded-xl bg-white/5">
-              <p class="text-xs font-bold uppercase tracking-wider text-[#FFC83D]">Counter 02</p>
-              <p class="text-sm font-bold text-white mt-0.5">Sizzling Iron Tawa</p>
-            </div>
-            <div class="p-2 rounded-xl bg-white/5">
-              <p class="text-xs font-bold uppercase tracking-wider text-[#FFC83D]">Counter 03</p>
-              <p class="text-sm font-bold text-white mt-0.5">Chowpatty Bhel Tossing</p>
-            </div>
-            <div class="p-2 rounded-xl bg-white/5">
-              <p class="text-xs font-bold uppercase tracking-wider text-[#FFC83D]">Counter 04</p>
-              <p class="text-sm font-bold text-white mt-0.5">Chilled Dahi & Papdi Bar</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 2. ALTERNATING SPLIT SHOWCASE: EXPLORE OUR STREET FOOD CORNER ================= -->
-    <section class="py-20 bg-[#FFF5E6]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-12">
-          <div class="section-eyebrow mb-3">
-            <i data-lucide="map-pin" class="w-4 h-4"></i>
-            <span>EXPLORE OUR STREET FOOD CORNER</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
-            Step Inside the Warmth of an Indian Evening Bazaar
-          </h2>
-          <p class="text-[#5C4033] text-base sm:text-lg">
-            In India, an "Adda" is more than a food stall—it is where friends gather after college, families celebrate weekend evenings, and strangers bond over the shared thrill of spicy pani puri.
-          </p>
-        </div>
-
-        <!-- Split Block A: Image Left, Content Right -->
-        <div class="editorial-split-box mb-10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-6">
-              <div class="editorial-img-frame">
-                <img src="image/home2/q2V1m1OoMcTb6LiRnj2yE6uNXLTD31Jjj53_x-jVBmrl67xN5fnAxq5KI8I7EHk1l9ue19Ty33OWyKFHtYQqzoINhgwdFYVVZbNS2IYRGbcOr78DJMj4EuyAMXZedngaZRty_0-rHuNEuNuKJ5yr8tktcLI3zMtTiZ-87wY.jpg" alt="Vibrant Indian evening street food bazaar stall with buttered Pav buns and glowing marquee lights">
-              </div>
-            </div>
-            <div class="lg:col-span-6 flex flex-col items-center text-center">
-              <span class="badge-veg mb-3">THE NIGHT BAZAAR ATMOSPHERE</span>
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-[#38251D] mb-4">
-                Glowing Marquee Lights, Brass Matkas & Evening Hustle
-              </h3>
-              <p class="text-[#5C4033] text-base leading-relaxed mb-6">
-                Step up to our open-front counter and watch the theatre unfold: brass pots brimming with ice-cold pudina pani, mounds of golden nylon sev, and hand-painted bazaar signage that transports you straight to Old Delhi's Chandni Chowk and Mumbai's Juhu Chowpatty.
-              </p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-6">
-                <div class="p-4 rounded-2xl bg-[#FFF5E6] border border-[#38251D]/15">
-                  <h4 class="font-extrabold text-[#D92D20] text-lg mb-1">Zero Pre-Plating</h4>
-                  <p class="text-xs text-[#5C4033]">Every single chaat bowl is assembled to order so the puris remain 100% crisp when served.</p>
-                </div>
-                <div class="p-4 rounded-2xl bg-[#FFF5E6] border border-[#38251D]/15">
-                  <h4 class="font-extrabold text-[#4B8B43] text-lg mb-1">Custom Spice Dial</h4>
-                  <p class="text-xs text-[#5C4033]">Ask our Ustad for Mild Sweet-Tangy, Classic Bazaar Medium, or Extra Mirchi Tadka.</p>
-                </div>
-              </div>
-              <a href="menu.html" class="btn-primary">
-                <i data-lucide="utensils" class="w-4 h-4"></i>
-                <span>Explore Live Counter Menu</span>
+    <!-- ======================================================================
+         HERO SECTION (Home 2 – Street Food Corner Experience)
+         Main Heading: "A Street Full of Flavours, A Corner Full of Happiness!"
+         ====================================================================== -->
+    <section class="hero-section hero-street-corner">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6 hero-content-col">
+            <span class="kicker-badge badge-red hero-animate-item">
+              <i data-lucide="flame" style="width:16px;height:16px;"></i>
+              About Our Street Food Corner
+            </span>
+            <h1 class="hero-title hero-animate-item">
+              A Street Full of Flavours, A Corner Full of Happiness!
+            </h1>
+            <p class="hero-subtitle hero-animate-item mb-4">
+              Step into the electric atmosphere of India's most loved evening chaat adda — where sizzling tawas, earthen matkas of mint pani, and leaf-bowl golgappas bring people together over unforgettable street-food magic.
+            </p>
+            <div class="btn-group-centered hero-animate-item">
+              <a href="menu.html" class="btn-chaat btn-chaat-primary">
+                <i data-lucide="utensils-crossed" style="width:18px;height:18px;"></i>
+                <span>Explore Street Menu</span>
+              </a>
+              <a href="#artOfMakingChaat" class="btn-chaat btn-chaat-secondary">
+                <i data-lucide="sparkles" style="width:18px;height:18px;"></i>
+                <span>The Art of Chaat</span>
               </a>
             </div>
-          </div>
-        </div>
-
-        <!-- Split Block B: Content Left, Image Right -->
-        <div class="editorial-split-box">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-6 order-2 lg:order-1 flex flex-col items-center text-center">
-              <span class="badge-veg mb-3">THE SIZZLING IRON TAWA STATION</span>
-              <h3 class="text-2xl sm:text-3xl font-extrabold text-[#38251D] mb-4">
-                Slow-Seared Aloo Tikki, Ragda & Golden Samosa Chaat
-              </h3>
-              <p class="text-[#5C4033] text-base leading-relaxed mb-6">
-                Around our 36-inch heavy cast-iron tawa, herb-crusted potato tikkis sear in pure ghee until they develop a shatteringly crisp golden crust. We crush them hot off the griddle and ladle over simmering white-pea ragda, ginger juliennes, and pomegranate jewels.
-              </p>
-              <div class="milestone-pills-grid w-full mb-6">
-                <div class="milestone-pill">
-                  <span class="year">Ghee Roast</span>
-                  <span class="label">Outer Potato Crust</span>
-                </div>
-                <div class="milestone-pill">
-                  <span class="year">6-Hour</span>
-                  <span class="label">Simmered White Pea Ragda</span>
-                </div>
-                <div class="milestone-pill">
-                  <span class="year">5 Layers</span>
-                  <span class="label">Chutney, Curd & Sev</span>
-                </div>
-              </div>
-              <a href="catering.html" class="btn-outline-dark">
-                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                <span>Book Our Live Tawa for Events</span>
-              </a>
+            <div class="hero-Quick-stats hero-animate-item">
+              <span class="floating-spice-pill">
+                <i data-lucide="flame" style="width:16px;height:16px;color:#D92D20;"></i>
+                Live Sizzling Tawa Counter
+              </span>
+              <span class="floating-spice-pill">
+                <i data-lucide="leaf" style="width:16px;height:16px;color:#4B8B43;"></i>
+                Traditional Leaf Dona Serving
+              </span>
+              <span class="floating-spice-pill">
+                <i data-lucide="users" style="width:16px;height:16px;color:#38251D;"></i>
+                Lively Evening Adda Vibes
+              </span>
             </div>
-            <div class="lg:col-span-6 order-1 lg:order-2">
-              <div class="editorial-img-frame">
-                <img src="image/home2/FxQHdAtoKno7Mi3mXYMiUcKe9K8drxDVi1F-K_0bW5Gq0sNS4nYDw3Y3wRcShPwwa_arq_yIlJ5O52XIEJtUuURqFozer2Qu_MX_fRIbC9FiTQJ-7LCsE2krLkt2cZKhC6xDTV1i0LVCujWABTjayJ0v2sxMJkZ18_aNqqy.jpg" alt="Indian street food vendor at a live tawa counter with signboard for Pani Puri, Dahi Bhalla, Aloo Tikki, Samosa and Raj Kachori">
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-visual-wrap hero-animate-item">
+              <div class="hero-main-frame">
+                <img src="image/home2/siSQLkvfqKCe96bhkaX6E290QEfkvfWuiecgTRta5NzvxOHuxcpRmdVK94MmV1ENzKGCV5mnMSBinxlpzV7FhLAQdN97bAkpX3ZzcmjS-__r7n3UakNEo_IUhSAaV5Z60R6TdKRbLtKKWfVFk8nf9nMbsnCqpHTp0_D29RA.jpg" alt="Bustling Indian Street Food Corner at Chaat Adda with bowls of papdi, sev, chutneys and dahi puri" />
+              </div>
+              <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                <span class="floating-spice-pill">
+                  <i data-lucide="map-pin" style="width:16px;height:16px;color:#D92D20;"></i>
+                  Inspired by Chowpatty, Chandni Chowk &amp; Banaras
+                </span>
               </div>
             </div>
           </div>
@@ -237,617 +169,656 @@
       </div>
     </section>
 
-    <!-- ================= 3. THE ART OF MAKING CHAAT (4-STEP TIMELINE CARDS) ================= -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-14">
-          <div class="section-eyebrow mb-3">
-            <i data-lucide="layers" class="w-4 h-4"></i>
-            <span>4-STEP CULINARY CRAFT</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
-            The Art of Making Chaat
-          </h2>
-          <p class="text-[#5C4033] text-base sm:text-lg">
-            Great chaat is a symphony of four essential layers—temperature, crunch, tang, and aroma—built in seconds right before your eyes.
+    <!-- Street Food Corner Ticker -->
+    <div class="spice-ribbon" aria-label="Street Corner Highlights">
+      <ul class="spice-ribbon-list">
+        <li><i data-lucide="flame" style="width:16px;height:16px;"></i> Live Golgappa &amp; Phuchka Stand</li>
+        <li><i data-lucide="sparkles" style="width:16px;height:16px;"></i> Paper-Cone Bombay Bhel</li>
+        <li><i data-lucide="flame" style="width:16px;height:16px;"></i> Desi Ghee Tawa Ragda Patties</li>
+        <li><i data-lucide="sparkles" style="width:16px;height:16px;"></i> Earthen Kulhad Chai &amp; Lassi</li>
+      </ul>
+    </div>
+
+    <!-- ======================================================================
+         SECTION 1: EXPLORE OUR STREET FOOD CORNER
+         ====================================================================== -->
+    <section class="section-pad bg-white-warm" id="exploreStreetCorner">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge">Street-Food Culture &amp; Vibes</span>
+          <h2 class="section-title">Explore Our Street Food Corner</h2>
+          <p class="section-subtitle">
+            In India, a "Chaat Corner" is more than a food stall — it is a neighbourhood gathering spot where laughter, gossip, and tangy flavours collide every evening.
           </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
-          <!-- Step 1 -->
-          <article class="chaat-card chaat-card-step">
-            <div class="card-img-wrap">
-              <span class="step-badge-circle">01</span>
-              <img src="image/home2/cZ4cdT4InrypBeAnAQMnZZC76o6FPSF0nm_W5uO-qw1O4vkamUYd7vOGFa6ILaa6Ac6jnpC47CArcjp8AMx6V0rnOD4gtdspwcgx4ZgWlxp_EM9L8zrvTG932GNDL39lRUtnthhDH_rbMuLpgICV-0d1t1kCNaf0GuCoXB_.jpg" alt="Freshly Fried Puris & Snacks being cracked open by hand">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Foundation Layer</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Freshly Fried Puris & Snacks</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                Every morning we fry crisp semolina golgappas, flaky maida papdis, and puffed rice murmura so the base delivers an unmistakable hollow crunch.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">See Crispy Classics</a>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/q2V1m1OoMcTb6LiRnj2yE6uNXLTD31Jjj53_x-jVBmrl67xN5fnAxq5KI8I7EHk1l9ue19Ty33OWyKFHtYQqzoINhgwdFYVVZbNS2IYRGbcOr78DJMj4EuyAMXZedngaZRty_0-rHuNEuNuKJ5yr8tktcLI3zMtTiZ-87wY.jpg" alt="Evening Street Food Stall Atmosphere" />
               </div>
-            </div>
-          </article>
-
-          <!-- Step 2 -->
-          <article class="chaat-card chaat-card-step">
-            <div class="card-img-wrap">
-              <span class="step-badge-circle">02</span>
-              <img src="image/home2/ih9H6XvvzVOAbq1GebvPq2pY6LRbJXEMZ0e-1ysrHs9WDw-BO1Xmr1T68o65k_OQchc_fAev30OET66-XKvZWnEb4SPvSFeBzFjvJE1MgDOsxFmzl9fWxLV9NhIAFbDre5T0VIOUCArTTuSSIbqinv89pmvwrjrpp4JiDX_.jpg" alt="Signature Chutneys & Masalas being spooned into Bhel Puri">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Flavour Alchemy</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Signature Chutneys & Masalas</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                We layer stone-ground mint-coriander chutney, slow-reduced date-tamarind glaze, fiery red garlic chutney, and our 14-spice roasted jeera masala.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">Explore Chutney Bar</a>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Evening Adda Spirit</span>
+                <h3 class="card-title">Vibrant Bazaar Energy</h3>
+                <p class="card-desc">
+                  Warm glowing bulbs, the aroma of roasted jeera and sizzling pav, and friendly chaat masters calling out your custom spice level — "Meetha, Medium, or Extra Teekha!"
+                </p>
               </div>
-            </div>
-          </article>
-
-          <!-- Step 3 -->
-          <article class="chaat-card chaat-card-step">
-            <div class="card-img-wrap">
-              <span class="step-badge-circle">03</span>
-              <img src="image/home2/Gq5PJRKPjD9w9U0jDK6Xz7gbzPOnMJnwKVzD2o5Qi8uUbc6ZQJ6CbDwKvytQPDVM6kJT9wKIRqOx4RooUwQMjLLNaTUrff8Di-3d5Z4b44eYthQJh_Xj-vXMtMG0SCUwzLXzPIrBArXbmkx9I7ivEhrj0Ea8b2QwEhdeZfM.jpg" alt="Made-to-Order Assembly pouring mint pani from brass pot">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Live Theatre</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Made-to-Order Assembly</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                Whether tossing bhel in a deep steel handi or pouring chilled boondi pani from a brass lota, our Ustads customize the spice level to your exact preference.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">Customize Your Order</a>
+              <div class="card-footer-action">
+                <a href="contact.html" class="btn-chaat btn-chaat-outline">Visit Our Corner</a>
               </div>
-            </div>
-          </article>
-
-          <!-- Step 4 -->
-          <article class="chaat-card chaat-card-step">
-            <div class="card-img-wrap">
-              <span class="step-badge-circle">04</span>
-              <img src="image/home2/xTjruw4Zuom6B4YdXrRtkRU-Ti9vTOJWaHpPj-NzdpizUZe7T0CK1yYXyzFWMnnS4TFZGQ3zzJluouJY5YW0f8hVDbcs27AtOLC5BQV85RXvYLpYwqb3jx0gc4JlRa68XPZ1GVvSS6Oop8q99YP9N83813q0kFnJatBx5xv.jpg" alt="Served Fresh with Topping Crunch in traditional leaf dona">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">The Finishing Crown</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Served Fresh with Topping Crunch</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                Crowned with a generous snowfall of golden gram-flour sev, ruby pomegranate pearls, fresh coriander leaves, and served in eco-friendly leaf donas.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">Order Fresh Now</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 4. POPULAR STREET FOOD FAVOURITES (STALL AWNING CARDS) ================= -->
-    <section class="py-20 bg-[#FFF5E6]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-14">
-          <div class="section-eyebrow mb-3">
-            <i data-lucide="award" class="w-4 h-4"></i>
-            <span>CHEF & CROWD SIGNATURES</span>
+            </article>
           </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
-            Popular Street Food Favourites
-          </h2>
-          <p class="text-[#5C4033] text-base sm:text-lg">
-            Six iconic regional chaat creations—presented in our signature street-stall awning cards with equal heights and verified dish photography.
-          </p>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          <!-- 1. Classic Pani Puri -->
-          <article class="chaat-card chaat-card-stall">
-            <div class="card-img-wrap">
-              <img src="image/P3VWso3p9f7p9c1xG68M-wF2wG3w-sP8x-2p5e0s9m7t-6c8-3v2x-4y1z8q7r9w5e3r1t8y6u4i2o0p.jpg" alt="Classic Pani Puri platter with mint and tamarind water">
-            </div>
-            <div class="card-body">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <span class="badge-veg">100% Veg</span>
-                <span class="price-pill text-sm">₹80</span>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/FxQHdAtoKno7Mi3mXYMiUcKe9K8drxDVi1F-K_0bW5Gq0sNS4nYDw3Y3wRcShPwwa_arq_yIlJ5O52XIEJtUuURqFozer2Qu_MX_fRIbC9FiTQJ-7LCsE2krLkt2cZKhC6xDTV1i0LVCujWABTjayJ0v2sxMJkZ18_aNqqy.jpg" alt="Live Tawa Counter at Our Street Food Corner" />
               </div>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Classic Pani Puri</h3>
-              <p class="text-[#5C4033] text-sm mb-5">
-                Eight crisp semolina puris served with spiced potato-chickpea mash and dual pots of icy mint-coriander & sweet imli pani.
-              </p>
-              <div class="card-footer-push">
-                <button type="button" class="btn-primary w-full js-quick-order" data-name="Classic Pani Puri" data-price="80">
-                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                  <span>Order Now</span>
-                </button>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Made-to-Order</span>
+                <h3 class="card-title">Sizzling Tawa Stations</h3>
+                <p class="card-desc">
+                  Watch fresh tomatoes, green chilies, and golden potato tikkis sear on heavy iron tawas before being crowned with chilled curd and crispy nylon sev.
+                </p>
               </div>
-            </div>
-          </article>
-
-          <!-- 2. Masala Papdi Chaat -->
-          <article class="chaat-card chaat-card-stall">
-            <div class="card-img-wrap">
-              <img src="image/pexels-Valeria-Boltneva-1893556.jpg" alt="Masala Papdi Chaat topped with curd, chutneys and pomegranate">
-            </div>
-            <div class="card-body">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <span class="badge-veg">100% Veg</span>
-                <span class="price-pill text-sm">₹115</span>
+              <div class="card-footer-action">
+                <a href="menu.html?cat=tikki-samosa" class="btn-chaat btn-chaat-outline">View Tawa Specials</a>
               </div>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Masala Papdi Chaat</h3>
-              <p class="text-[#5C4033] text-sm mb-5">
-                House-fried flaky flour wafers layered with diced potatoes, boiled kabuli chana, velvety curd, sonth chutney, and roasted cumin.
-              </p>
-              <div class="card-footer-push">
-                <button type="button" class="btn-primary w-full js-quick-order" data-name="Masala Papdi Chaat" data-price="115">
-                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                  <span>Order Now</span>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- 3. Dahi Bhalla -->
-          <article class="chaat-card chaat-card-stall">
-            <div class="card-img-wrap">
-              <img src="image/pexels-sarthak-2474661.jpg" alt="Delhi Style Dahi Bhalla in chilled spiced yogurt">
-            </div>
-            <div class="card-body">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <span class="badge-veg">100% Veg</span>
-                <span class="price-pill text-sm">₹125</span>
-              </div>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Dahi Bhalla</h3>
-              <p class="text-[#5C4033] text-sm mb-5">
-                Cloud-soft urad dal lentil dumplings soaked in sweetened hung curd and drizzled with ginger-tamarind chutney and ruby pomegranate.
-              </p>
-              <div class="card-footer-push">
-                <button type="button" class="btn-primary w-full js-quick-order" data-name="Dahi Bhalla" data-price="125">
-                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                  <span>Order Now</span>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- 4. Crispy Corn Chaat -->
-          <article class="chaat-card chaat-card-stall">
-            <div class="card-img-wrap">
-              <img src="image/home2/pexels-sourav-33721708.jpg" alt="Crispy Corn Chaat prepared fresh with sweet corn, onions, lime and masala">
-            </div>
-            <div class="card-body">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <span class="badge-veg">100% Veg</span>
-                <span class="price-pill text-sm">₹105</span>
-              </div>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Crispy Corn Chaat</h3>
-              <p class="text-[#5C4033] text-sm mb-5">
-                Golden-roasted sweet corn kernels tossed with finely diced red onions, tomatoes, green chillies, fresh lime juice, and kala namak.
-              </p>
-              <div class="card-footer-push">
-                <button type="button" class="btn-primary w-full js-quick-order" data-name="Crispy Corn Chaat" data-price="105">
-                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                  <span>Order Now</span>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- 5. Raj Kachori -->
-          <article class="chaat-card chaat-card-stall">
-            <div class="card-img-wrap">
-              <img src="image/pexels-marvin-ozz-2474658.jpg" alt="Royal Raj Kachori stuffed with sprouts, curd, chutneys and sev">
-            </div>
-            <div class="card-body">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <span class="badge-veg">Royal Special</span>
-                <span class="price-pill text-sm">₹160</span>
-              </div>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Raj Kachori</h3>
-              <p class="text-[#5C4033] text-sm mb-5">
-                The king of chaats! A giant crispy kachori shell filled with moong sprouts, mini pakoris, whipped curd, three chutneys, and crunchy boondi.
-              </p>
-              <div class="card-footer-push">
-                <button type="button" class="btn-primary w-full js-quick-order" data-name="Raj Kachori" data-price="160">
-                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                  <span>Order Now</span>
-                </button>
-              </div>
-            </div>
-          </article>
-
-          <!-- 6. Ragda Pattice -->
-          <article class="chaat-card chaat-card-stall">
-            <div class="card-img-wrap">
-              <img src="image/pexels-saveurs-secretes-5560763.jpg" alt="Mumbai Style Ragda Pattice with spiced white pea curry">
-            </div>
-            <div class="card-body">
-              <div class="flex items-center justify-center gap-2 mb-2">
-                <span class="badge-veg">Mumbai Classic</span>
-                <span class="price-pill text-sm">₹135</span>
-              </div>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Ragda Pattice</h3>
-              <p class="text-[#5C4033] text-sm mb-5">
-                Twin pan-seared potato pattice swimming in slow-simmered spiced white pea ragda curry, topped with tangy kokum-imli glaze and sev.
-              </p>
-              <div class="card-footer-push">
-                <button type="button" class="btn-primary w-full js-quick-order" data-name="Ragda Pattice" data-price="135">
-                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                  <span>Order Now</span>
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 5. LIVE CHAAT PREPARATION SECTION ================= -->
-    <section class="py-20 bg-[#38251D] text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-14">
-          <div class="section-eyebrow mb-3">
-            <i data-lucide="chef-hat" class="w-4 h-4"></i>
-            <span>OPEN-KITCHEN TRANSPARENCY</span>
+            </article>
           </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4">
-            Live Chaat Preparation
-          </h2>
-          <p class="text-[#FFF5E6]/85 text-base sm:text-lg">
-            Every bowl at Chaat Adda is mixed live in front of you—combining the theatrical energy of traditional Indian street carts with five-star kitchen hygiene.
-          </p>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-          <!-- Card 1 -->
-          <article class="chaat-card bg-[#2A1B15] border-[#FFC83D]/30 text-white">
-            <div class="card-img-wrap bg-[#1D120E]">
-              <img src="image/home2/ROqiz8RejXPOXYNMcbDs4ZRDxpO2iiiAHYtAg19B1d6ge58gpDg9k1LHosA4oRuCBugstY6vtVjJuAG6og0WbGQjHO3pQCtYEYpXy0Z9qqWL577h_7apK43g-G6aW9yNAlOEOKIW8urfdP0UCFH62xX6T1Dp47C_6Vh8o5CC_wxLt.jpg" alt="Master Chaat Ustad tossing spicy bhel and chana in a deep steel handi">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Handi Tossing</span>
-              <h3 class="text-xl font-extrabold text-[#FFC83D] mb-2">High-Speed Bhel & Chana Mixing</h3>
-              <p class="text-[#FFF5E6]/85 text-sm mb-4">
-                Our chefs toss puffed murmura, roasted peanuts, raw mango, and chutneys in deep stainless-steel handis so every grain is coated without turning soggy.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-white/10">
-                <a href="menu.html" class="btn-secondary w-full text-xs py-2.5">Try Chowpatty Bhel</a>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="190">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/Jm4U1Lzs-GwsXNS50H3PM664RXq2k-ywQBE85Lm-54sB6DygeZRF5okID-Eb0bWH26ziGX1DEYfaKdIGdl4oGWyvdrCdO7L3K72L3ZjmfcyosNMijhlWFDcwYIfyEmKk4OeMLiFJqx3l_bxUf0QEye1tO4jpomEsd1ZJufI2rOG1v.jpg" alt="Colorful Indian Street Art Dining Seating" />
               </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="chaat-card bg-[#2A1B15] border-[#FFC83D]/30 text-white">
-            <div class="card-img-wrap bg-[#1D120E]">
-              <img src="image/home2/uS675fdbwsFgV_5IPCfcWpSSuAxctQ6b8Er3vWLx-u6C4T9z8-ONdzUlaiuC6qEHBHyPLGBTii5y5SohwknAZbphV5tZ6U97GWab9aAAfwAKNnxzJRQcCymiErUmY5prtwom8WNhUZMoPiOR6BlqR8ueV3z_ZW8hszFNfCP.jpg" alt="Hygienic Live Chaat Counter with gloved chef and covered condiment bowls">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Gloved & Sanitized</span>
-              <h3 class="text-xl font-extrabold text-[#FFC83D] mb-2">Food-Grade Steel & RO Water</h3>
-              <p class="text-[#FFF5E6]/85 text-sm mb-4">
-                All chutneys, curds, and boiled garnishes are stored in chilled food-grade steel containers, and our chefs wear fresh nitrile gloves for every service.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-white/10">
-                <a href="catering.html" class="btn-secondary w-full text-xs py-2.5">View Catering Hygiene</a>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Street-Art Seating</span>
+                <h3 class="card-title">Desi Pop-Art Dining</h3>
+                <p class="card-desc">
+                  Enjoy the nostalgia of open-air street stalls with the comfort of colourful indoor seating, hand-painted murals, and spotless dining tables.
+                </p>
               </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="chaat-card bg-[#2A1B15] border-[#FFC83D]/30 text-white">
-            <div class="card-img-wrap bg-[#1D120E]">
-              <img src="image/home2/yABLaandPe_kdF-VpJfL1fXVJl4aKwx3rfrVTt1ebRbX10Vzbh8mYe7OgM54p8ZBn1Kx-4WCvmWtOObP_N3t1SCyvZzm16Z83KSomJazSotuCFICQp7XkDeq5GqS-mmtajWFlE0QVlI6D6yBDHHhDmOTcxVydJRAVlhzalR.jpg" alt="Traditional Indian Chaat Center counter with sizzling tawa and hanging snacks">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Heritage Recipes</span>
-              <h3 class="text-xl font-extrabold text-[#FFC83D] mb-2">Authentic Ustad Spice Proportions</h3>
-              <p class="text-[#FFF5E6]/85 text-sm mb-4">
-                Trained in generational chaat families from Agra, Varanasi, and Mumbai, our counter masters balance sweet, sour, salty, and pungent notes effortlessly.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-white/10">
-                <a href="contact.html" class="btn-secondary w-full text-xs py-2.5">Visit Our Flagship</a>
+              <div class="card-footer-action">
+                <a href="index.html" class="btn-chaat btn-chaat-outline">Read Our Brand Story</a>
               </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= 6. OUR STREET FOOD SPECIALTIES (REGIONAL POSTCARD CARDS) ================= -->
-    <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-14">
-          <div class="section-eyebrow mb-3">
-            <i data-lucide="compass" class="w-4 h-4"></i>
-            <span>4 REGIONS OF INDIA</span>
+            </article>
           </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
-            Our Street Food Specialties
-          </h2>
-          <p class="text-[#5C4033] text-base sm:text-lg">
-            Travel across India's legendary street-food capitals through four regional culinary traditions curated under one roof.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
-          <!-- Specialty 1 -->
-          <article class="chaat-card chaat-card-postcard">
-            <div class="card-img-wrap">
-              <img src="image/home2/ih9H6XvvzVOAbq1GebvPq2pY6LRbJXEMZ0e-1ysrHs9WDw-BO1Xmr1T68o65k_OQchc_fAev30OET66-XKvZWnEb4SPvSFeBzFjvJE1MgDOsxFmzl9fWxLV9NhIAFbDre5T0VIOUCArTTuSSIbqinv89pmvwrjrpp4JiDX_.jpg" alt="Mumbai Chowpatty Classics Bhel Puri and Sev Puri">
-            </div>
-            <div class="card-body">
-              <span class="region-stamp mb-2">West India • Mumbai</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Mumbai Chowpatty Classics</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                Breezy seaside favourites including crunchy Bhel Puri, flat Batata Sev Puri with garlic chutney, and sizzling Ragda Pattice.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">Explore Mumbai Menu</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Specialty 2 -->
-          <article class="chaat-card chaat-card-postcard">
-            <div class="card-img-wrap">
-              <img src="image/pexels-Valeria-Boltneva-1893555.jpg" alt="Old Delhi Chaat Specials Aloo Tikki and Dahi Bhalla">
-            </div>
-            <div class="card-body">
-              <span class="region-stamp mb-2">North India • Old Delhi</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Old Delhi Chaat Specials</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                Chandni Chowk classics featuring ghee-roasted Aloo Tikki, chilled Dahi Bhalla Papdi, and stuffed Raj Kachori with dry fruits.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">Explore Delhi Menu</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Specialty 3 -->
-          <article class="chaat-card chaat-card-postcard">
-            <div class="card-img-wrap">
-              <img src="image/home2/pexels-saidpexels-11216447.jpg" alt="Hot & Crispy Evening Snacks roasted over glowing embers">
-            </div>
-            <div class="card-body">
-              <span class="region-stamp mb-2">Monsoon & Evening Cart</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Hot & Crispy Evening Snacks</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                Piping-hot Punjabi Samosas, spiced Khasta Kachori, charcoal-roasted Masala Bhutta corn, and triple-decker grilled sandwiches.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">Explore Hot Snacks</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Specialty 4 -->
-          <article class="chaat-card chaat-card-postcard">
-            <div class="card-img-wrap">
-              <img src="image/home2/pexels-thilina-alagiyawanna-3266092-40156167.jpg" alt="Desi Coolers & Refreshments stall with chilled drinks">
-            </div>
-            <div class="card-body">
-              <span class="region-stamp mb-2">Beverage Bar</span>
-              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Desi Coolers & Refreshments</h3>
-              <p class="text-[#5C4033] text-sm mb-4">
-                Cool down the spice with clay-cup Kesar Mango Lassi, smoky Banta Nimbu Soda, cumin-spiced Matka Jaljeera, and Cutting Masala Chai.
-              </p>
-              <div class="card-footer-push pt-3 border-t border-[#38251D]/10">
-                <a href="menu.html" class="btn-outline-dark w-full text-xs py-2.5">Explore Coolers</a>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= 7. STREET FOOD GALLERY (6 AUTHENTIC INDIAN SCENES) ================= -->
-    <section class="py-20 bg-[#FFF5E6]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-14">
-          <div class="section-eyebrow mb-3">
-            <i data-lucide="camera" class="w-4 h-4"></i>
-            <span>SIGHTS & COLOURS OF THE BAZAAR</span>
+    <!-- ======================================================================
+         SECTION 2: THE ART OF MAKING CHAAT (4-Step Craft)
+         ====================================================================== -->
+    <section class="section-pad bg-cream-alt" id="artOfMakingChaat">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge badge-red">4-Layer Flavour Symphony</span>
+          <h2 class="section-title">The Art of Making Chaat</h2>
+          <p class="section-subtitle">
+            Every great chaat is a delicate race against time — layering hot and cold, crisp and creamy, fiery and sweet seconds before you take your first bite.
+          </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="40">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/cZ4cdT4InrypBeAnAQMnZZC76o6FPSF0nm_W5uO-qw1O4vkamUYd7vOGFa6ILaa6Ac6jnpC47CArcjp8AMx6V0rnOD4gtdspwcgx4ZgWlxp_EM9L8zrvTG932GNDL39lRUtnthhDH_rbMuLpgICV-0d1t1kCNaf0GuCoXB_.jpg" alt="Step 1 – Hand-cracking crisp puris and stuffing with spiced potato and vatana" />
+              </div>
+              <div class="card-body-centered">
+                <span class="kicker-badge">Step 01</span>
+                <h3 class="card-title">The Crisp Crack &amp; Stuffing</h3>
+                <p class="card-desc">
+                  Each sun-golden suji or atta puri is cracked by thumb and filled with warm, cumin-spiced potato mash and tender white vatana peas.
+                </p>
+              </div>
+            </article>
           </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
-            Street Food Gallery
-          </h2>
-          <p class="text-[#5C4033] text-base sm:text-lg">
-            Every photograph captures real Indian chaat counters, festival setups, and vibrant street-corner dining moments.
-          </p>
-        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-          <!-- Gallery 1 -->
-          <article class="chaat-card">
-            <div class="card-img-wrap">
-              <img src="image/home2/siSQLkvfqKCe96bhkaX6E290QEfkvfWuiecgTRta5NzvxOHuxcpRmdVK94MmV1ENzKGCV5mnMSBinxlpzV7FhLAQdN97bAkpX3ZzcmjS-__r7n3UakNEo_IUhSAaV5Z60R6TdKRbLtKKWfVFk8nf9nMbsnCqpHTp0_D29RA.jpg" alt="Bustling Indian Chaat Corner Display">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Counter Showcase</span>
-              <h3 class="text-lg font-extrabold text-[#38251D] mb-1">The Grand Chaat Display</h3>
-              <p class="text-sm text-[#5C4033]">Rows of crispy puris, golden samosas, ruby pomegranate jewels, and chilled yogurt bowls ready for evening service.</p>
-            </div>
-          </article>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/ih9H6XvvzVOAbq1GebvPq2pY6LRbJXEMZ0e-1ysrHs9WDw-BO1Xmr1T68o65k_OQchc_fAev30OET66-XKvZWnEb4SPvSFeBzFjvJE1MgDOsxFmzl9fWxLV9NhIAFbDre5T0VIOUCArTTuSSIbqinv89pmvwrjrpp4JiDX_.jpg" alt="Step 2 – Tossing fresh coriander, onions, raw mango and chutneys into a paper cone" />
+              </div>
+              <div class="card-body-centered">
+                <span class="kicker-badge">Step 02</span>
+                <h3 class="card-title">The Fresh Herb &amp; Spice Toss</h3>
+                <p class="card-desc">
+                  Finely chopped red onions, farm-fresh green coriander, raw kairi mango, and hand-roasted black salt chaat masala awaken the palate.
+                </p>
+              </div>
+            </article>
+          </div>
 
-          <!-- Gallery 2 -->
-          <article class="chaat-card">
-            <div class="card-img-wrap">
-              <img src="image/home2/k920ZoOYq6bOGpeLkH9ckLNMd9xBOb0X_jClqNBe4pn0IiEl8wg_GgyP_QsxAibTnRrdOgp7VItrlUEPE6dkZ69b-5e6gjq05kgFLIaR9pORkXnIvOHnzcgzAMwp66TTAIjuCezVbpVA6gjtQov-6mp9RffMbz08AF36qOp.jpg" alt="Bhel Puri Live Chaat Bar at Celebration">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Celebration Stalls</span>
-              <h3 class="text-lg font-extrabold text-[#38251D] mb-1">Live Bhel Puri Bar</h3>
-              <p class="text-sm text-[#5C4033]">Guests gathering around our marigold-draped wedding and festival chaat counter for custom-spiced cones.</p>
-            </div>
-          </article>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="140">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/Gq5PJRKPjD9w9U0jDK6Xz7gbzPOnMJnwKVzD2o5Qi8uUbc6ZQJ6CbDwKvytQPDVM6kJT9wKIRqOx4RooUwQMjLLNaTUrff8Di-3d5Z4b44eYthQJh_Xj-vXMtMG0SCUwzLXzPIrBArXbmkx9I7ivEhrj0Ea8b2QwEhdeZfM.jpg" alt="Step 3 – Pouring chilled pudina pani from a traditional brass lota" />
+              </div>
+              <div class="card-body-centered">
+                <span class="kicker-badge">Step 03</span>
+                <h3 class="card-title">The Chilled Brass Lota Pour</h3>
+                <p class="card-desc">
+                  Poured high from a gleaming brass lota — a splash of fiery mint-coriander jaljeera balanced with velvety khajoor-imli nectar.
+                </p>
+              </div>
+            </article>
+          </div>
 
-          <!-- Gallery 3 -->
-          <article class="chaat-card">
-            <div class="card-img-wrap">
-              <img src="image/home2/Gq5PJRKPjD9w9U0jDK6Xz7gbzPOnMJnwKVzD2o5Qi8uUbc6ZQJ6CbDwKvytQPDVM6kJT9wKIRqOx4RooUwQMjLLNaTUrff8Di-3d5Z4b44eYthQJh_Xj-vXMtMG0SCUwzLXzPIrBArXbmkx9I7ivEhrj0Ea8b2QwEhdeZfM.jpg" alt="Pouring fresh mint pani with boondi from brass pot">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Golgappa Ritual</span>
-              <h3 class="text-lg font-extrabold text-[#38251D] mb-1">The Brass Lota Pour</h3>
-              <p class="text-sm text-[#5C4033]">Chilled mint and coriander water speckled with crunchy boondi poured fresh into every potato-stuffed golgappa.</p>
-            </div>
-          </article>
-
-          <!-- Gallery 4 -->
-          <article class="chaat-card">
-            <div class="card-img-wrap">
-              <img src="image/home2/xTjruw4Zuom6B4YdXrRtkRU-Ti9vTOJWaHpPj-NzdpizUZe7T0CK1yYXyzFWMnnS4TFZGQ3zzJluouJY5YW0f8hVDbcs27AtOLC5BQV85RXvYLpYwqb3jx0gc4JlRa68XPZ1GVvSS6Oop8q99YP9N83813q0kFnJatBx5xv.jpg" alt="Eco-friendly leaf dona bowl filled with 5 golgappas">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Traditional Serving</span>
-              <h3 class="text-lg font-extrabold text-[#38251D] mb-1">Eco-Friendly Leaf Donas</h3>
-              <p class="text-sm text-[#5C4033]">We serve our street classics in biodegradable pressed-leaf bowls that honour authentic Indian bazaar heritage.</p>
-            </div>
-          </article>
-
-          <!-- Gallery 5 -->
-          <article class="chaat-card">
-            <div class="card-img-wrap">
-              <img src="image/GpWP1XNh-be-IqukWAoIp15muD8y9qZRSQjKrbyIxWBo0xq8x68gSDdAub6ELvb6t9MbAUeP9St6o0Ly3F__60WFR25yHwR2MUuuFGgZCBYIvmih1JJUs5rUjZba8HycljYVGeQsH0rWOaG-Yg3VUf_QRMEaUNzedf5TkUbVId0bv.jpg" alt="Festive Pani Puri Cart with brass matka and marigold garlands">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Royal Cart</span>
-              <h3 class="text-lg font-extrabold text-[#38251D] mb-1">Marigold & Brass Cart</h3>
-              <p class="text-sm text-[#5C4033]">Our signature wooden cart adorned with fresh marigold garlands and hammered brass vessels at our flagship corner.</p>
-            </div>
-          </article>
-
-          <!-- Gallery 6 -->
-          <article class="chaat-card">
-            <div class="card-img-wrap">
-              <img src="image/Jm4U1Lzs-GwsXNS50H3PM664RXq2k-ywQBE85Lm-54sB6DygeZRF5okID-Eb0bWH26ziGX1DEYfaKdIGdl4oGWyvdrCdO7L3K72L3ZjmfcyosNMijhlWFDcwYIfyEmKk4OeMLiFJqx3l_bxUf0QEye1tO4jpomEsd1ZJufI2rOG1v.jpg" alt="Vibrant Indian Tuk-Tuk and pop-art dining ambience">
-            </div>
-            <div class="card-body">
-              <span class="badge-veg mb-2">Adda Vibe</span>
-              <h3 class="text-lg font-extrabold text-[#38251D] mb-1">Vibrant Pop-Art Seating</h3>
-              <p class="text-sm text-[#5C4033]">Gather with friends beside our custom-painted yellow auto-rickshaw booth and Bollywood street murals.</p>
-            </div>
-          </article>
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="190">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/xTjruw4Zuom6B4YdXrRtkRU-Ti9vTOJWaHpPj-NzdpizUZe7T0CK1yYXyzFWMnnS4TFZGQ3zzJluouJY5YW0f8hVDbcs27AtOLC5BQV85RXvYLpYwqb3jx0gc4JlRa68XPZ1GVvSS6Oop8q99YP9N83813q0kFnJatBx5xv.jpg" alt="Step 4 – Serving golgappa in an eco-friendly dried leaf dona bowl" />
+              </div>
+              <div class="card-body-centered">
+                <span class="kicker-badge">Step 04</span>
+                <h3 class="card-title">The Leaf Dona Experience</h3>
+                <p class="card-desc">
+                  Served immediately in biodegradable sal-leaf donas or crisp paper cones — finished with a compulsory "Sukha Puri" on the house!
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= 8. CALL TO ACTION ================= -->
-    <section class="py-20 spice-cta-banner text-white">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm text-[#FFC83D] text-xs font-extrabold uppercase tracking-widest mb-5">
-          <i data-lucide="sparkles" class="w-4 h-4"></i>
-          <span>FRESHLY PREPARED ALL DAY • 11 AM TO 11 PM</span>
+    <!-- ======================================================================
+         SECTION 3: POPULAR STREET FOOD FAVOURITES (6 Street Corner Cards)
+         ====================================================================== -->
+    <section class="section-pad bg-white-warm" id="streetFoodFavourites">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge">Hot Off the Corner Cart</span>
+          <h2 class="section-title">Popular Street Food Favourites</h2>
+          <p class="section-subtitle">
+            Authentic street-side hits served in leaf donas and paper cones. Add your favourites straight to your order! (Editable Sample Pricing)
+          </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
         </div>
-        <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-          Come Hungry. Leave with a <span class="text-[#FFC83D]">Happy Heart!</span>
-        </h2>
-        <p class="text-lg sm:text-xl text-[#FFF5E6]/90 mb-9 max-w-2xl mx-auto">
-          Browse all 7 categories on our interactive menu or send your order straight to our kitchen on WhatsApp.
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="menu.html" class="btn-secondary text-base px-8 py-4">
-            <i data-lucide="utensils" class="w-5 h-5"></i>
-            <span>View Full Menu</span>
-          </a>
-          <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20would%20like%20to%20order%20from%20your%20Street%20Food%20Corner." target="_blank" rel="noopener" class="btn-whatsapp text-base px-8 py-4">
-            <i data-lucide="message-circle" class="w-5 h-5"></i>
-            <span>Order on WhatsApp</span>
-          </a>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="40">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/xTjruw4Zuom6B4YdXrRtkRU-Ti9vTOJWaHpPj-NzdpizUZe7T0CK1yYXyzFWMnnS4TFZGQ3zzJluouJY5YW0f8hVDbcs27AtOLC5BQV85RXvYLpYwqb3jx0gc4JlRa68XPZ1GVvSS6Oop8q99YP9N83813q0kFnJatBx5xv.jpg" alt="Leaf Dona Kolkata Phuchka" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Street Corner Hit</span>
+                <h3 class="card-title">Kolkata Leaf-Dona Phuchka</h3>
+                <p class="card-desc">
+                  Whole-wheat crispy phuchkas stuffed with Gondhoraj-lemon spiced potato &amp; black chana mash, dipped in smoky tamarind water.
+                </p>
+                <div class="price-pill">₹70</div>
+              </div>
+              <div class="card-footer-action">
+                <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="sc-kolkata-phuchka" data-name="Kolkata Leaf-Dona Phuchka" data-price="70" data-category="Pani Puri & Golgappa">
+                  <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+                  <span>Order Now</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/ih9H6XvvzVOAbq1GebvPq2pY6LRbJXEMZ0e-1ysrHs9WDw-BO1Xmr1T68o65k_OQchc_fAev30OET66-XKvZWnEb4SPvSFeBzFjvJE1MgDOsxFmzl9fWxLV9NhIAFbDre5T0VIOUCArTTuSSIbqinv89pmvwrjrpp4JiDX_.jpg" alt="Paper Cone Jhalmuri & Bombay Bhel" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Evening Snack</span>
+                <h3 class="card-title">Paper-Cone Jhalmuri &amp; Bhel</h3>
+                <p class="card-desc">
+                  Crunchy puffed rice tossed in a steel handi with roasted peanuts,chanachur, fresh coconut slivers, coriander, and a dash of mustard oil.
+                </p>
+                <div class="price-pill">₹80</div>
+              </div>
+              <div class="card-footer-action">
+                <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="sc-cone-bhel" data-name="Paper-Cone Jhalmuri & Bhel" data-price="80" data-category="Bhel & Street Snacks">
+                  <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+                  <span>Order Now</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/pexels-ranjit-pradhan-943095-40047410.jpg" alt="Garma Garam Pakora & Mirchi Vada Basket" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Monsoon Special</span>
+                <h3 class="card-title">Karare Pakora &amp; Mirchi Vada</h3>
+                <p class="card-desc">
+                  Piping-hot gram-flour fritters of onion, potato, and stuffed Jodhpuri mirchi vada dusted with amchur chaat masala and green chutney.
+                </p>
+                <div class="price-pill">₹95</div>
+              </div>
+              <div class="card-footer-action">
+                <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="sc-pakora-basket" data-name="Karare Pakora & Mirchi Vada" data-price="95" data-category="Bhel & Street Snacks">
+                  <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+                  <span>Order Now</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/pexels-sourav-33721708.jpg" alt="Chowpatty Roasted Masala Bhutta & Chana Jor" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Beachside Classic</span>
+                <h3 class="card-title">Chowpatty Masala Corn &amp; Chana</h3>
+                <p class="card-desc">
+                  Char-roasted sweet corn kernels and spiced chana jor garam rubbed with fresh lime, kashmiri chili, and black salt butter.
+                </p>
+                <div class="price-pill">₹75</div>
+              </div>
+              <div class="card-footer-action">
+                <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="sc-masala-corn" data-name="Chowpatty Masala Corn & Chana" data-price="75" data-category="Bhel & Street Snacks">
+                  <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+                  <span>Order Now</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/pexels-fahim-shizan-2152194768-34356404.jpg" alt="Cheese & Sev Loaded Fuska Puri Platter" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Crowd Favourite</span>
+                <h3 class="card-title">Loaded Masala Fuska Platter</h3>
+                <p class="card-desc">
+                  A full ring of 12 crispy puris loaded with spiced potato-chana mash, grated paneer &amp; sev, served with fiery tamarind-chili dip in the center.
+                </p>
+                <div class="price-pill">₹130</div>
+              </div>
+              <div class="card-footer-action">
+                <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="sc-fuska-ring" data-name="Loaded Masala Fuska Platter" data-price="130" data-category="Pani Puri & Golgappa">
+                  <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+                  <span>Order Now</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="240">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/pexels-uniqueton-4722522.jpg" alt="Crispy Moong Dal Vada & Chutney" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Crunchy Bite</span>
+                <h3 class="card-title">Crispy Moong Dal Ram Ladoo</h3>
+                <p class="card-desc">
+                  Old Delhi's iconic fluffy, golden moong-chana dal fritters topped with grated mooli (radish) salad and tangy green pudina chutney.
+                </p>
+                <div class="price-pill">₹90</div>
+              </div>
+              <div class="card-footer-action">
+                <button type="button" class="btn-chaat btn-chaat-primary js-add-to-order" data-id="sc-ram-ladoo" data-name="Crispy Moong Dal Ram Ladoo" data-price="90" data-category="Bhel & Street Snacks">
+                  <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
+                  <span>Order Now</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: LIVE CHAAT PREPARATION
+         ====================================================================== -->
+    <section class="section-pad bg-cream-alt" id="liveChaatPreparation">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge badge-green">Prepared Live in Front of You</span>
+          <h2 class="section-title">Live Chaat Preparation</h2>
+          <p class="section-subtitle">
+            There is no secret kitchen here — watch our ustads toss, crush, sear, and garnish your chaat live at our open street-food counters.
+          </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/ROqiz8RejXPOXYNMcbDs4ZRDxpO2iiiAHYtAg19B1d6ge58gpDg9k1LHosA4oRuCBugstY6vtVjJuAG6og0WbGQjHO3pQCtYEYpXy0Z9qqWL577h_7apK43g-G6aW9yNAlOEOKIW8urfdP0UCFH62xX6T1Dp47C_6Vh8o5CC_wxLt.jpg" alt="Master Chef Tossing Chana & Bhel in Giant Steel Handi" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> High-Energy Tossing</span>
+                <h3 class="card-title">The Giant Patila Bhel Toss</h3>
+                <p class="card-desc">
+                  Our chaat masters rhythmically toss puffed rice, sprouted chana, onions, and 12 secret spices in a giant steel patila so every grain is coated in flavour.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/uS675fdbwsFgV_5IPCfcWpSSuAxctQ6b8Er3vWLx-u6C4T9z8-ONdzUlaiuC6qEHBHyPLGBTii5y5SohwknAZbphV5tZ6U97GWab9aAAfwAKNnxzJRQcCymiErUmY5prtwom8WNhUZMoPiOR6BlqR8ueV3z_ZW8hszFNfCP.jpg" alt="Chef in White Uniform Preparing Live Chaat Counter" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Spotless Hygiene</span>
+                <h3 class="card-title">Custom Spice &amp; Chutney Bar</h3>
+                <p class="card-desc">
+                  Choose Jain-friendly (no onion, no garlic), kids' mild sweet imli, or fiery green chili-garlic tadka — customized plate by plate with gloved hands.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="190">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/yABLaandPe_kdF-VpJfL1fXVJl4aKwx3rfrVTt1ebRbX10Vzbh8mYe7OgM54p8ZBn1Kx-4WCvmWtOObP_N3t1SCyvZzm16Z83KSomJazSotuCFICQp7XkDeq5GqS-mmtajWFlE0QVlI6D6yBDHHhDmOTcxVydJRAVlhzalR.jpg" alt="Traditional Indian Chaat Center Counter" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge"><span class="veg-icon-box"></span> Nostalgic Tradition</span>
+                <h3 class="card-title">Authentic Tawa &amp; Kadai Heritage</h3>
+                <p class="card-desc">
+                  From Banarasi garadu and chhole tikkiya to crispy kachoris, we keep the time-honoured techniques of India's historic chaat gullies alive.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: OUR STREET FOOD SPECIALTIES (Regional Showcase)
+         ====================================================================== -->
+    <section class="section-pad bg-white-warm" id="streetFoodSpecialties">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge badge-red">4 Iconic Street Corners of India</span>
+          <h2 class="section-title">Our Street Food Specialties</h2>
+          <p class="section-subtitle">
+            Travel across India's legendary street-food capitals without leaving your table at Chaat Adda.
+          </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="40">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/pexels-shahbaz-ansari-283673909-13063313.jpg" alt="Mumbai Juhu & Chowpatty Corner" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge">West India</span>
+                <h3 class="card-title">Mumbai Chowpatty Corner</h3>
+                <p class="card-desc">Ragda Pani Puri, Geeli Bhel, Sev Batata Puri, and buttery Bombay Masala Toast Sandwiches.</p>
+              </div>
+              <div class="card-footer-action">
+                <a href="menu.html?cat=papdi-sev" class="btn-chaat btn-chaat-outline">Explore Mumbai Picks</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/pexels-dashingvinit-16171917.jpg" alt="Old Delhi Chandni Chowk Corner" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge">North India</span>
+                <h3 class="card-title">Old Delhi Paranthe &amp; Tikki Gully</h3>
+                <p class="card-desc">Gujiya Dahi Bhalla, Bhalla Papdi, Raj Kachori, and crisp desi-ghee Aloo Tikki Chaat.</p>
+              </div>
+              <div class="card-footer-action">
+                <a href="menu.html?cat=dahi-chaat" class="btn-chaat btn-chaat-outline">Explore Delhi Picks</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="140">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/pexels-jahratreza-40000012.jpg" alt="Kolkata Victoria Phuchka Stand" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge">East India</span>
+                <h3 class="card-title">Kolkata Phuchka &amp; Churmur Stand</h3>
+                <p class="card-desc">Tangy tetul-water Phuchkas, spicy Churmur crushed with green chilies, and mustard Jhalmuri.</p>
+              </div>
+              <div class="card-footer-action">
+                <a href="menu.html?cat=pani-puri" class="btn-chaat btn-chaat-outline">Explore Kolkata Picks</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="190">
+            <article class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/P3VWsokILeZRtD5yAozBwfzd5gYl6MTwSZZu7Xwmi2wbCNS2MEQLZSKUiYNj2_Wcqk2t7seY0xUNXIM3NFUXjq_YMaPiVvX9bPbRa9rZWzE8B6lT1e7ikdLCOBTV7hcvGJKvZcN68907XsZuyM6HmzTrqW7M5sR9WyrDn2SOW3Uq2.jpg" alt="Banaras & Indore Chaat Bazaar" />
+              </div>
+              <div class="card-body-centered">
+                <span class="veg-badge">Heart of India</span>
+                <h3 class="card-title">Banaras &amp; Sarafa Bazaar</h3>
+                <p class="card-desc">Warm Tamatar Chaat in kulhad, Palak Patta Chaat, Khasta Kachori, and Kesariya Thandai.</p>
+              </div>
+              <div class="card-footer-action">
+                <a href="menu.html?cat=tikki-samosa" class="btn-chaat btn-chaat-outline">Explore Banaras Picks</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: STREET FOOD GALLERY
+         ====================================================================== -->
+    <section class="section-pad bg-cream-alt" id="streetFoodGallery">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="kicker-badge">Visual Feast</span>
+          <h2 class="section-title">Street Food Corner Gallery</h2>
+          <p class="section-subtitle">
+            Snapshots of our evening food stalls, live wedding chaat bars, and steaming street-side delicacies.
+          </p>
+          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="40">
+            <div class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/k920ZoOYq6bOGpeLkH9ckLNMd9xBOb0X_jClqNBe4pn0IiEl8wg_GgyP_QsxAibTnRrdOgp7VItrlUEPE6dkZ69b-5e6gjq05kgFLIaR9pORkXnIvOHnzcgzAMwp66TTAIjuCezVbpVA6gjtQov-6mp9RffMbz08AF36qOp.jpg" alt="Royal Live Bhel Puri Bar at Evening Celebration" />
+              </div>
+              <div class="card-body-centered">
+                <h3 class="card-title">Live Bhel Puri Bar</h3>
+                <p class="card-desc">Terracotta bowls overflowing with golden sev, ruby pomegranate, peanuts, and fresh chutneys.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="90">
+            <div class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/pexels-thilina-alagiyawanna-3266092-40156167.jpg" alt="Night Street Food Counter Glow" />
+              </div>
+              <div class="card-body-centered">
+                <h3 class="card-title">Late-Evening Adda Glow</h3>
+                <p class="card-desc">Where friends gather under warm street lights for a round of spicy snacks and chilled sodas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="140">
+            <div class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/pexels-saidpexels-11216447.jpg" alt="Charcoal Roasted Sweet Corn Cart" />
+              </div>
+              <div class="card-body-centered">
+                <h3 class="card-title">Smoky Charcoal Roasts</h3>
+                <p class="card-desc">Fresh golden corn cobs roasted over glowing embers and brushed with nimbu-mirch masala.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="190">
+            <div class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/pexels-brett-sayles-2856030.jpg" alt="Street Corner Night Food Cart" />
+              </div>
+              <div class="card-body-centered">
+                <h3 class="card-title">Bustling Night Stalls</h3>
+                <p class="card-desc">Vibrant menu boards and quick counter service designed for instant street-food gratification.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="240">
+            <div class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/home2/pexels-valeriya-25388878.jpg" alt="Outdoor Festival Food Pan Station" />
+              </div>
+              <div class="card-body-centered">
+                <h3 class="card-title">Outdoor Festival Counters</h3>
+                <p class="card-desc">Bringing sizzling tawa specialties to college fests, carnivals, and weekend flea markets.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="290">
+            <div class="chaat-card">
+              <div class="card-img-wrap">
+                <img src="image/D-VCw3FdMRfG7K8ogX1LoNnZvIGhAMfm58yrwYpELOeVcZnkEPpRGWG_Quabv5FiCnUwKZSnipmJcyqOc4NV-ifV70cGxx2G-NZ-T4cZjfWReeQU66j1LsLfqGiXehXyZlPsf1QunJy8cxQsRqzRHhh8eMNZrIUNU9p4ujm46qEZE.jpg" alt="Modern Street Food Cafe Dining Room" />
+              </div>
+              <div class="card-body-centered">
+                <h3 class="card-title">Comfort Indoor Seating</h3>
+                <p class="card-desc">Air-conditioned family tables right next to our live chaat counter so everyone dines in comfort.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: VISIT OUR FOOD CORNER CTA
+         ====================================================================== -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="cta-banner-box" data-aos="zoom-in">
+          <span class="kicker-badge">Open Every Day · 11:30 AM – 11:00 PM</span>
+          <h2 class="section-title">Visit Our Street Food Corner Today!</h2>
+          <p>
+            Gather your friends for a live round of Pani Puri, order a family chaat box on WhatsApp, or book our live street-food carts for your next celebration.
+          </p>
+          <div class="btn-group-centered">
+            <a href="menu.html" class="btn-chaat btn-chaat-secondary">
+              <i data-lucide="utensils" style="width:18px;height:18px;"></i>
+              <span>Browse Full Menu</span>
+            </a>
+            <a href="contact.html" class="btn-chaat btn-chaat-outline">
+              <i data-lucide="map-pin" style="width:18px;height:18px;"></i>
+              <span>Get Directions &amp; Hours</span>
+            </a>
+            <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20want%20to%20order%20from%20your%20Street%20Food%20Corner." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
+              <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+              <span>Order on WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer pt-16 pb-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/15 text-center md:text-left">
-        <div class="flex flex-col items-center md:items-start">
-          <a href="index.html" class="mb-4 inline-block bg-[#FFF5E6] p-2.5 rounded-2xl">
-            <img src="assets/logo.svg" alt="Chaat Adda Logo" class="h-11 w-auto">
+  <!-- ========================================================================
+       PREMIUM COLORFUL FOOTER (Logo links to Home)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 footer-col">
+          <a href="index.html" class="footer-logo-link" aria-label="Chaat Adda Home">
+            <img src="assets/logo.svg" alt="Chaat Adda Logo" width="190" height="46" />
           </a>
-          <p class="text-[#FFC83D] font-bold text-sm uppercase tracking-wider mb-2">Every Bite Has a Story!</p>
-          <p class="text-[#FFF5E6]/80 text-sm leading-relaxed mb-5">
-            Authentic Indian street-food & chaat restaurant serving crispy puris, handcrafted chutneys, and 100% hygienic preparation.
+          <p class="small mb-2">
+            <strong>Every Bite Has a Story!</strong> Celebrating India's vibrant street-food heritage with freshly prepared chaats, artisanal chutneys, and 100% hygienic preparation.
           </p>
-          <div class="flex items-center gap-3">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Chaat Adda on Instagram">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <div class="social-icons-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Chaat Adda on Facebook">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Chaat Adda on YouTube">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Subscribe to Chaat Adda on YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
             </a>
           </div>
         </div>
 
-        <div class="flex flex-col items-center md:items-start">
-          <h3 class="text-lg font-extrabold text-[#FFC83D] mb-4">Quick Links</h3>
-          <ul class="space-y-2.5 text-sm">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="home2.html" class="footer-link">Home 2 (Street Food Corner)</a></li>
-            <li><a href="menu.html" class="footer-link">Explore Full Menu</a></li>
-            <li><a href="catering.html" class="footer-link">Live Chaat Catering</a></li>
-            <li><a href="contact.html" class="footer-link">Contact & Store Locator</a></li>
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 – About Chaat Adda</a></li>
+            <li><a href="home2.html">Home 2 – Street Food Corner</a></li>
+            <li><a href="menu.html">Full Street Food Menu</a></li>
+            <li><a href="catering.html">Event &amp; Wedding Catering</a></li>
+            <li><a href="contact.html">Contact &amp; Location</a></li>
           </ul>
         </div>
 
-        <div class="flex flex-col items-center md:items-start">
-          <h3 class="text-lg font-extrabold text-[#FFC83D] mb-4">Opening Hours</h3>
-          <ul class="space-y-2.5 text-sm text-[#FFF5E6]/85">
-            <li class="flex flex-col sm:flex-row sm:justify-between gap-1">
-              <span class="font-semibold">Monday – Thursday:</span>
-              <span class="text-[#FFC83D] font-bold">11:00 AM – 10:30 PM</span>
-            </li>
-            <li class="flex flex-col sm:flex-row sm:justify-between gap-1">
-              <span class="font-semibold">Friday – Sunday:</span>
-              <span class="text-[#FFC83D] font-bold">11:00 AM – 11:30 PM</span>
-            </li>
-            <li class="pt-2 text-xs text-[#FFF5E6]/70">
-              *Live Pani Puri & Tawa Counter active all day.
-            </li>
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Popular Chaats</h3>
+          <ul class="footer-links-list">
+            <li><a href="menu.html?cat=pani-puri">Pani Puri &amp; Golgappa</a></li>
+            <li><a href="menu.html?cat=papdi-sev">Bombay Sev Puri &amp; Papdi</a></li>
+            <li><a href="menu.html?cat=dahi-chaat">Dahi Puri &amp; Dahi Bhalla</a></li>
+            <li><a href="menu.html?cat=tikki-samosa">Desi Ghee Aloo Tikki Chaat</a></li>
+            <li><a href="menu.html?cat=beverages">Kulhad Lassi &amp; Masala Chai</a></li>
           </ul>
         </div>
 
-        <div class="flex flex-col items-center md:items-start">
-          <h3 class="text-lg font-extrabold text-[#FFC83D] mb-4">Contact Details</h3>
-          <ul class="space-y-3 text-sm text-[#FFF5E6]/85">
-            <li>
-              <span class="block text-xs uppercase tracking-wider text-[#FFC83D] font-bold">Flagship Outlet (Editable Sample)</span>
-              Shop 14, Ground Floor, Linking Road, Bandra West, Mumbai – 400050
-            </li>
-            <li>
-              <a href="tel:+919876543210" class="footer-link font-bold">+91 98765 43210</a>
-            </li>
-            <li>
-              <a href="mailto:namaste@chaatadda.in" class="footer-link">namaste@chaatadda.in</a>
-            </li>
-            <li class="pt-1">
-              <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20have%20a%20question." target="_blank" rel="noopener" class="btn-whatsapp text-xs py-2 px-4">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                <span>WhatsApp Support</span>
-              </a>
-            </li>
+        <div class="col-md-6 col-lg-3 footer-col">
+          <h3 class="footer-heading">Visit &amp; Contact</h3>
+          <ul class="footer-links-list">
+            <li><span>Shop 14, Spice Bazaar Promenade, Sample Food Street (Editable Sample Address)</span></li>
+            <li><a href="tel:+919876543210">Phone: +91 98765 43210</a></li>
+            <li><a href="mailto:hello@chaatadda.com">Email: hello@chaatadda.com</a></li>
+            <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp: +91 98765 43210</a></li>
+            <li><strong class="text-warning">Hours: Mon – Sun, 11:30 AM – 11:00 PM</strong></li>
           </ul>
         </div>
       </div>
 
-      <div class="pt-8 text-center text-xs text-[#FFF5E6]/70 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p>© <span id="currentYear">2025</span> Chaat Adda – Indian Street Food Corner. All rights reserved.</p>
-        <p>Crafted with authentic Indian spices, zero artificial colours & 100% vegetarian love.</p>
+      <div class="footer-bottom">
+        <p class="mb-0">&copy; 2026 <strong>Chaat Adda</strong> – Every Bite Has a Story! All Rights Reserved. | 100% Vegetarian Street Food &amp; Chaat.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
+

@@ -1,627 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catering – Bring the Chaat Party to Your Celebration! | Chaat Adda</title>
-  <meta name="description" content="Make every gathering unforgettable with Chaat Adda's live street-food catering! Weddings, birthday parties, corporate events and live pani puri counters." />
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Swiper CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
-  <!-- AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- Custom Brand Stylesheet -->
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering – Bring the Street Food Experience to Your Celebration! | Chaat Adda</title>
+  <meta name="description" content="Book Chaat Adda's live Indian street-food and chaat counters for weddings, birthday parties, corporate events, college fests, festivals and house parties.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ========================================================================
-       STICKY HEADER & NAVIGATION
-       At 360px, 768px and 1024px: Displays ONLY Logo & Hamburger on same row
-       ======================================================================== -->
-  <header class="site-header" id="siteHeader">
-    <div class="header-container">
+  <!-- ================= STICKY HEADER ================= -->
+  <header class="site-header solid-default" id="siteHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="index.html" class="brand-logo" aria-label="Chaat Adda Home">
-        <img src="assets/logo.svg" alt="Chaat Adda – Every Bite Has a Story!" width="215" height="52" />
+        <img src="assets/logo.svg" alt="Chaat Adda Logo">
       </a>
 
-      <!-- Desktop Navigation (>1024px) -->
-      <nav aria-label="Primary Navigation">
-        <ul class="desktop-nav">
-          <li><a href="index.html" class="nav-link-item">Home 1</a></li>
-          <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
-          <li><a href="menu.html" class="nav-link-item">Menu</a></li>
-          <li><a href="catering.html" class="nav-link-item active" aria-current="page">Catering</a></li>
-          <li><a href="contact.html" class="nav-link-item">Contact</a></li>
-        </ul>
+      <nav class="desktop-nav items-center gap-8" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="catering.html" class="nav-link active">Catering</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Desktop Right CTA (>1024px) -->
-      <div class="desktop-header-actions">
-        <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
-          <span>RTL</span>
+      <div class="desktop-cta items-center gap-2.5">
+        <button type="button" class="util-toggle-btn js-rtl-toggle" aria-label="Switch LTR / RTL direction" title="Toggle RTL / LTR">
+          <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+          <span class="js-rtl-label">RTL</span>
         </button>
-        <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-          <span>Dark</span>
+        <button type="button" class="util-toggle-btn js-theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          <i data-lucide="moon" class="w-4 h-4"></i>
+          <span class="js-theme-label">Dark</span>
         </button>
-        <a href="menu.html#orderSummaryBox" class="header-cart-btn" aria-label="View Current Order">
-          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
-          <span>Order</span>
-          <span class="cart-count-badge">0</span>
+        <a href="menu.html#orderSummarySection" class="relative inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#FFF5E6] border-2 border-[#38251D]/20 text-[#38251D] hover:border-[#D92D20] transition" aria-label="View Order Tray">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span class="js-cart-badge hidden absolute -top-1.5 -right-1.5 bg-[#D92D20] text-white text-xs font-extrabold w-5 h-5 rounded-full items-center justify-center">0</span>
         </a>
-        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20enquire%20about%20Live%20Chaat%20Catering." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
-          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
+        <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20would%20like%20to%20enquire%20about%20Live%20Chaat%20Catering." target="_blank" rel="noopener" class="btn-whatsapp text-sm py-2.5 px-5">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
           <span>Order on WhatsApp</span>
         </a>
       </div>
 
-      <!-- Hamburger Button (Shown at 360px, 768px, 1024px) -->
-      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
-        <span class="hamburger-lines">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
+      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
-    </div>
-
-    <!-- Mobile & Tablet Hamburger Menu Drawer -->
-    <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-hidden="true">
-      <ul class="mobile-nav-list">
-        <li><a href="index.html" class="mobile-nav-link">Home 1 – About Chaat Adda</a></li>
-        <li><a href="home2.html" class="mobile-nav-link">Home 2 – Street Food Corner</a></li>
-        <li><a href="menu.html" class="mobile-nav-link">Menu</a></li>
-        <li><a href="catering.html" class="mobile-nav-link active" aria-current="page">Catering</a></li>
-        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-      </ul>
-      <div class="mobile-drawer-actions">
-        <div class="mobile-utility-row">
-          <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
-            <span>RTL</span>
-          </button>
-          <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-            <span>Dark</span>
-          </button>
-        </div>
-        <a href="menu.html#orderSummaryBox" class="btn-chaat btn-chaat-secondary">
-          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
-          <span>View Order (<span class="cart-count-badge">0</span>)</span>
-        </a>
-        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20enquire%20about%20Live%20Chaat%20Catering." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
-          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
-          <span>Order on WhatsApp</span>
-        </a>
-      </div>
     </div>
   </header>
 
+  <!-- Mobile & Tablet Navigation Drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+  <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div class="flex items-center justify-between pb-6 border-b border-[#38251D]/15">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.svg" alt="Chaat Adda Logo">
+      </a>
+    </div>
+    <nav class="flex flex-col my-4">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="home2.html" class="mobile-nav-link">Home 2</a>
+      <a href="menu.html" class="mobile-nav-link">Menu</a>
+      <a href="catering.html" class="mobile-nav-link active">Catering</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+    <div class="drawer-utility-row">
+      <button type="button" class="util-toggle-btn js-rtl-toggle" aria-label="Switch LTR / RTL direction">
+        <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+        <span class="js-rtl-label">RTL</span>
+      </button>
+      <button type="button" class="util-toggle-btn js-theme-toggle" aria-label="Toggle Dark / Light Theme">
+        <i data-lucide="moon" class="w-4 h-4"></i>
+        <span class="js-theme-label">Dark</span>
+      </button>
+    </div>
+    <div class="mt-auto pt-4 flex flex-col gap-3">
+      <a href="#cateringEnquirySection" class="btn-primary w-full">
+        <i data-lucide="calendar-check" class="w-4 h-4"></i>
+        <span>Book Catering Stall</span>
+      </a>
+      <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20would%20like%20to%20enquire%20about%20Live%20Chaat%20Catering." target="_blank" rel="noopener" class="btn-whatsapp w-full">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Order on WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
   <main>
-    <!-- ======================================================================
-         CATERING HERO SECTION
-         Heading: "Bring the Chaat Party to Your Celebration!"
-         Subheading: "Make every gathering unforgettable with our delicious street-food catering experience."
-         ====================================================================== -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="kicker-badge badge-red hero-animate-item">
-          <i data-lucide="party-popper" style="width:16px;height:16px;"></i>
-          Live Street-Food &amp; Wedding Chaat Counters
-        </span>
-        <h1 class="hero-title hero-animate-item">Bring the Chaat Party to Your Celebration!</h1>
-        <p class="hero-subtitle hero-animate-item mb-4">
-          Make every gathering unforgettable with our delicious street-food catering experience.
-        </p>
-        <div class="btn-group-centered hero-animate-item">
-          <a href="#cateringPackages" class="btn-chaat btn-chaat-primary">
-            <i data-lucide="sparkles" style="width:18px;height:18px;"></i>
-            <span>View Catering Packages</span>
-          </a>
-          <a href="#cateringEnquirySection" class="btn-chaat btn-chaat-secondary">
-            <i data-lucide="calendar-check" style="width:18px;height:18px;"></i>
-            <span>Request Free Quote</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         CATERING SERVICES (6 Required Cards)
-         1. Birthday Parties  2. Weddings & Engagements  3. Corporate Events
-         4. College Festivals  5. Private Celebrations  6. Live Chaat Counters
-         ====================================================================== -->
-    <section class="section-pad bg-white-warm" id="cateringServices">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="kicker-badge">Events We Cater</span>
-          <h2 class="section-title">Catering Services</h2>
-          <p class="section-subtitle">
-            From intimate home get-togethers of 25 guests to grand wedding receptions of 1,500+ guests, our costumed chaat masters bring the full bazaar experience to you.
-          </p>
-          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
-        </div>
-
-        <div class="row g-4 align-items-stretch">
-          <!-- 1. Birthday Parties -->
-          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="40">
-            <article class="chaat-card">
-              <div class="card-body-centered">
-                <div class="feature-icon-circle">
-                  <i data-lucide="cake" style="width:32px;height:32px;"></i>
-                </div>
-                <h3 class="card-title">Birthday Parties</h3>
-                <p class="card-desc">
-                  Kid-friendly mild chocolate &amp; mango golgappas, cheesy masala sandwiches, and live bhel stations that turn every birthday into a carnival.
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <a href="#cateringEnquirySection" class="btn-chaat btn-chaat-outline">Book for Birthday</a>
-              </div>
-            </article>
+    <!-- ================= 1. SPLIT CELEBRATION CATERING HERO ================= -->
+    <section class="catering-split-hero text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-6 text-center">
+            <div class="section-eyebrow mb-4">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+              <span>ROYAL WEDDING & EVENT LIVE CHAAT BAR</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] mb-5">
+              Bring the Street Food Experience to Your <span class="text-[#FFC83D]">Celebration!</span>
+            </h1>
+            <p class="text-base sm:text-lg text-[#FFF5E6]/90 mb-8 max-w-xl mx-auto">
+              Turn your wedding sangeet, corporate fiesta, or house party into a bustling Indian bazaar with our marigold-adorned live chaat carts, brass matkas, and uniformed Chaat Ustads.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a href="#cateringEnquirySection" class="btn-secondary text-base">
+                <i data-lucide="calendar-heart" class="w-5 h-5"></i>
+                <span>Request Custom Quote</span>
+              </a>
+              <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20want%20to%20book%20a%20Live%20Chaat%20Counter%20for%20an%20event." target="_blank" rel="noopener" class="btn-whatsapp text-base">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>WhatsApp Event Desk</span>
+              </a>
+            </div>
           </div>
 
-          <!-- 2. Weddings & Engagements -->
-          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
-            <article class="chaat-card">
-              <div class="card-body-centered">
-                <div class="feature-icon-circle">
-                  <i data-lucide="heart-handshake" style="width:32px;height:32px;"></i>
-                </div>
-                <h3 class="card-title">Weddings &amp; Engagements</h3>
-                <p class="card-desc">
-                  Royal brass-and-terracotta chaat bars with 7-flavour Pani Puri, Banarasi Tamatar Chaat, Palak Patta, and Shahi Raj Kachori for Sangeet, Mehendi &amp; Receptions.
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <a href="#cateringEnquirySection" class="btn-chaat btn-chaat-outline">Book for Wedding</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- 3. Corporate Events -->
-          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="120">
-            <article class="chaat-card">
-              <div class="card-body-centered">
-                <div class="feature-icon-circle">
-                  <i data-lucide="briefcase" style="width:32px;height:32px;"></i>
-                </div>
-                <h3 class="card-title">Corporate Events</h3>
-                <p class="card-desc">
-                  Energize office Diwali melas, team townhalls, and Friday evening socials with hygienic, zero-mess individual chaat boxes or compact live carts.
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <a href="#cateringEnquirySection" class="btn-chaat btn-chaat-outline">Book Corporate Stall</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- 4. College Festivals -->
-          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
-            <article class="chaat-card">
-              <div class="card-body-centered">
-                <div class="feature-icon-circle">
-                  <i data-lucide="graduation-cap" style="width:32px;height:32px;"></i>
-                </div>
-                <h3 class="card-title">College Festivals</h3>
-                <p class="card-desc">
-                  High-speed, pocket-friendly street food stalls serving Vada Pav, Samosa Chaat, Fuska platters, and chilled Shikanji for campus cultural fests.
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <a href="#cateringEnquirySection" class="btn-chaat btn-chaat-outline">Book Campus Stall</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- 5. Private Celebrations -->
-          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <article class="chaat-card">
-              <div class="card-body-centered">
-                <div class="feature-icon-circle">
-                  <i data-lucide="sparkles" style="width:32px;height:32px;"></i>
-                </div>
-                <h3 class="card-title">Private Celebrations</h3>
-                <p class="card-desc">
-                  Housewarmings, kitty parties, anniversaries, and terrace get-togethers with customizable Jain, vegan, and extra-chatpata menus.
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <a href="#cateringEnquirySection" class="btn-chaat btn-chaat-outline">Plan Private Party</a>
-              </div>
-            </article>
-          </div>
-
-          <!-- 6. Live Chaat Counters -->
-          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="240">
-            <article class="chaat-card">
-              <div class="card-body-centered">
-                <div class="feature-icon-circle">
-                  <i data-lucide="flame" style="width:32px;height:32px;"></i>
-                </div>
-                <h3 class="card-title">Live Chaat Counters</h3>
-                <p class="card-desc">
-                  Signature themed street carts with marigold decor, uniformed chefs, RO water dispensers, brass handis, and eco-friendly leaf donas.
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <a href="#cateringEnquirySection" class="btn-chaat btn-chaat-outline">Customize Live Counter</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         LIVE FOOD COUNTER SECTION (Realistic Photography)
-         ====================================================================== -->
-    <section class="section-pad bg-cream-alt" id="liveCounterSection">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="kicker-badge badge-green">Interactive Culinary Theatre</span>
-          <h2 class="section-title">Live Food Counter Experience</h2>
-          <p class="section-subtitle">
-            Guests love watching their chaat crafted fresh! Our live counters feature terracotta condiment bowls, brass matkas, and uniformed chefs.
-          </p>
-          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
-        </div>
-
-        <div class="row g-4 align-items-stretch">
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="40">
-            <article class="chaat-card">
-              <div class="card-img-wrap">
-                <img src="image/home2/k920ZoOYq6bOGpeLkH9ckLNMd9xBOb0X_jClqNBe4pn0IiEl8wg_GgyP_QsxAibTnRrdOgp7VItrlUEPE6dkZ69b-5e6gjq05kgFLIaR9pORkXnIvOHnzcgzAMwp66TTAIjuCezVbpVA6gjtQov-6mp9RffMbz08AF36qOp.jpg" alt="Royal Wedding Live Bhel & Chaat Bar" />
-              </div>
-              <div class="card-body-centered">
-                <span class="veg-badge"><span class="veg-icon-box"></span> Luxury Wedding Setup</span>
-                <h3 class="card-title">Royal Terracotta Chaat Bar</h3>
-                <p class="card-desc">
-                  Elegantly styled earthen bowls of golden sev, ruby pomegranate, roasted peanuts, and chutneys manned by uniformed hospitality chefs.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="110">
-            <article class="chaat-card">
-              <div class="card-img-wrap">
-                <img src="image/home2/uS675fdbwsFgV_5IPCfcWpSSuAxctQ6b8Er3vWLx-u6C4T9z8-ONdzUlaiuC6qEHBHyPLGBTii5y5SohwknAZbphV5tZ6U97GWab9aAAfwAKNnxzJRQcCymiErUmY5prtwom8WNhUZMoPiOR6BlqR8ueV3z_ZW8hszFNfCP.jpg" alt="Outdoor Garden Party Live Chaat Station" />
-              </div>
-              <div class="card-body-centered">
-                <span class="veg-badge"><span class="veg-icon-box"></span> Garden &amp; Lawn Events</span>
-                <h3 class="card-title">Open-Air Chaat Station</h3>
-                <p class="card-desc">
-                  Complete stainless-steel hygienic setup with chaffing dishes for hot ragda &amp; chole, gloved service, and custom spice plating.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="180">
-            <article class="chaat-card">
-              <div class="card-img-wrap">
-                <img src="image/pexels-dino-uniyal-5998477-11574756.jpg" alt="Hygienic Gloved Live Chaat Topping Bar" />
-              </div>
-              <div class="card-body-centered">
-                <span class="veg-badge"><span class="veg-icon-box"></span> 5-Star Hygiene Standards</span>
-                <h3 class="card-title">Live Pani Puri &amp; Dahi Bar</h3>
-                <p class="card-desc">
-                  RO mineral water golgappa fountains, chilled sweet curd dispensers, and fresh herb garnishes served plate-by-plate.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         CATERING PACKAGES (3 Package Cards with Editable Per-Person Pricing)
-         1. Mini Chaat Party  2. Classic Street Feast  3. Grand Chaat Celebration
-         ====================================================================== -->
-    <section class="section-pad bg-white-warm" id="cateringPackages">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="kicker-badge badge-red">Transparent &amp; Customizable</span>
-          <h2 class="section-title">Catering Packages</h2>
-          <p class="section-subtitle">
-            Choose from our three signature catering packages below, or customize your own menu. (Editable Sample Per-Person Pricing)
-          </p>
-          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
-        </div>
-
-        <div class="row g-4 align-items-stretch">
-          <!-- Package 1: Mini Chaat Party -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
-            <article class="chaat-card">
-              <div class="card-img-wrap">
-                <img src="image/pexels-shahbaz-ansari-283673909-13041629.jpg" alt="Mini Chaat Party Package" />
-              </div>
-              <div class="card-body-centered">
-                <span class="veg-badge"><span class="veg-icon-box"></span> Min. 25 Guests · House Parties</span>
-                <h3 class="card-title">Mini Chaat Party</h3>
-                <div class="price-pill">₹249 / Person <small class="ms-1 fw-normal">(Sample)</small></div>
-                <p class="card-desc">
-                  <strong>Includes 3 Live Chaats + 1 Beverage:</strong><br />
-                  • Live Pani Puri Counter (2 Flavoured Panis)<br />
-                  • Bombay Sev Puri or Geeli Bhel Puri<br />
-                  • Classic Dahi Batata Puri<br />
-                  • Nimbu Pudina Masala Shikanji
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <button type="button" class="btn-chaat btn-chaat-primary js-select-package" data-package="Mini Chaat Party (₹249/person)">
-                  <i data-lucide="check-circle" style="width:18px;height:18px;"></i>
-                  <span>Select Mini Chaat Party</span>
-                </button>
-              </div>
-            </article>
-          </div>
-
-          <!-- Package 2: Classic Street Feast -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="120">
-            <article class="chaat-card" style="border-color: var(--chili-red); border-width: 3px;">
-              <div class="card-img-wrap">
-                <img src="image/pexels-aditya-mara-425995080-17223836.jpg" alt="Classic Street Feast Package" />
-              </div>
-              <div class="card-body-centered">
-                <span class="kicker-badge badge-red mb-2">Most Popular Package</span>
-                <h3 class="card-title">Classic Street Feast</h3>
-                <div class="price-pill">₹399 / Person <small class="ms-1 fw-normal">(Sample)</small></div>
-                <p class="card-desc">
-                  <strong>Includes 5 Live Chaats + 2 Beverages:</strong><br />
-                  • 5-Flavour Live Golgappa Station<br />
-                  • Sizzling Desi Ghee Aloo Tikki Chaat<br />
-                  • Melt-in-Mouth Dahi Bhalla Papdi<br />
-                  • Crispy Palak Patta Chaat &amp; Bombay Bhel<br />
-                  • Kulhad Kesariya Lassi &amp; Masala Chai
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <button type="button" class="btn-chaat btn-chaat-primary js-select-package" data-package="Classic Street Feast (₹399/person)">
-                  <i data-lucide="check-circle" style="width:18px;height:18px;"></i>
-                  <span>Select Classic Street Feast</span>
-                </button>
-              </div>
-            </article>
-          </div>
-
-          <!-- Package 3: Grand Chaat Celebration -->
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="190">
-            <article class="chaat-card">
-              <div class="card-img-wrap">
-                <img src="image/MVkGuQUyN8Plg-ycCucmHrI1yBel6SsJqooKCAj9J_sjkxaL-B-Dq-ad2OYZDBoRHFu8M5W2i-bqcu2ASZSkAk8lqG9Jtte2Tsiluq3IRxHxPdu3nmIYbUHFJU_pTrgzF68N4KDKLCUEPkknj-WvPXFmO0Rv_2MRx3YZGvxWXcW5F.jpg" alt="Grand Chaat Celebration Package" />
-              </div>
-              <div class="card-body-centered">
-                <span class="veg-badge"><span class="veg-icon-box"></span> Weddings &amp; Mega Events</span>
-                <h3 class="card-title">Grand Chaat Celebration</h3>
-                <div class="price-pill">₹599 / Person <small class="ms-1 fw-normal">(Sample)</small></div>
-                <p class="card-desc">
-                  <strong>Includes 8 Live Stations + Dessert &amp; Drinks:</strong><br />
-                  • Royal Brass 7-Water Golgappa Bar<br />
-                  • Shahi Raj Kachori &amp; Katori Tokri Chaat<br />
-                  • Tawa Aloo Tikki, Samosa Chaat &amp; Pav Bhaji<br />
-                  • Amchi Vada Pav, Kulhad Lassi &amp; Hot Jalebi Rabdi
-                </p>
-              </div>
-              <div class="card-footer-action">
-                <button type="button" class="btn-chaat btn-chaat-primary js-select-package" data-package="Grand Chaat Celebration (₹599/person)">
-                  <i data-lucide="check-circle" style="width:18px;height:18px;"></i>
-                  <span>Select Grand Celebration</span>
-                </button>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         CATERING ENQUIRY FORM (All 9 Required Fields + Validation + WhatsApp)
-         ====================================================================== -->
-    <section class="section-pad bg-cream-alt" id="cateringEnquirySection">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="kicker-badge">Book Your Event Date</span>
-          <h2 class="section-title">Catering Enquiry Form</h2>
-          <p class="section-subtitle">
-            Fill in your event details below for a custom quote, or send your enquiry directly to our Catering Manager on WhatsApp.
-          </p>
-          <div class="spice-divider"><span class="line-red"></span><span class="dot-yellow"></span><span class="line-green"></span></div>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-9" data-aos="fade-up">
-            <div class="chaat-form-card">
-              <form id="cateringEnquiryForm" novalidate>
-                <div class="row g-3">
-                  <!-- 1. Full Name -->
-                  <div class="col-md-6">
-                    <label for="cateringName" class="form-label-centered">Full Name *</label>
-                    <input type="text" id="cateringName" class="chaat-input" placeholder="e.g.,Vikramaditya Mehta" required />
-                    <div id="errCateringName" class="field-error-msg">Please enter your full name (min. 2 characters).</div>
-                  </div>
-
-                  <!-- 2. Phone Number -->
-                  <div class="col-md-6">
-                    <label for="cateringPhone" class="form-label-centered">Phone Number *</label>
-                    <input type="tel" id="cateringPhone" class="chaat-input" placeholder="e.g., +91 98765 43210" required />
-                    <div id="errCateringPhone" class="field-error-msg">Please enter a valid 10-digit phone number.</div>
-                  </div>
-
-                  <!-- 3. Email Address -->
-                  <div class="col-md-6">
-                    <label for="cateringEmail" class="form-label-centered">Email Address *</label>
-                    <input type="email" id="cateringEmail" class="chaat-input" placeholder="e.g., vikram@example.com" required />
-                    <div id="errCateringEmail" class="field-error-msg">Please enter a valid email address.</div>
-                  </div>
-
-                  <!-- 4. Event Type -->
-                  <div class="col-md-6">
-                    <label for="cateringEventType" class="form-label-centered">Event Type *</label>
-                    <select id="cateringEventType" class="chaat-select" required>
-                      <option value="">-- Select Event Type --</option>
-                      <option value="Birthday Party">Birthday Party</option>
-                      <option value="Wedding / Engagement">Wedding &amp; Engagement</option>
-                      <option value="Corporate Event">Corporate Event</option>
-                      <option value="College Festival">College Festival</option>
-                      <option value="Private Celebration">Private Celebration</option>
-                      <option value="Live Chaat Counter">Live Chaat Counter Only</option>
-                    </select>
-                    <div id="errCateringEventType" class="field-error-msg">Please select an event type.</div>
-                  </div>
-
-                  <!-- 5. Event Date -->
-                  <div class="col-md-6">
-                    <label for="cateringEventDate" class="form-label-centered">Event Date *</label>
-                    <input type="date" id="cateringEventDate" class="chaat-input" required />
-                    <div id="errCateringEventDate" class="field-error-msg">Please choose your event date.</div>
-                  </div>
-
-                  <!-- 6. Number of Guests -->
-                  <div class="col-md-6">
-                    <label for="cateringGuests" class="form-label-centered">Number of Guests (Min. 10) *</label>
-                    <input type="number" id="cateringGuests" class="chaat-input" min="10" max="5000" placeholder="e.g., 120" required />
-                    <div id="errCateringGuests" class="field-error-msg">Please enter guest count (minimum 10 guests).</div>
-                  </div>
-
-                  <!-- 7. Event Location -->
-                  <div class="col-md-6">
-                    <label for="cateringLocation" class="form-label-centered">Event Location / Venue *</label>
-                    <input type="text" id="cateringLocation" class="chaat-input" placeholder="e.g., Banquet Hall / Area / City" required />
-                    <div id="errCateringLocation" class="field-error-msg">Please enter the event location or city.</div>
-                  </div>
-
-                  <!-- 8. Food Preferences -->
-                  <div class="col-md-6">
-                    <label for="cateringPreference" class="form-label-centered">Food Preferences *</label>
-                    <select id="cateringPreference" class="chaat-select" required>
-                      <option value="">-- Select Food Preference --</option>
-                      <option value="Regular 100% Vegetarian">Regular 100% Vegetarian</option>
-                      <option value="Jain Menu (No Onion / No Garlic)">Jain Menu (No Onion / No Garlic)</option>
-                      <option value="Regular + Separate Jain Counter">Regular + Separate Jain Counter</option>
-                      <option value="Kids Friendly Mild Spice">Kids Friendly Mild Spice</option>
-                    </select>
-                    <div id="errCateringPreference" class="field-error-msg">Please select a food preference.</div>
-                  </div>
-
-                  <!-- 9. Additional Requirements -->
-                  <div class="col-12">
-                    <label for="cateringRequirements" class="form-label-centered">Additional Requirements &amp; Preferred Package</label>
-                    <textarea id="cateringRequirements" class="chaat-textarea" rows="3" placeholder="Tell us which package or live chaat counters you would like (e.g., Classic Street Feast, Live Golgappa & Aloo Tikki)..."></textarea>
-                  </div>
-
-                  <!-- Submit & WhatsApp Buttons -->
-                  <div class="col-12 mt-4">
-                    <div class="btn-group-centered">
-                      <button type="submit" class="btn-chaat btn-chaat-primary">
-                        <i data-lucide="send" style="width:18px;height:18px;"></i>
-                        <span>Submit Enquiry</span>
-                      </button>
-                      <button type="button" id="cateringWhatsappBtn" class="btn-chaat btn-chaat-whatsapp">
-                        <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
-                        <span>Enquire via WhatsApp</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="cateringFormStatus" class="form-status-box" role="alert" aria-live="polite"></div>
-              </form>
+          <div class="lg:col-span-6">
+            <div class="editorial-img-frame bg-[#1E120D] border-2 border-[#FFC83D]/40 p-3">
+              <img src="image/home2/k920ZoOYq6bOGpeLkH9ckLNMd9xBOb0X_jClqNBe4pn0IiEl8wg_GgyP_QsxAibTnRrdOgp7VItrlUEPE6dkZ69b-5e6gjq05kgFLIaR9pORkXnIvOHnzcgzAMwp66TTAIjuCezVbpVA6gjtQov-6mp9RffMbz08AF36qOp.jpg" alt="Luxury Indian Wedding Bhel Puri Live Chaat Bar with Chef and Guests">
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ================= 2. CATERING SERVICES (6 OCCASION CARDS) ================= -->
+    <section class="py-20 bg-[#FFF5E6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <div class="section-eyebrow mb-3">
+            <i data-lucide="party-popper" class="w-4 h-4"></i>
+            <span>TAILORED FOR EVERY OCCASION</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
+            Our Catering Services
+          </h2>
+          <p class="text-[#5C4033] text-base sm:text-lg">
+            From intimate 30-guest terrace get-togethers to 1,000-guest destination weddings, we design custom live chaat experiences for six signature celebration types.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+          <!-- Service 1: Wedding Chaat Counters -->
+          <article class="chaat-card">
+            <div class="card-img-wrap">
+              <img src="image/home2/k920ZoOYq6bOGpeLkH9ckLNMd9xBOb0X_jClqNBe4pn0IiEl8wg_GgyP_QsxAibTnRrdOgp7VItrlUEPE6dkZ69b-5e6gjq05kgFLIaR9pORkXnIvOHnzcgzAMwp66TTAIjuCezVbpVA6gjtQov-6mp9RffMbz08AF36qOp.jpg" alt="Wedding Chaat Counters">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">150 – 1,500 Guests</span>
+              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Wedding Chaat Counters</h3>
+              <p class="text-[#5C4033] text-sm mb-5">
+                Royal brass-and-marigold stalls for Haldi, Mehendi, Sangeet, and Wedding Receptions featuring 5-flavour Golgappa bars and live Ghee Aloo Tikki tawas.
+              </p>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-primary w-full text-xs py-2.5">Book Wedding Counter</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Birthday Parties -->
+          <article class="chaat-card">
+            <div class="card-img-wrap">
+              <img src="image/GpWP1XNh-be-IqukWAoIp15muD8y9qZRSQjKrbyIxWBo0xq8x68gSDdAub6ELvb6t9MbAUeP9St6o0Ly3F__60WFR25yHwR2MUuuFGgZCBYIvmih1JJUs5rUjZba8HycljYVGeQsH0rWOaG-Yg3VUf_QRMEaUNzedf5TkUbVId0bv.jpg" alt="Birthday Parties Chaat Cart">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">30 – 200 Guests</span>
+              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Birthday Parties</h3>
+              <p class="text-[#5C4033] text-sm mb-5">
+                Kid-friendly and family-favourite chaat carts with customizable mild-to-spicy chutneys, Cheese Sev Puri, Sweet Corn Chaat, and Mango Lassi shots.
+              </p>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-primary w-full text-xs py-2.5">Book Birthday Cart</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Corporate Events -->
+          <article class="chaat-card">
+            <div class="card-img-wrap">
+              <img src="image/home2/uS675fdbwsFgV_5IPCfcWpSSuAxctQ6b8Er3vWLx-u6C4T9z8-ONdzUlaiuC6qEHBHyPLGBTii5y5SohwknAZbphV5tZ6U97GWab9aAAfwAKNnxzJRQcCymiErUmY5prtwom8WNhUZMoPiOR6BlqR8ueV3z_ZW8hszFNfCP.jpg" alt="Corporate Events Live Chaat Counter">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">50 – 500 Employees</span>
+              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Corporate Events</h3>
+              <p class="text-[#5C4033] text-sm mb-5">
+                Compact, smoke-free indoor chaat stations for office townhalls, Diwali festivities, product launches, and Friday evening team socials.
+              </p>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-primary w-full text-xs py-2.5">Book Corporate Stall</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: College Events -->
+          <article class="chaat-card">
+            <div class="card-img-wrap">
+              <img src="image/Jm4U1Lzs-GwsXNS50H3PM664RXq2k-ywQBE85Lm-54sB6DygeZRF5okID-Eb0bWH26ziGX1DEYfaKdIGdl4oGWyvdrCdO7L3K72L3ZjmfcyosNMijhlWFDcwYIfyEmKk4OeMLiFJqx3l_bxUf0QEye1tO4jpomEsd1ZJufI2rOG1v.jpg" alt="College Events Pop-Up Chaat Stall">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">200 – 2,000 Students</span>
+              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">College Events</h3>
+              <p class="text-[#5C4033] text-sm mb-5">
+                High-speed expressive pop-up stalls for campus cultural fests, convocation evenings, and alumni meets with student-favourite combos.
+              </p>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-primary w-full text-xs py-2.5">Book Campus Pop-Up</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 5: Festival Celebrations -->
+          <article class="chaat-card">
+            <div class="card-img-wrap">
+              <img src="image/home2/siSQLkvfqKCe96bhkaX6E290QEfkvfWuiecgTRta5NzvxOHuxcpRmdVK94MmV1ENzKGCV5mnMSBinxlpzV7FhLAQdN97bAkpX3ZzcmjS-__r7n3UakNEo_IUhSAaV5Z60R6TdKRbLtKKWfVFk8nf9nMbsnCqpHTp0_D29RA.jpg" alt="Festival Celebrations Chaat Bazaar">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">Jain & Fasting Options</span>
+              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">Festival Celebrations</h3>
+              <p class="text-[#5C4033] text-sm mb-5">
+                Dedicated community stalls for Navratri Garba nights, Ganeshotsav, Holi Milan, and Diwali Melas with pure Jain (no onion/garlic) options.
+              </p>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-primary w-full text-xs py-2.5">Book Festival Stall</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 6: House Parties -->
+          <article class="chaat-card">
+            <div class="card-img-wrap">
+              <img src="image/home2/xTjruw4Zuom6B4YdXrRtkRU-Ti9vTOJWaHpPj-NzdpizUZe7T0CK1yYXyzFWMnnS4TFZGQ3zzJluouJY5YW0f8hVDbcs27AtOLC5BQV85RXvYLpYwqb3jx0gc4JlRa68XPZ1GVvSS6Oop8q99YP9N83813q0kFnJatBx5xv.jpg" alt="House Parties DIY & Live Chaat Setup">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">25 – 80 Guests</span>
+              <h3 class="text-xl font-extrabold text-[#38251D] mb-2">House Parties</h3>
+              <p class="text-[#5C4033] text-sm mb-5">
+                Compact terrace or living-room chaat setups with a dedicated Ustad, leaf donas, clay kulhads, and zero post-party cleanup required from you.
+              </p>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-primary w-full text-xs py-2.5">Book House Party</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. LIVE FOOD COUNTER SECTION (ALTERNATING SPLIT BLOCKS) ================= -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <div class="section-eyebrow mb-3">
+            <i data-lucide="chef-hat" class="w-4 h-4"></i>
+            <span>THEATRICAL LIVE STATIONS</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
+            How Our Live Food Counters Work
+          </h2>
+          <p class="text-[#5C4033] text-base sm:text-lg">
+            We bring the complete street-food ecosystem to your venue 90 minutes before guest arrival—from brass vessels and RO pani coolers to eco-friendly leaf tableware.
+          </p>
+        </div>
+
+        <!-- Split Block 1: Image Left, Content Right -->
+        <div class="editorial-split-box mb-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6">
+              <div class="editorial-img-frame">
+                <img src="image/home2/Gq5PJRKPjD9w9U0jDK6Xz7gbzPOnMJnwKVzD2o5Qi8uUbc6ZQJ6CbDwKvytQPDVM6kJT9wKIRqOx4RooUwQMjLLNaTUrff8Di-3d5Z4b44eYthQJh_Xj-vXMtMG0SCUwzLXzPIrBArXbmkx9I7ivEhrj0Ea8b2QwEhdeZfM.jpg" alt="Live 5-Flavour Pani Puri Matka Bar pouring chilled mint water">
+              </div>
+            </div>
+            <div class="lg:col-span-6 flex flex-col items-center text-center">
+              <span class="badge-veg mb-3">STATION 01 • INTERACTIVE MATKA BAR</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-[#38251D] mb-4">
+                5-Flavour Live Golgappa & Chilled Dahi Puri Counter
+              </h3>
+              <p class="text-[#5C4033] text-base leading-relaxed mb-6">
+                Guests gather around hammered brass matkas filled with five chilled waters: Spicy Pudina, Khatta-Meetha Imli, Hing Jeera, Raw Mango Kairi, and Lasooni Tadka. Each golgappa is stuffed and served one by one to match every guest's exact spice preference.
+              </p>
+              <div class="milestone-pills-grid w-full">
+                <div class="milestone-pill">
+                  <span class="year">5 Pani Flavours</span>
+                  <span class="label">100% RO Mineral Water</span>
+                </div>
+                <div class="milestone-pill">
+                  <span class="year">Suji & Atta</span>
+                  <span class="label">Dual Crispy Puris</span>
+                </div>
+                <div class="milestone-pill">
+                  <span class="year">Leaf Donas</span>
+                  <span class="label">Biodegradable Bowls</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Split Block 2: Content Left, Image Right -->
+        <div class="editorial-split-box">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-6 order-2 lg:order-1 flex flex-col items-center text-center">
+              <span class="badge-veg mb-3">STATION 02 • HOT IRON TAWA & HANDI</span>
+              <h3 class="text-2xl sm:text-3xl font-extrabold text-[#38251D] mb-4">
+                Sizzling Ghee Aloo Tikki, Ragda Pattice & Bhel Tossing
+              </h3>
+              <p class="text-[#5C4033] text-base leading-relaxed mb-6">
+                Watch our uniformed Chaat Ustads sear golden potato tikkis in pure desi ghee on a heavy iron tawa while tossing crunchy Juhu Chowpatty Bhel in deep steel handis—filling your venue with irresistible Indian bazaar aromas.
+              </p>
+              <div class="milestone-pills-grid w-full">
+                <div class="milestone-pill">
+                  <span class="year">Pure Ghee</span>
+                  <span class="label">Live Tawa Roasting</span>
+                </div>
+                <div class="milestone-pill">
+                  <span class="year">Gloved Chefs</span>
+                  <span class="label">5-Star Hygiene Protocol</span>
+                </div>
+                <div class="milestone-pill">
+                  <span class="year">Jain Counter</span>
+                  <span class="label">Separate Prep Utensils</span>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-6 order-1 lg:order-2">
+              <div class="editorial-img-frame">
+                <img src="image/home2/uS675fdbwsFgV_5IPCfcWpSSuAxctQ6b8Er3vWLx-u6C4T9z8-ONdzUlaiuC6qEHBHyPLGBTii5y5SohwknAZbphV5tZ6U97GWab9aAAfwAKNnxzJRQcCymiErUmY5prtwom8WNhUZMoPiOR6BlqR8ueV3z_ZW8hszFNfCP.jpg" alt="Outdoor Live Chaat Counter setup with uniformed chef">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 4. CATERING PACKAGES (3 TIERED PACKAGE CARDS) ================= -->
+    <section class="py-20 bg-[#FFF5E6]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-14">
+          <div class="section-eyebrow mb-3">
+            <i data-lucide="package-check" class="w-4 h-4"></i>
+            <span>TRANSPARENT PER-PLATE PACKAGES (EDITABLE SAMPLE)</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#38251D] mb-4">
+            Catering Packages
+          </h2>
+          <p class="text-[#5C4033] text-base sm:text-lg">
+            Choose from three curated catering tiers or request a fully customized menu tailored to your guest count.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          <!-- Tier 1: Street Adda Express -->
+          <article class="chaat-card chaat-card-package">
+            <div class="card-img-wrap">
+              <img src="image/P3VWso3p9f7p9c1xG68M-wF2wG3w-sP8x-2p5e0s9m7t-6c8-3v2x-4y1z8q7r9w5e3r1t8y6u4i2o0p.jpg" alt="Street Adda Express Package">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">Min. 30 Guests</span>
+              <h3 class="text-2xl font-extrabold text-[#38251D] mb-1">Street Adda Express</h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-[#D92D20] mb-3">Ideal for House Parties & Birthdays</p>
+              <div class="price-pill text-lg mb-4">₹299 / Guest</div>
+              <ul class="package-feature-list mb-6">
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Live 3-Flavour Pani Puri Counter (Unlimited)</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Bombay Batata Sev Puri & Juhu Bhel Puri</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Chilled Dahi Batata Puri</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>1 Uniformed Chaat Ustad + Eco Leaf Donas</span></li>
+              </ul>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-outline-dark w-full">Select Express Package</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tier 2: Royal Bazaar Mehfil (Featured) -->
+          <article class="chaat-card chaat-card-package featured">
+            <div class="card-img-wrap">
+              <img src="image/pexels-Valeria-Boltneva-1893555.jpg" alt="Royal Bazaar Mehfil Package">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">Most Popular • Min. 75 Guests</span>
+              <h3 class="text-2xl font-extrabold text-[#38251D] mb-1">Royal Bazaar Mehfil</h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-[#D92D20] mb-3">Ideal for Sangeet, Corporate & Festivals</p>
+              <div class="price-pill text-lg mb-4">₹449 / Guest</div>
+              <ul class="package-feature-list mb-6">
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Live 5-Flavour Brass Matka Golgappa Bar</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Hot Cast-Iron Tawa Ghee Aloo Tikki & Ragda</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Delhi Style Dahi Bhalla Papdi Chaat</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Matka Pudina Jaljeera or Masala Nimbu Soda</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>2 Chaat Ustads + Marigold Decorated Cart</span></li>
+              </ul>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-primary w-full">Select Royal Mehfil</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tier 3: Grand Maharaja Wedding Bar -->
+          <article class="chaat-card chaat-card-package">
+            <div class="card-img-wrap">
+              <img src="image/pexels-marvin-ozz-2474658.jpg" alt="Grand Maharaja Wedding Bar Package">
+            </div>
+            <div class="card-body">
+              <span class="badge-veg mb-2">Min. 150 Guests</span>
+              <h3 class="text-2xl font-extrabold text-[#38251D] mb-1">Grand Maharaja Chowk</h3>
+              <p class="text-xs font-bold uppercase tracking-wider text-[#D92D20] mb-3">Ideal for Grand Weddings & Receptions</p>
+              <div class="price-pill text-lg mb-4">₹649 / Guest</div>
+              <ul class="package-feature-list mb-6">
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>All 7 Chaat Stations (Pani Puri, Tawa, Dahi, Bhel)</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Shahi Dry-Fruit Raj Kachori & Chole Samosa</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Kutchi Dabeli & Kulhad Kesar Mango Lassi</span></li>
+                <li><i data-lucide="check-circle-2" class="w-4 h-4"></i> <span>Dedicated Pure Jain Counter + 4 Master Ustads</span></li>
+              </ul>
+              <div class="card-footer-push">
+                <a href="#cateringEnquirySection" class="btn-outline-dark w-full">Select Maharaja Chowk</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 5. CATERING ENQUIRY FORM ================= -->
+    <section class="py-20 bg-white" id="cateringEnquirySection">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-[#FFF5E6] rounded-3xl p-6 sm:p-10 lg:p-12 border-2 border-[#38251D]/15 shadow-xl">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <div class="section-eyebrow mb-3">
+              <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+              <span>INSTANT EVENT QUOTE & AVAILABILITY</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-[#38251D] mb-3">
+              Catering Enquiry Form
+            </h2>
+            <p class="text-[#5C4033] text-sm sm:text-base">
+              Fill in your celebration details below. Our Catering Manager will call you within 2 hours with a customized live counter layout and tasting invite.
+            </p>
+          </div>
+
+          <form id="cateringForm" novalidate class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- 1. Full Name -->
+              <div>
+                <label for="catName" class="form-label">Full Name *</label>
+                <input type="text" id="catName" class="form-input" placeholder="e.g., Rohan Deshmukh" required>
+                <p class="form-error-msg" id="catNameError">Please enter your full name.</p>
+              </div>
+
+              <!-- 2. Phone Number -->
+              <div>
+                <label for="catPhone" class="form-label">Phone / WhatsApp Number *</label>
+                <input type="tel" id="catPhone" class="form-input" placeholder="e.g., +91 98765 43210" required>
+                <p class="form-error-msg" id="catPhoneError">Please enter a valid 10-digit phone number.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- 3. Email Address -->
+              <div>
+                <label for="catEmail" class="form-label">Email Address *</label>
+                <input type="email" id="catEmail" class="form-input" placeholder="e.g., rohan@example.com" required>
+                <p class="form-error-msg" id="catEmailError">Please enter a valid email address.</p>
+              </div>
+
+              <!-- 4. Event Type -->
+              <div>
+                <label for="catEventType" class="form-label">Event Type *</label>
+                <select id="catEventType" class="form-input" required>
+                  <option value="">Select Celebration Type</option>
+                  <option value="Wedding Chaat Counter">Wedding / Sangeet / Mehendi</option>
+                  <option value="Birthday Party">Birthday Party</option>
+                  <option value="Corporate Event">Corporate Event / Office Social</option>
+                  <option value="College Event">College Cultural Fest</option>
+                  <option value="Festival Celebration">Festival Celebration (Diwali / Navratri / Holi)</option>
+                  <option value="House Party">Intimate House / Terrace Party</option>
+                </select>
+                <p class="form-error-msg" id="catEventTypeError">Please select an event type.</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <!-- 5. Event Date -->
+              <div>
+                <label for="catDate" class="form-label">Event Date *</label>
+                <input type="date" id="catDate" class="form-input" required>
+                <p class="form-error-msg" id="catDateError">Please choose your event date.</p>
+              </div>
+
+              <!-- 6. Number of Guests -->
+              <div>
+                <label for="catGuests" class="form-label">Number of Guests *</label>
+                <input type="number" id="catGuests" min="20" max="5000" class="form-input" placeholder="e.g., 120" required>
+                <p class="form-error-msg" id="catGuestsError">Minimum 20 guests required for live catering.</p>
+              </div>
+
+              <!-- 7. Event Location -->
+              <div>
+                <label for="catLocation" class="form-label">Event Location / Venue *</label>
+                <input type="text" id="catLocation" class="form-input" placeholder="e.g., Juhu, Mumbai" required>
+                <p class="form-error-msg" id="catLocationError">Please enter the event venue or locality.</p>
+              </div>
+            </div>
+
+            <!-- 8. Preferred Menu Items -->
+            <div>
+              <label for="catMenuPref" class="form-label">Preferred Package / Chaat Stations *</label>
+              <input type="text" id="catMenuPref" class="form-input" placeholder="e.g., Royal Bazaar Mehfil – 5-Flavour Pani Puri, Ghee Aloo Tikki, Dahi Bhalla" required>
+              <p class="form-error-msg" id="catMenuPrefError">Please share your preferred package or chaat items.</p>
+            </div>
+
+            <!-- 9. Special Notes -->
+            <div>
+              <label for="catNotes" class="form-label">Special Notes (Jain Counter, Timing, Theme Decor)</label>
+              <textarea id="catNotes" rows="3" class="form-input" placeholder="Let us know if you need a separate Jain stall, kids' mild counter, or specific service hours..."></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
+              <button type="submit" class="btn-primary w-full sm:w-auto px-8 py-4 text-base">
+                <i data-lucide="send" class="w-5 h-5"></i>
+                <span>Book Catering</span>
+              </button>
+              <button type="button" id="cateringWhatsappBtn" class="btn-whatsapp w-full sm:w-auto px-8 py-4 text-base">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                <span>WhatsApp Enquiry</span>
+              </button>
+            </div>
+
+            <!-- Success Banner -->
+            <div id="cateringSuccessBanner" class="hidden p-5 rounded-2xl bg-[#4B8B43] text-white text-center font-semibold text-sm mt-4"></div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ========================================================================
-       PREMIUM COLORFUL FOOTER (Logo links to Home)
-       ======================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3 footer-col">
-          <a href="index.html" class="footer-logo-link" aria-label="Chaat Adda Home">
-            <img src="assets/logo.svg" alt="Chaat Adda Logo" width="190" height="46" />
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/15 text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start">
+          <a href="index.html" class="mb-4 inline-block bg-[#FFF5E6] p-2.5 rounded-2xl">
+            <img src="assets/logo.svg" alt="Chaat Adda Logo" class="h-11 w-auto">
           </a>
-          <p class="small mb-2">
-            <strong>Every Bite Has a Story!</strong> Celebrating India's vibrant street-food heritage with freshly prepared chaats, artisanal chutneys, and 100% hygienic preparation.
+          <p class="text-[#FFC83D] font-bold text-sm uppercase tracking-wider mb-2">Every Bite Has a Story!</p>
+          <p class="text-[#FFF5E6]/80 text-sm leading-relaxed mb-5">
+            Authentic Indian street-food & chaat restaurant serving crispy puris, handcrafted chutneys, and 100% hygienic preparation.
           </p>
-          <div class="social-icons-row">
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <div class="flex items-center gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Chaat Adda on Instagram">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Follow Chaat Adda on Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Chaat Adda on Facebook">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Subscribe to Chaat Adda on YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Chaat Adda on YouTube">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg>
             </a>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3 footer-col">
-          <h3 class="footer-heading">Quick Links</h3>
-          <ul class="footer-links-list">
-            <li><a href="index.html">Home 1 – About Chaat Adda</a></li>
-            <li><a href="home2.html">Home 2 – Street Food Corner</a></li>
-            <li><a href="menu.html">Full Street Food Menu</a></li>
-            <li><a href="catering.html">Event &amp; Wedding Catering</a></li>
-            <li><a href="contact.html">Contact &amp; Location</a></li>
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-lg font-extrabold text-[#FFC83D] mb-4">Quick Links</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2 (Street Food Corner)</a></li>
+            <li><a href="menu.html" class="footer-link">Explore Full Menu</a></li>
+            <li><a href="catering.html" class="footer-link">Live Chaat Catering</a></li>
+            <li><a href="contact.html" class="footer-link">Contact & Store Locator</a></li>
           </ul>
         </div>
 
-        <div class="col-md-6 col-lg-3 footer-col">
-          <h3 class="footer-heading">Popular Chaats</h3>
-          <ul class="footer-links-list">
-            <li><a href="menu.html?cat=pani-puri">Pani Puri &amp; Golgappa</a></li>
-            <li><a href="menu.html?cat=papdi-sev">Bombay Sev Puri &amp; Papdi</a></li>
-            <li><a href="menu.html?cat=dahi-chaat">Dahi Puri &amp; Dahi Bhalla</a></li>
-            <li><a href="menu.html?cat=tikki-samosa">Desi Ghee Aloo Tikki Chaat</a></li>
-            <li><a href="menu.html?cat=beverages">Kulhad Lassi &amp; Masala Chai</a></li>
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-lg font-extrabold text-[#FFC83D] mb-4">Opening Hours</h3>
+          <ul class="space-y-2.5 text-sm text-[#FFF5E6]/85">
+            <li class="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <span class="font-semibold">Monday – Thursday:</span>
+              <span class="text-[#FFC83D] font-bold">11:00 AM – 10:30 PM</span>
+            </li>
+            <li class="flex flex-col sm:flex-row sm:justify-between gap-1">
+              <span class="font-semibold">Friday – Sunday:</span>
+              <span class="text-[#FFC83D] font-bold">11:00 AM – 11:30 PM</span>
+            </li>
+            <li class="pt-2 text-xs text-[#FFF5E6]/70">
+              *Live Pani Puri & Tawa Counter active all day.
+            </li>
           </ul>
         </div>
 
-        <div class="col-md-6 col-lg-3 footer-col">
-          <h3 class="footer-heading">Visit &amp; Contact</h3>
-          <ul class="footer-links-list">
-            <li><span>Shop 14, Spice Bazaar Promenade, Sample Food Street (Editable Sample Address)</span></li>
-            <li><a href="tel:+919876543210">Phone: +91 98765 43210</a></li>
-            <li><a href="mailto:hello@chaatadda.com">Email: hello@chaatadda.com</a></li>
-            <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp: +91 98765 43210</a></li>
-            <li><strong class="text-warning">Hours: Mon – Sun, 11:30 AM – 11:00 PM</strong></li>
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-lg font-extrabold text-[#FFC83D] mb-4">Contact Details</h3>
+          <ul class="space-y-3 text-sm text-[#FFF5E6]/85">
+            <li>
+              <span class="block text-xs uppercase tracking-wider text-[#FFC83D] font-bold">Flagship Outlet (Editable Sample)</span>
+              Shop 14, Ground Floor, Linking Road, Bandra West, Mumbai – 400050
+            </li>
+            <li>
+              <a href="tel:+919876543210" class="footer-link font-bold">+91 98765 43210</a>
+            </li>
+            <li>
+              <a href="mailto:namaste@chaatadda.in" class="footer-link">namaste@chaatadda.in</a>
+            </li>
+            <li class="pt-1">
+              <a href="https://wa.me/919876543210?text=Hi%20Chaat%20Adda!%20I%20have%20a%20question." target="_blank" rel="noopener" class="btn-whatsapp text-xs py-2 px-4">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>WhatsApp Support</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p class="mb-0">&copy; 2026 <strong>Chaat Adda</strong> – Every Bite Has a Story! All Rights Reserved. | 100% Vegetarian Street Food &amp; Chaat.</p>
+      <div class="pt-8 text-center text-xs text-[#FFF5E6]/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© <span id="currentYear">2025</span> Chaat Adda – Indian Street Food Corner. All rights reserved.</p>
+        <p>Crafted with authentic Indian spices, zero artificial colours & 100% vegetarian love.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
-

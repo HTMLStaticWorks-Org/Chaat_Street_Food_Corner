@@ -332,16 +332,50 @@ function initMenuPageInteractions() {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = (e.target.value || '').trim().toLowerCase();
+      document.querySelectorAll('.header-search-input').forEach((inp) => {
+        if (inp !== e.target) inp.value = e.target.value;
+      });
       filterMenu();
     });
   }
 
-  // Check URL hash or query param for category pre-selection
+  // Also wire the global header search input for live filtering when on menu.html
+  document.querySelectorAll('.header-search-form').forEach((form) => {
+    const headerInput = form.querySelector('.header-search-input');
+    if (headerInput) {
+      headerInput.addEventListener('input', (e) => {
+        searchQuery = (e.target.value || '').trim().toLowerCase();
+        if (searchInput) searchInput.value = e.target.value;
+        filterMenu();
+      });
+    }
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (headerInput) {
+        searchQuery = (headerInput.value || '').trim().toLowerCase();
+        if (searchInput) searchInput.value = headerInput.value;
+        filterMenu();
+        const gridEl = document.getElementById('menuItemsGrid');
+        if (gridEl) gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Check URL hash or query param for category or search pre-selection
   const params = new URLSearchParams(window.location.search);
   const catParam = params.get('cat');
   if (catParam) {
     const targetBtn = document.querySelector(`.category-tab-btn[data-filter="${catParam}"]`);
     if (targetBtn) targetBtn.click();
+  }
+  const qParam = params.get('q');
+  if (qParam) {
+    searchQuery = qParam.trim().toLowerCase();
+    if (searchInput) searchInput.value = qParam.trim();
+    document.querySelectorAll('.header-search-input').forEach((inp) => {
+      inp.value = qParam.trim();
+    });
+    filterMenu();
   }
 }
 
@@ -685,7 +719,11 @@ function applyDirection(dir) {
     btn.classList.toggle('is-active', isRtl);
     btn.setAttribute('aria-pressed', String(isRtl));
     btn.setAttribute('aria-label', isRtl ? 'Switch to LTR Layout' : 'Switch to RTL Layout');
-    btn.innerHTML = `${RTL_SVG}<span>${isRtl ? 'LTR' : 'RTL'}</span>`;
+    if (btn.closest('.desktop-header-actions')) {
+      btn.innerHTML = `<span>${isRtl ? 'LTR' : 'RTL'}</span>`;
+    } else {
+      btn.innerHTML = `${RTL_SVG}<span>${isRtl ? 'LTR' : 'RTL'}</span>`;
+    }
   });
 }
 

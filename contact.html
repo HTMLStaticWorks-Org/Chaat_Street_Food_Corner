@@ -19,70 +19,114 @@
   <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <!-- Custom Brand Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
 </head>
 <body>
 
   <!-- ========================================================================
-       STICKY HEADER & NAVIGATION
+       STICKY TWO-TIER EDITORIAL HEADER & NAVIGATION
+       Desktop (>1024px):
+       - Tier 1: Logo + Global Pill Search Bar + RTL, Dark, Cravings, Order Bag Badge & Primary CTA
+       - Tier 2: Horizontal Navigation with Active Bottom Bar & Categories Dropdown + Live Street Status
        At 360px, 768px and 1024px: Displays ONLY Logo & Hamburger on same row
        ======================================================================== -->
   <header class="site-header" id="siteHeader">
-    <div class="header-container">
-      <a href="index.html" class="brand-logo" aria-label="Chaat Adda Home">
-        <img src="assets/logo.svg" alt="Chaat Adda – Every Bite Has a Story!" width="215" height="52" />
-      </a>
-
-      <!-- Desktop Navigation (>1024px) -->
-      <nav aria-label="Primary Navigation">
-        <ul class="desktop-nav">
-          <li><a href="index.html" class="nav-link-item">Home 1</a></li>
-          <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
-          <li><a href="menu.html" class="nav-link-item">Menu</a></li>
-          <li><a href="catering.html" class="nav-link-item">Catering</a></li>
-          <li><a href="contact.html" class="nav-link-item active" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Desktop Right CTA (>1024px) -->
-      <div class="desktop-header-actions">
-        <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
-          <span>RTL</span>
-        </button>
-        <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-          <span>Dark</span>
-        </button>
-        <a href="menu.html#orderSummaryBox" class="header-cart-btn" aria-label="View Current Order">
-          <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
-          <span>Order</span>
-          <span class="cart-count-badge">0</span>
+    <!-- Top Tier -->
+    <div class="header-top-tier">
+      <div class="header-container">
+        <a href="index.html" class="brand-logo" aria-label="Chaat Adda Home">
+          <img src="assets/logo.svg" alt="Chaat Adda – Every Bite Has a Story!" width="215" height="52" />
         </a>
-        <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" class="btn-chaat btn-chaat-whatsapp js-whatsapp-cart-link">
-          <i data-lucide="message-circle" style="width:18px;height:18px;"></i>
-          <span>Order on WhatsApp</span>
-        </a>
+
+        <!-- Global Pill Search Bar (>1024px) -->
+        <form class="header-search-form" action="menu.html" method="get" role="search">
+          <svg class="header-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="search" name="q" class="header-search-input" placeholder="Search Pani Puri, Dahi Bhalla, Aloo Tikki, Combos..." aria-label="Search Chaat Adda Menu" />
+          <a href="menu.html?cat=pani-puri" class="header-search-tag" title="Explore Bestselling Chaats">🔥 Bestsellers</a>
+        </form>
+
+        <!-- Desktop Right Actions (>1024px) -->
+        <div class="desktop-header-actions">
+          <button type="button" class="header-utility-btn js-rtl-toggle" aria-label="Switch to RTL Layout" aria-pressed="false">
+            <span>RTL</span>
+          </button>
+          <button type="button" class="header-utility-btn js-theme-toggle" aria-label="Switch to Dark Theme" aria-pressed="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            <span>Dark</span>
+          </button>
+          <a href="menu.html#menuItemsGrid" class="header-icon-action" aria-label="Popular Street Favourites" title="Popular Street Favourites">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </a>
+          <a href="menu.html#orderSummaryBox" class="header-icon-action" aria-label="View Current Order Bag" title="Your Chaat Order Bag">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-count-badge">0</span>
+          </a>
+          <a href="https://wa.me/919876543210?text=Namaste%20Chaat%20Adda!%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" class="header-cta-pill js-whatsapp-cart-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            <span>Order on WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Hamburger Button (Shown at 360px, 768px, 1024px) -->
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
+          <span class="hamburger-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
       </div>
+    </div>
 
-      <!-- Hamburger Button (Shown at 360px, 768px, 1024px) -->
-      <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileMenuDrawer">
-        <span class="hamburger-lines">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
+    <!-- Bottom Tier (>1024px) -->
+    <div class="header-bottom-tier">
+      <div class="header-bottom-container">
+        <nav aria-label="Primary Navigation" style="height:100%;">
+          <ul class="desktop-nav">
+            <li><a href="index.html" class="nav-link-item">Home 1</a></li>
+            <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
+            <li><a href="menu.html" class="nav-link-item">Menu</a></li>
+            <li class="nav-has-dropdown">
+              <a href="menu.html#menuCategoryTabs" class="nav-link-item">
+                <span>Chaat Categories</span>
+                <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </a>
+              <ul class="nav-dropdown-menu" aria-label="Chaat Categories Submenu">
+                <li><a href="menu.html?cat=pani-puri" class="nav-dropdown-item"><span>Pani Puri &amp; Golgappa</span><span class="nav-dropdown-badge">Hot</span></a></li>
+                <li><a href="menu.html?cat=papdi-sev" class="nav-dropdown-item"><span>Papdi &amp; Sev Puri</span></a></li>
+                <li><a href="menu.html?cat=dahi-chaat" class="nav-dropdown-item"><span>Dahi Chaat Specials</span></a></li>
+                <li><a href="menu.html?cat=bhel-snacks" class="nav-dropdown-item"><span>Bhel &amp; Street Snacks</span></a></li>
+                <li><a href="menu.html?cat=tikki-samosa" class="nav-dropdown-item"><span>Tikki &amp; Samosa Chaat</span><span class="nav-dropdown-badge">Popular</span></a></li>
+                <li><a href="menu.html?cat=sandwiches" class="nav-dropdown-item"><span>Bombay Sandwiches</span></a></li>
+                <li><a href="menu.html?cat=beverages" class="nav-dropdown-item"><span>Kulhad Chai &amp; Coolers</span></a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#specialCombos" class="nav-link-item">Special Combos</a></li>
+            <li><a href="catering.html" class="nav-link-item">Catering</a></li>
+            <li><a href="contact.html" class="nav-link-item active" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-fresh-promise">
+          <span class="header-fresh-dot" aria-hidden="true"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+          <span>Prepared Live to Order &bull; 100% Pure Veg &amp; Mineral Water Today</span>
+        </div>
+      </div>
     </div>
 
     <!-- Mobile & Tablet Hamburger Menu Drawer -->
     <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-hidden="true">
+      <form class="mobile-drawer-search" action="menu.html" method="get" role="search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" name="q" placeholder="Search Pani Puri, Tikki, Combos..." aria-label="Search Chaat Adda Menu" />
+      </form>
       <ul class="mobile-nav-list">
         <li><a href="index.html" class="mobile-nav-link">Home 1 – About Chaat Adda</a></li>
         <li><a href="home2.html" class="mobile-nav-link">Home 2 – Street Food Corner</a></li>
-        <li><a href="menu.html" class="mobile-nav-link">Menu</a></li>
-        <li><a href="catering.html" class="mobile-nav-link">Catering</a></li>
-        <li><a href="contact.html" class="mobile-nav-link active" aria-current="page">Contact</a></li>
+        <li><a href="menu.html" class="mobile-nav-link">Menu (All 7 Categories)</a></li>
+        <li><a href="catering.html" class="mobile-nav-link">Catering &amp; Live Counters</a></li>
+        <li><a href="contact.html" class="mobile-nav-link active" aria-current="page">Contact &amp; Location</a></li>
       </ul>
       <div class="mobile-drawer-actions">
         <div class="mobile-utility-row">

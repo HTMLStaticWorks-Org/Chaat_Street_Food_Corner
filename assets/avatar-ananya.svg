@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bgAnanya" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC83D"/>
+      <stop offset="100%" stop-color="#D92D20"/>
+    </linearGradient>
+    <clipPath id="circleClipAnanya">
+      <circle cx="60" cy="60" r="56"/>
+    </clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="url(#bgAnanya)"/>
+  <circle cx="60" cy="60" r="55" fill="#FFF5E6"/>
+  <g clip-path="url(#circleClipAnanya)">
+    <!-- Shoulders / Kurti -->
+    <path d="M22 118 C25 90, 42 82, 60 82 C78 82, 95 90, 98 118 Z" fill="#D92D20"/>
+    <path d="M48 84 L60 102 L72 84 Z" fill="#FFC83D"/>
+    <!-- Neck -->
+    <rect x="52" y="68" width="16" height="18" fill="#F3B391" rx="4"/>
+    <!-- Head/Face -->
+    <ellipse cx="60" cy="52" rx="22" ry="26" fill="#F8C4A5"/>
+    <!-- Hair back -->
+    <path d="M34 52 C32 30, 42 16, 60 16 C78 16, 88 30, 86 52 C86 64, 82 76, 82 76 C78 68, 76 60, 76 52 C76 34, 44 34, 44 52 C44 60, 42 68, 38 76 C38 76, 34 64, 34 52 Z" fill="#2A1810"/>
+    <!-- Hair bangs / front -->
+    <path d="M38 42 C44 30, 56 26, 60 28 C64 26, 76 30, 82 42 C76 36, 68 34, 60 35 C52 34, 44 36, 38 42 Z" fill="#1C100A"/>
+    <!-- Eyes -->
+    <ellipse cx="51" cy="50" rx="3" ry="3.5" fill="#2A1810"/>
+    <ellipse cx="69" cy="50" rx="3" ry="3.5" fill="#2A1810"/>
+    <circle cx="52" cy="49" r="1" fill="#FFF"/>
+    <circle cx="70" cy="49" r="1" fill="#FFF"/>
+    <!-- Eyebrows -->
+    <path d="M46 44 Q51 42 56 45" stroke="#2A1810" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <path d="M74 44 Q69 42 64 45" stroke="#2A1810" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Bindi -->
+    <circle cx="60" cy="44" r="2" fill="#D92D20"/>
+    <!-- Smile -->
+    <path d="M53 62 Q60 69 67 62" stroke="#B83A24" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <!-- Blush -->
+    <circle cx="45" cy="57" r="4" fill="#F09886" opacity="0.45"/>
+    <circle cx="75" cy="57" r="4" fill="#F09886" opacity="0.45"/>
+    <!-- Earrings (Jhumka) -->
+    <circle cx="36" cy="58" r="2.5" fill="#FFC83D"/>
+    <path d="M33 62 L39 62 L36 67 Z" fill="#FFC83D"/>
+    <circle cx="84" cy="58" r="2.5" fill="#FFC83D"/>
+    <path d="M81 62 L87 62 L84 67 Z" fill="#FFC83D"/>
+  </g>
+</svg>

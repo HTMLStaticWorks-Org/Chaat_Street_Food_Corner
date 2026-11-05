@@ -54,8 +54,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
             <span>Dark</span>
           </button>
-          <a href="#streetSpecialties" class="header-icon-action" aria-label="Street Corner Specialties" title="Street Corner Specialties">
+          <a href="#streetSpecialties" class="header-icon-action" aria-label="Street Corner Specialties" title="Your Liked Favourites">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <span class="favorites-count-badge cart-count-badge" style="display:none;">0</span>
           </a>
           <a href="menu.html#orderSummaryBox" class="header-icon-action" aria-label="View Current Order Bag" title="Your Chaat Order Bag">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -86,22 +87,6 @@
             <li><a href="index.html" class="nav-link-item">Home 1</a></li>
             <li><a href="home2.html" class="nav-link-item active" aria-current="page">Home 2</a></li>
             <li><a href="menu.html" class="nav-link-item">Menu</a></li>
-            <li class="nav-has-dropdown">
-              <a href="menu.html#menuCategoryTabs" class="nav-link-item">
-                <span>Chaat Categories</span>
-                <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </a>
-              <ul class="nav-dropdown-menu" aria-label="Chaat Categories Submenu">
-                <li><a href="menu.html?cat=pani-puri" class="nav-dropdown-item"><span>Pani Puri &amp; Golgappa</span><span class="nav-dropdown-badge">Hot</span></a></li>
-                <li><a href="menu.html?cat=papdi-sev" class="nav-dropdown-item"><span>Papdi &amp; Sev Puri</span></a></li>
-                <li><a href="menu.html?cat=dahi-chaat" class="nav-dropdown-item"><span>Dahi Chaat Specials</span></a></li>
-                <li><a href="menu.html?cat=bhel-snacks" class="nav-dropdown-item"><span>Bhel &amp; Street Snacks</span></a></li>
-                <li><a href="menu.html?cat=tikki-samosa" class="nav-dropdown-item"><span>Tikki &amp; Samosa Chaat</span><span class="nav-dropdown-badge">Popular</span></a></li>
-                <li><a href="menu.html?cat=sandwiches" class="nav-dropdown-item"><span>Bombay Sandwiches</span></a></li>
-                <li><a href="menu.html?cat=beverages" class="nav-dropdown-item"><span>Kulhad Chai &amp; Coolers</span></a></li>
-              </ul>
-            </li>
-            <li><a href="index.html#specialCombos" class="nav-link-item">Special Combos</a></li>
             <li><a href="catering.html" class="nav-link-item">Catering</a></li>
             <li><a href="contact.html" class="nav-link-item">Contact</a></li>
           </ul>
@@ -139,6 +124,10 @@
             <span>Dark</span>
           </button>
         </div>
+        <a href="#streetSpecialties" class="btn-chaat btn-chaat-outline w-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span>Favourites (<span class="favorites-count-badge">0</span>)</span>
+        </a>
         <a href="menu.html#orderSummaryBox" class="btn-chaat btn-chaat-secondary">
           <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
           <span>View Order (<span class="cart-count-badge">0</span>)</span>
@@ -392,6 +381,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/home2/xTjruw4Zuom6B4YdXrRtkRU-Ti9vTOJWaHpPj-NzdpizUZe7T0CK1yYXyzFWMnnS4TFZGQ3zzJluouJY5YW0f8hVDbcs27AtOLC5BQV85RXvYLpYwqb3jx0gc4JlRa68XPZ1GVvSS6Oop8q99YP9N83813q0kFnJatBx5xv.jpg" alt="Leaf Dona Kolkata Phuchka" />
+                <button type="button" class="card-like-btn" data-id="sc-kolkata-phuchka" data-name="Kolkata Leaf-Dona Phuchka" aria-label="Add Kolkata Leaf-Dona Phuchka to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Street Corner Hit</span>
@@ -414,6 +406,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/home2/ih9H6XvvzVOAbq1GebvPq2pY6LRbJXEMZ0e-1ysrHs9WDw-BO1Xmr1T68o65k_OQchc_fAev30OET66-XKvZWnEb4SPvSFeBzFjvJE1MgDOsxFmzl9fWxLV9NhIAFbDre5T0VIOUCArTTuSSIbqinv89pmvwrjrpp4JiDX_.jpg" alt="Paper Cone Jhalmuri & Bombay Bhel" />
+                <button type="button" class="card-like-btn" data-id="sc-cone-bhel" data-name="Paper-Cone Jhalmuri & Bhel" aria-label="Add Paper-Cone Jhalmuri & Bhel to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Evening Snack</span>
@@ -436,6 +431,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-ranjit-pradhan-943095-40047410.jpg" alt="Garma Garam Pakora & Mirchi Vada Basket" />
+                <button type="button" class="card-like-btn" data-id="sc-pakora-basket" data-name="Karare Pakora & Mirchi Vada" aria-label="Add Karare Pakora & Mirchi Vada to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Monsoon Special</span>
@@ -458,6 +456,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/home2/pexels-sourav-33721708.jpg" alt="Chowpatty Roasted Masala Bhutta & Chana Jor" />
+                <button type="button" class="card-like-btn" data-id="sc-masala-corn" data-name="Chowpatty Masala Corn & Chana" aria-label="Add Chowpatty Masala Corn to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Beachside Classic</span>
@@ -480,6 +481,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-fahim-shizan-2152194768-34356404.jpg" alt="Cheese & Sev Loaded Fuska Puri Platter" />
+                <button type="button" class="card-like-btn" data-id="sc-fuska-ring" data-name="Loaded Masala Fuska Platter" aria-label="Add Loaded Masala Fuska Platter to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Crowd Favourite</span>
@@ -502,6 +506,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-uniqueton-4722522.jpg" alt="Crispy Moong Dal Vada & Chutney" />
+                <button type="button" class="card-like-btn" data-id="sc-ram-ladoo" data-name="Crispy Moong Dal Ram Ladoo" aria-label="Add Crispy Moong Dal Ram Ladoo to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Crunchy Bite</span>

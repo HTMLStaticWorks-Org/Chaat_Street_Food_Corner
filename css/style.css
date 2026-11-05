@@ -1107,7 +1107,7 @@ h3,
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   text-align: center;
   transition: var(--transition-base);
   position: relative;
@@ -1153,6 +1153,53 @@ h3,
   transform: scale(1.06);
 }
 
+/* Card Floating Like/Favorite Heart Button */
+.card-like-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 245, 230, 0.92);
+  border: 1.5px solid rgba(56, 37, 29, 0.15);
+  color: var(--deep-brown);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition-base);
+  box-shadow: 0 4px 12px rgba(56, 37, 29, 0.15);
+  padding: 0;
+}
+
+.card-like-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--deep-brown);
+  fill: none;
+  stroke-width: 2.2;
+  transition: transform 0.25s ease, fill 0.25s ease, stroke 0.25s ease;
+}
+
+.card-like-btn:hover {
+  transform: scale(1.12);
+  background: #FFFFFF;
+  border-color: var(--chili-red);
+}
+
+.card-like-btn.is-liked {
+  background: #FFF0EF;
+  border-color: var(--chili-red);
+}
+
+.card-like-btn.is-liked svg {
+  stroke: var(--chili-red);
+  fill: var(--chili-red);
+  transform: scale(1.1);
+}
+
 /* Veg Indicator & Price Tag */
 .veg-badge {
   display: inline-flex;
@@ -1195,10 +1242,11 @@ h3,
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.25rem;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 1.15rem;
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--mango-yellow);
-  margin: 0.55rem 0 0.9rem;
+  margin: 0 0 0.85rem;
+  white-space: nowrap;
 }
 
 .card-body-centered {
@@ -1213,8 +1261,12 @@ h3,
 .card-desc {
   color: var(--deep-brown-soft);
   font-size: 0.94rem;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 1rem 0;
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-footer-action {
@@ -1404,6 +1456,145 @@ h3,
 .qty-btn:hover {
   background: var(--chili-red);
   color: var(--white);
+}
+
+.order-total-box {
+  background: var(--warm-cream);
+  border: 1.5px solid var(--mango-yellow);
+  color: var(--deep-brown);
+}
+
+.order-total-box .order-total-label {
+  color: var(--deep-brown);
+}
+
+.order-total-box .order-total-subtext {
+  color: var(--deep-brown-soft);
+}
+
+/* ==========================================================================
+   BACK TO TOP BUTTON (Visible in All Views)
+   ========================================================================== */
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--chili-red);
+  color: var(--white);
+  border: 2.5px solid var(--mango-yellow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(217, 45, 32, 0.4);
+  cursor: pointer;
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.85);
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
+}
+
+.back-to-top-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--white);
+  stroke-width: 2.6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s ease;
+}
+
+.back-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top-btn:hover {
+  background: var(--mango-yellow);
+  border-color: var(--deep-brown);
+  color: var(--deep-brown);
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 14px 28px rgba(255, 200, 61, 0.5);
+}
+
+.back-to-top-btn:hover svg {
+  stroke: var(--deep-brown);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 767.98px) {
+  .back-to-top-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 44px;
+    height: 44px;
+  }
+
+  .back-to-top-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ==========================================================================
+   FAQ ACCORDION SECTION (Contact Page)
+   ========================================================================== */
+
+.faq-accordion .accordion-item {
+  background: var(--white);
+  border: 2px solid rgba(56, 37, 29, 0.12);
+  border-radius: var(--radius-md) !important;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.faq-accordion .accordion-item:hover {
+  border-color: var(--mango-yellow);
+  box-shadow: var(--shadow-md);
+}
+
+.faq-accordion .accordion-button {
+  background: var(--white);
+  color: var(--deep-brown);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 1.15rem 1.35rem;
+  border: none;
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255, 200, 61, 0.18);
+  color: var(--chili-red);
+  border-bottom: 1.5px solid rgba(56, 37, 29, 0.08);
+}
+
+.faq-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338251D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D92D20' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  transform: rotate(180deg);
+}
+
+.faq-accordion .accordion-body {
+  padding: 1.25rem 1.35rem;
+  color: var(--deep-brown-soft);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  background: var(--white);
 }
 
 /* ==========================================================================
@@ -1894,6 +2085,14 @@ html[data-theme="dark"] .mobile-nav-link {
   border-color: rgba(255, 200, 61, 0.25);
 }
 
+html[data-theme="dark"] .mobile-nav-link.active,
+html[data-theme="dark"] .mobile-nav-link:hover {
+  background: var(--chili-red) !important;
+  color: var(--white) !important;
+  border-color: var(--chili-red) !important;
+  box-shadow: 0 4px 16px rgba(217, 45, 32, 0.45);
+}
+
 html[data-theme="dark"] .hero-section,
 html[data-theme="dark"] .hero-street-corner,
 html[data-theme="dark"] .page-hero {
@@ -1938,11 +2137,86 @@ html[data-theme="dark"] .header-utility-btn {
   border-color: var(--mango-yellow);
 }
 
+html[data-theme="dark"] .category-tab-btn:hover {
+  background: var(--mango-yellow) !important;
+  color: var(--deep-brown) !important;
+  border-color: var(--mango-yellow) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(255, 200, 61, 0.4);
+}
+
 html[data-theme="dark"] .category-tab-btn.active,
 html[data-theme="dark"] .header-utility-btn.is-active {
-  background: var(--chili-red);
-  color: var(--white);
+  background: var(--chili-red) !important;
+  color: var(--white) !important;
+  border-color: var(--chili-red) !important;
+}
+
+html[data-theme="dark"] .order-total-box {
+  background: #241611 !important;
+  border-color: var(--mango-yellow) !important;
+  color: #FFF5E6 !important;
+}
+
+html[data-theme="dark"] .order-total-box .order-total-label {
+  color: #FFF5E6 !important;
+}
+
+html[data-theme="dark"] .order-total-box .order-total-subtext {
+  color: rgba(255, 245, 230, 0.72) !important;
+}
+
+html[data-theme="dark"] .order-total-box #orderSummaryTotal {
+  color: #FF6B5E !important;
+}
+
+html[data-theme="dark"] .card-like-btn {
+  background: rgba(44, 28, 22, 0.92);
+  border-color: rgba(255, 200, 61, 0.35);
+  color: #FFF5E6;
+}
+
+html[data-theme="dark"] .card-like-btn svg {
+  stroke: #FFF5E6;
+}
+
+html[data-theme="dark"] .card-like-btn:hover {
+  background: #3A251D;
   border-color: var(--chili-red);
+}
+
+html[data-theme="dark"] .card-like-btn.is-liked {
+  background: #381A15;
+  border-color: var(--chili-red);
+}
+
+html[data-theme="dark"] .card-like-btn.is-liked svg {
+  stroke: #FF6B5E;
+  fill: #FF6B5E;
+}
+
+html[data-theme="dark"] .faq-accordion .accordion-item {
+  background: #2C1C16;
+  border-color: rgba(255, 200, 61, 0.28);
+}
+
+html[data-theme="dark"] .faq-accordion .accordion-button {
+  background: #2C1C16;
+  color: #FFF5E6;
+}
+
+html[data-theme="dark"] .faq-accordion .accordion-button:not(.collapsed) {
+  background: rgba(255, 200, 61, 0.16);
+  color: var(--mango-yellow);
+}
+
+html[data-theme="dark"] .faq-accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFC83D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+html[data-theme="dark"] .faq-accordion .accordion-body {
+  background: #241611;
+  color: rgba(255, 245, 230, 0.82);
 }
 
 html[data-theme="dark"] .chaat-input,

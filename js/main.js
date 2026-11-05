@@ -769,12 +769,118 @@ function initThemeAndRtl() {
 }
 
 /* ==========================================================================
+   FAVORITES (LIKED ITEMS) SYSTEM
+   ========================================================================== */
+
+const LIKES_STORAGE_KEY = 'chaat_adda_likes_v1';
+let userLikes = [];
+
+function loadLikes() {
+  try {
+    const raw = localStorage.getItem(LIKES_STORAGE_KEY);
+    userLikes = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(userLikes)) userLikes = [];
+  } catch (e) {
+    userLikes = [];
+  }
+  updateLikesUI();
+}
+
+function saveLikes() {
+  try {
+    localStorage.setItem(LIKES_STORAGE_KEY, JSON.stringify(userLikes));
+  } catch (e) {}
+  updateLikesUI();
+}
+
+function updateLikesUI() {
+  const count = userLikes.length;
+  document.querySelectorAll('.favorites-count-badge').forEach((badge) => {
+    badge.textContent = count;
+    badge.style.display = count > 0 ? 'inline-flex' : 'none';
+  });
+
+  document.querySelectorAll('.card-like-btn').forEach((btn) => {
+    const id = btn.getAttribute('data-id');
+    const isLiked = id && userLikes.includes(id);
+    btn.classList.toggle('is-liked', isLiked);
+    btn.setAttribute('aria-pressed', String(isLiked));
+    btn.setAttribute('title', isLiked ? 'Remove from Favourites' : 'Add to Favourites');
+  });
+}
+
+function toggleLikeItem(id, name) {
+  if (!id) return;
+  const index = userLikes.indexOf(id);
+  if (index > -1) {
+    userLikes.splice(index, 1);
+    showToast(`Removed "${name || 'Chaat'}" from your Favourites`);
+  } else {
+    userLikes.push(id);
+    showToast(`Added "${name || 'Chaat'}" to your Favourites! ❤️`);
+  }
+  saveLikes();
+}
+
+function initLikeButtons() {
+  loadLikes();
+  document.addEventListener('click', (e) => {
+    const likeBtn = e.target.closest('.card-like-btn');
+    if (likeBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const id = likeBtn.getAttribute('data-id');
+      const name = likeBtn.getAttribute('data-name');
+      toggleLikeItem(id, name);
+    }
+  });
+}
+
+/* ==========================================================================
+   BACK TO TOP BUTTON
+   ========================================================================== */
+
+function initBackToTop() {
+  let btn = document.getElementById('backToTopBtn');
+  if (!btn) {
+    btn = document.createElement('button');
+    btn.id = 'backToTopBtn';
+    btn.type = 'button';
+    btn.className = 'back-to-top-btn';
+    btn.setAttribute('aria-label', 'Back to Top of Page');
+    btn.setAttribute('title', 'Back to Top');
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></svg>';
+    document.body.appendChild(btn);
+  }
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 280) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  };
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+/* ==========================================================================
    INITIALIZE ON DOM READY
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeAndRtl();
   loadCart();
+  initLikeButtons();
+  initBackToTop();
   initHeaderAndNav();
   initOrderButtons();
   initMenuPageInteractions();

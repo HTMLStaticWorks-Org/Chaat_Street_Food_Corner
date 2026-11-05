@@ -54,8 +54,9 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
             <span>Dark</span>
           </button>
-          <a href="#popularFavourites" class="header-icon-action" aria-label="Popular Street Favourites" title="Popular Street Favourites">
+          <a href="#popularFavourites" class="header-icon-action" aria-label="Popular Street Favourites" title="Your Liked Favourites">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <span class="favorites-count-badge cart-count-badge" style="display:none;">0</span>
           </a>
           <a href="menu.html#orderSummaryBox" class="header-icon-action" aria-label="View Current Order Bag" title="Your Chaat Order Bag">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -86,22 +87,6 @@
             <li><a href="index.html" class="nav-link-item active" aria-current="page">Home 1</a></li>
             <li><a href="home2.html" class="nav-link-item">Home 2</a></li>
             <li><a href="menu.html" class="nav-link-item">Menu</a></li>
-            <li class="nav-has-dropdown">
-              <a href="menu.html#menuCategoryTabs" class="nav-link-item">
-                <span>Chaat Categories</span>
-                <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-              </a>
-              <ul class="nav-dropdown-menu" aria-label="Chaat Categories Submenu">
-                <li><a href="menu.html?cat=pani-puri" class="nav-dropdown-item"><span>Pani Puri &amp; Golgappa</span><span class="nav-dropdown-badge">Hot</span></a></li>
-                <li><a href="menu.html?cat=papdi-sev" class="nav-dropdown-item"><span>Papdi &amp; Sev Puri</span></a></li>
-                <li><a href="menu.html?cat=dahi-chaat" class="nav-dropdown-item"><span>Dahi Chaat Specials</span></a></li>
-                <li><a href="menu.html?cat=bhel-snacks" class="nav-dropdown-item"><span>Bhel &amp; Street Snacks</span></a></li>
-                <li><a href="menu.html?cat=tikki-samosa" class="nav-dropdown-item"><span>Tikki &amp; Samosa Chaat</span><span class="nav-dropdown-badge">Popular</span></a></li>
-                <li><a href="menu.html?cat=sandwiches" class="nav-dropdown-item"><span>Bombay Sandwiches</span></a></li>
-                <li><a href="menu.html?cat=beverages" class="nav-dropdown-item"><span>Kulhad Chai &amp; Coolers</span></a></li>
-              </ul>
-            </li>
-            <li><a href="index.html#specialCombos" class="nav-link-item">Special Combos</a></li>
             <li><a href="catering.html" class="nav-link-item">Catering</a></li>
             <li><a href="contact.html" class="nav-link-item">Contact</a></li>
           </ul>
@@ -139,6 +124,10 @@
             <span>Dark</span>
           </button>
         </div>
+        <a href="#popularFavourites" class="btn-chaat btn-chaat-outline w-100">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span>Favourites (<span class="favorites-count-badge">0</span>)</span>
+        </a>
         <a href="menu.html#orderSummaryBox" class="btn-chaat btn-chaat-secondary">
           <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
           <span>View Order (<span class="cart-count-badge">0</span>)</span>
@@ -319,6 +308,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-shahbaz-ansari-283673909-13041629.jpg" alt="Pani Puri – Crispy hollow puris with spicy mint and tangy tamarind water" />
+                <button type="button" class="card-like-btn" data-id="fav-pani-puri" data-name="Pani Puri" aria-label="Add Pani Puri to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> 100% Vegetarian · Bestseller</span>
@@ -342,6 +334,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-jahratreza-40000335.jpg" alt="Dahi Puri – Crispy puris topped with velvety sweet curd and chutneys" />
+                <button type="button" class="card-like-btn" data-id="fav-dahi-puri" data-name="Dahi Puri" aria-label="Add Dahi Puri to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> 100% Vegetarian · Chef's Special</span>
@@ -365,6 +360,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-ar-kay-768552413-34270741.jpg" alt="Sev Puri – Mumbai style papdi topped with potatoes, chutneys, raw mango and golden sev" />
+                <button type="button" class="card-like-btn" data-id="fav-sev-puri" data-name="Sev Puri" aria-label="Add Sev Puri to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> 100% Vegetarian · Mumbai Classic</span>
@@ -388,6 +386,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-ar-kay-768552413-34270742.jpg" alt="Bhel Puri – Tossed puffed rice with crushed papdi, peanuts, chutneys and coriander" />
+                <button type="button" class="card-like-btn" data-id="fav-bhel-puri" data-name="Bhel Puri" aria-label="Add Bhel Puri to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> 100% Vegetarian · Light &amp; Crunchy</span>
@@ -411,6 +412,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-dashingvinit-16171917.jpg" alt="Aloo Tikki Chaat – Tawa-seared potato patties topped with chole, curd and chutneys" />
+                <button type="button" class="card-like-btn" data-id="fav-aloo-tikki" data-name="Aloo Tikki Chaat" aria-label="Add Aloo Tikki Chaat to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> 100% Vegetarian · Tawa Special</span>
@@ -434,6 +438,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/pexels-drmkhawarnazir-9213253.jpg" alt="Samosa Chaat – Crushed punjabi samosa with spicy chickpea curry, yogurt and chutneys" />
+                <button type="button" class="card-like-btn" data-id="fav-samosa-chaat" data-name="Samosa Chaat" aria-label="Add Samosa Chaat to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> 100% Vegetarian · Hearty Classic</span>
@@ -448,6 +455,9 @@
                   <i data-lucide="shopping-bag" style="width:18px;height:18px;"></i>
                   <span>Order Now</span>
                 </button>
+              </div>
+            </article>
+          </div>
               </div>
             </article>
           </div>
@@ -549,6 +559,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/xbC78VmRZnBhQG_SKEiGNmrsyXmfx2dRmB3zWbIPnr7hSzdW62aNGRXEVeo1ExhwmV1vm5HHMIPrZ8b7PQR5eJMOC7obkCpJ_8sEJyOtGa8a22H3Kipi8Em70XZEDrUi_8hQy3xwc3YDh-yCPp3eFN57ML-IFgN3bH25XT1s-vljA.jpg" alt="Mumbai Chowpatty Trio Combo – Pani Puri, Sev Puri and Bhel Puri" />
+                <button type="button" class="card-like-btn" data-id="combo-chowpatty-trio" data-name="Mumbai Chowpatty Trio Combo" aria-label="Add Mumbai Chowpatty Trio to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Best for 2 Foodies</span>
@@ -572,6 +585,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/P3VWsokILeZRtD5yAozBwfzd5gYl6MTwSZZu7Xwmi2wbCNS2MEQLZSKUiYNj2_Wcqk2t7seY0xUNXIM3NFUXjq_YMaPiVvX9bPbRa9rZWzE8B6lT1e7ikdLCOBTV7hcvGJKvZcN68907XsZuyM6HmzTrqW7M5sR9WyrDn2SOW3Uq2.jpg" alt="Royal Dahi & Tawa Chaat Platter Combo" />
+                <button type="button" class="card-like-btn" data-id="combo-royal-platter" data-name="Royal Chaat Adda Platter" aria-label="Add Royal Chaat Adda Platter to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Most Popular Platter</span>
@@ -595,6 +611,9 @@
             <article class="chaat-card">
               <div class="card-img-wrap">
                 <img src="image/1FA5ukAcjRFLpLVEwhuYg2YJ1Gj2EaIFlmtBxorapGz26Qr5bC7dvknw3NrGjL2lnKmPLfxerSw9vRgXx3YdVqNcL7AuVSTQFC4Cv4BE3xwW7lRWdrJSAfrt_bhezftt9qBFUr1I_8OEfD-whWRH34NpC_o6DwGXCLWdIAH-NPjjX.jpg" alt="Grand Family Golgappa & Chaat Party Box" />
+                <button type="button" class="card-like-btn" data-id="combo-family-box" data-name="Family Chaat Party Box" aria-label="Add Family Chaat Party Box to favourites">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
               </div>
               <div class="card-body-centered">
                 <span class="veg-badge"><span class="veg-icon-box"></span> Serves 4–5 Guests</span>

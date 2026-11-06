@@ -1264,9 +1264,67 @@ h3,
   margin: 0 0 1rem 0;
   text-align: center;
   flex-grow: 1;
+  width: 100%;
+  display: block;
+  line-height: 1.6;
+}
+
+/* Push price pill to horizontal baseline when after card-desc */
+.card-body-centered .card-desc + .price-pill,
+.card-body-centered .price-pill:last-child {
+  margin-top: auto;
+  margin-bottom: 0.85rem;
+}
+
+/* Dedicated Catering Package description & list styling */
+.catering-package-desc {
+  width: 100%;
+  flex-grow: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 1.15rem;
+  text-align: center;
+}
+
+.package-features-heading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--deep-brown);
+  margin-bottom: 0.65rem;
+  display: block;
+  text-align: center;
+}
+
+.package-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  text-align: center;
+  width: 100%;
+}
+
+.package-features-list li {
+  font-size: 0.91rem;
+  color: var(--deep-brown-soft);
+  line-height: 1.45;
+}
+
+.package-features-list li::before {
+  content: "• ";
+  color: var(--chili-red);
+  font-weight: 800;
+}
+
+html[data-theme="dark"] .package-features-heading {
+  color: var(--warm-cream);
+}
+
+html[data-theme="dark"] .package-features-list li {
+  color: rgba(255, 245, 230, 0.85);
 }
 
 .card-footer-action {

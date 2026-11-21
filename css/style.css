@@ -932,8 +932,11 @@ h3,
    ========================================================================== */
 
 .hero-section {
-  padding-top: calc(var(--header-height) + 2.75rem);
-  padding-bottom: 4.5rem;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
   background:
@@ -941,6 +944,12 @@ h3,
     radial-gradient(circle at 88% 22%, rgba(217, 45, 32, 0.14), transparent 40%),
     linear-gradient(180deg, #FFF5E6 0%, #FDEBD0 100%);
   border-bottom: 3px solid var(--mango-yellow);
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: 640px;
+  }
 }
 
 .hero-street-corner {
@@ -951,14 +960,41 @@ h3,
 }
 
 .page-hero {
-  padding-top: calc(var(--header-height) + 2.5rem);
-  padding-bottom: 3.25rem;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: calc(var(--header-height) + 1.85rem);
+  padding-bottom: 2.25rem;
   background:
     radial-gradient(circle at 20% 20%, rgba(255, 200, 61, 0.35), transparent 45%),
     radial-gradient(circle at 80% 75%, rgba(217, 45, 32, 0.14), transparent 45%),
     linear-gradient(180deg, #FFF5E6 0%, #FDE8C9 100%);
   border-bottom: 3px solid var(--mango-yellow);
   text-align: center;
+  width: 100%;
+}
+
+.page-hero > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-hero .hero-subtitle {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767.98px) {
+  .page-hero {
+    min-height: 320px;
+    padding-top: calc(var(--header-height) + 1.25rem);
+    padding-bottom: 1.75rem;
+  }
 }
 
 .hero-content-col {
@@ -1674,7 +1710,7 @@ html[data-theme="dark"] .package-features-list li {
   font-size: 0.92rem;
   color: var(--deep-brown);
   margin-bottom: 0.45rem;
-  text-align: center;
+  text-align: left;
 }
 
 .chaat-input,
@@ -1688,8 +1724,13 @@ html[data-theme="dark"] .package-features-list li {
   color: var(--deep-brown);
   font-family: var(--font-sans);
   font-size: 0.96rem;
-  text-align: center;
+  text-align: left;
   transition: var(--transition-base);
+}
+
+.chaat-input::placeholder,
+.chaat-textarea::placeholder {
+  text-align: left;
 }
 
 .chaat-input:focus,
@@ -1714,7 +1755,7 @@ html[data-theme="dark"] .package-features-list li {
   font-weight: 700;
   margin-top: 0.3rem;
   display: none;
-  text-align: center;
+  text-align: left;
 }
 
 .field-error-msg.visible {
@@ -2447,6 +2488,17 @@ html[dir="rtl"] .back-to-top-btn {
 html[dir="rtl"] .chaat-toast {
   right: auto !important;
   left: 24px !important;
+}
+
+/* Form Inputs & Labels in RTL */
+html[dir="rtl"] .form-label-centered,
+html[dir="rtl"] .chaat-input,
+html[dir="rtl"] .chaat-select,
+html[dir="rtl"] .chaat-textarea,
+html[dir="rtl"] .chaat-input::placeholder,
+html[dir="rtl"] .chaat-textarea::placeholder,
+html[dir="rtl"] .field-error-msg {
+  text-align: right !important;
 }
 
 
